@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSetRecord xmlns="http://tempuri.org/DataSetRecord.xsd">
+  <DataTableRecord>
+    <FileName>together.wav</FileName>
+    <StartTime>PT0S</StartTime>
+    <EndTime>PT3S</EndTime>
+    <Tag>44</Tag>
+    <ColorIndex>0</ColorIndex>
+  </DataTableRecord>
+</DataSetRecord>

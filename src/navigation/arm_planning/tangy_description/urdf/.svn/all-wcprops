@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/asblab-ros-pkg/!svn/ver/1654/trunk/ros/tangy/src/navigation/arm_planning/tangy_description/urdf
+END
+tangymodel_sim.urdf
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/asblab-ros-pkg/!svn/ver/1654/trunk/ros/tangy/src/navigation/arm_planning/tangy_description/urdf/tangymodel_sim.urdf
+END
+tangymodel_cleaned.urdf~
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/asblab-ros-pkg/!svn/ver/1654/trunk/ros/tangy/src/navigation/arm_planning/tangy_description/urdf/tangymodel_cleaned.urdf~
+END
+tangymodel_bak.urdf~
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/asblab-ros-pkg/!svn/ver/1654/trunk/ros/tangy/src/navigation/arm_planning/tangy_description/urdf/tangymodel_bak.urdf~
+END
+tangymodel.urdf~
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/asblab-ros-pkg/!svn/ver/1654/trunk/ros/tangy/src/navigation/arm_planning/tangy_description/urdf/tangymodel.urdf~
+END
+tangymodel_eff.urdf
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/asblab-ros-pkg/!svn/ver/1654/trunk/ros/tangy/src/navigation/arm_planning/tangy_description/urdf/tangymodel_eff.urdf
+END
+tangymodel_pos.urdf
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/asblab-ros-pkg/!svn/ver/1654/trunk/ros/tangy/src/navigation/arm_planning/tangy_description/urdf/tangymodel_pos.urdf
+END
+tangmodel.urdf~
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/asblab-ros-pkg/!svn/ver/1654/trunk/ros/tangy/src/navigation/arm_planning/tangy_description/urdf/tangmodel.urdf~
+END
+tangymodel_eff_backup.urdf
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/asblab-ros-pkg/!svn/ver/1654/trunk/ros/tangy/src/navigation/arm_planning/tangy_description/urdf/tangymodel_eff_backup.urdf
+END
+tangymodel_sim.urdf~
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/asblab-ros-pkg/!svn/ver/1654/trunk/ros/tangy/src/navigation/arm_planning/tangy_description/urdf/tangymodel_sim.urdf~
+END
+tangymodel_eff (backup).urdf
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/asblab-ros-pkg/!svn/ver/1654/trunk/ros/tangy/src/navigation/arm_planning/tangy_description/urdf/tangymodel_eff%20(backup).urdf
+END

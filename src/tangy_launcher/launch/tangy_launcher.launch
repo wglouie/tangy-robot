@@ -1,0 +1,133 @@
+<launch>
+	<arg name="project_name" default="building_basement"/>
+  <arg name="robot_name" default="tangy"/>
+  <arg name="robot_id" default="52"/>
+  <arg name="initial_x" default="0"/>
+  <arg name="initial_y" default="0"/>
+  <arg name="simulation" default="true"/>
+
+  <arg name="find_persons_module" default="false" />
+  <arg name="move_module" default="true" />
+  <arg name="identify_persons_module" default="false" />
+  <arg name="interact_person_module" default="false" />
+  <arg name="telepresence_module" default="true" />
+  <arg name="bingo_module" default="true" />
+  <arg name="remind_module" default="true" />
+  <arg name="recharge_module" default="true" />
+  <arg name="battery_module" default="false" />
+
+	<param name="database/project_path"
+   		 value="$(find project_files)/$(arg project_name)/project.xml"/>
+
+  <arg name="model" default="$(find tangerine_2dnav)/Model/TangerineModel.urdf.xacro"/>
+	<arg name="gui" default="False" />
+	<param name="robot_description" command="$(find xacro)/xacro.py $(arg model)" />
+	<param name="use_gui" value="$(arg gui)"/>
+
+	<group ns="tangy">
+
+		<!-- set the initial pose of the robot? -->
+		<include file="$(find tangerine_2dnav)/launch/my_robot_configuration.launch"/>
+		<include file="$(find tangerine_2dnav)/launch/move_base.launch">
+			<arg name="map_server" value="false"/>
+		</include>
+		<include file="$(find battery_reader)/launch/battery_reader.launch"/>	
+	</group>
+
+	<!-- robot state 
+	<node
+	  name="$(arg robot_name)_state"
+	  pkg="robot_state"
+	  type="robot_state"
+	  args="$(arg robot_name) $(arg robot_id) $(arg initial_x) $(arg initial_y)"
+	output="screen"
+	/>-->
+	  
+	<!-- task manager 
+	<node
+	  name="$(arg robot_name)_task_manager"
+	  pkg="robot_task_manager"
+	  type="robot_task_manager"
+	  args="$(arg robot_name)"
+	/>-->
+
+	<!-- MODULES -->
+
+	<!-- move module 
+	<node
+	  name="$(arg robot_name)_move_module"
+	  pkg="robot_move_module"
+	  type="robot_move_module"
+	  args="$(arg robot_name)"
+	  if="$(arg move_module)"
+	/>-->
+
+	<!-- telepresence module 
+	<node
+	  name="$(arg robot_name)_telepresence_module"
+	  pkg="robot_telepresence_module"
+	  type="robot_telepresence_module"
+	  args="$(arg robot_name)"
+	  if="$(arg telepresence_module)"
+	/> -->
+
+	<!-- bingo module 
+	<node
+	  name="$(arg robot_name)_bingo_module"
+	  pkg="robot_bingo_module"
+	  type="robot_bingo_module"
+	  args="$(arg robot_name)"
+	  if="$(arg bingo_module)"	
+	/>-->
+
+	<!-- remind module
+	<node
+	  name="$(arg robot_name)_remind_module"
+	  pkg="robot_remind_module"
+	  type="robot_remind_module"
+	  args="$(arg robot_name)"
+	  if="$(arg remind_module)"
+	/>-->
+
+	<!-- recharge module 
+	<node
+	  name="$(arg robot_name)_recharge_module"
+	  pkg="robot_recharge_module"
+	  type="robot_recharge_module"
+	  args="$(arg robot_name)"
+	  if="$(arg recharge_module)"
+	/>-->
+
+	<!-- find_persons
+	<node
+	  name="$(arg robot_name)_find_persons_module"
+	  pkg="robot_find_persons_module"
+	  type="robot_find_persons_module"
+	  args="$(arg robot_name) $(arg robot_id) $(find user_gui)/settings/"
+	  output="screen"
+	  if="$(arg find_persons_module)"
+	/> -->
+
+	<!-- identify_persons
+	<node
+	  name="$(arg robot_name)_identify_person_module"
+	  pkg="robot_identify_person_module"
+	  type="robot_identify_person_module"
+	  args="$(arg robot_name) $(arg robot_id)"
+	  output="screen"
+	  if="$(arg identify_persons_module)"
+	/> -->
+
+	<!-- interact 
+	<node
+	  name="$(arg robot_name)_interact_person_module"
+	  pkg="robot_interact_person_module"
+	  type="robot_interact_person_module"
+	  args="$(arg robot_name) $(arg robot_id)"
+	  output="screen"
+	  if="$(arg interact_person_module)"
+	/>-->
+
+</launch>
+
+

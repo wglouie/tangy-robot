@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSetRecord xmlns="http://tempuri.org/DataSetRecord.xsd">
+  <DataTableRecord>
+    <FileName>Tapoff_max.wav</FileName>
+    <StartTime>PT0S</StartTime>
+    <EndTime>PT4S</EndTime>
+    <Tag>54</Tag>
+    <ColorIndex>2</ColorIndex>
+  </DataTableRecord>
+</DataSetRecord>

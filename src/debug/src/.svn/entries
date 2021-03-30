@@ -1,0 +1,84 @@
+10
+
+dir
+0
+https://subversion.assembla.com/svn/asblab-ros-pkg/trunk/ros/tangy/src/tangy_move/src
+https://subversion.assembla.com/svn/asblab-ros-pkg
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+38ca4218-26d1-4222-9c23-96f05058baf6
+
+checkGoalDist.c
+file
+
+
+
+add
+
+move.c
+file
+
+
+
+add
+
+distantConvert.c
+file
+
+
+
+add
+
+checkGoalAngle.c
+file
+
+
+
+add
+
+angleConvert.c
+file
+
+
+
+add
+
+tangy_move.cpp
+file
+
+
+
+add
+
+tangy_move_main.cpp
+file
+
+
+
+add
+
+rotate.c
+file
+
+
+
+add
+

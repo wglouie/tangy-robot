@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<launch>
+
+	<!-- Server -->
+	<machine name="tangy-server" address="chris-XPS-8500.local" env-loader="~/tangy-robot/machine.sh" user="chris" default="false" />
+
+	<!-- H20 Robot -->
+	<machine name="tangy-robot" address="tangerine-tablet.local" env-loader="~/tangy-robot/machine.sh" user="tangerine" default="true" />
+
+	<!-- Geoff PC-->
+	<machine name="geoff-pc" address="geoff-OptiPlex-990.local" env-loader="~/tangy-robot/machine.sh" user="geoff" default="false" />
+
+	<!-- Extra PC -->
+	<machine name="extra-pc" address="asblab-Aspire-T3-100.local" env-loader="~/tangy-robot/machine.sh" user="asblab" default = "false" />
+
+</launch>

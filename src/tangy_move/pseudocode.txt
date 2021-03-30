@@ -1,0 +1,32 @@
+check_angle
+- get current angle of robot
+- check if angle is within a certain degree towards the goal
+
+rotate
+- tell robot to angle itself towards goal on the map
+- call check_angle 
+
+angle_convert
+- calculate current angle difference to goal using points (x0.y0) and (x1,y1)
+- convert angle from robot frame to map frame
+- call rotate
+
+face_point
+- tell robot to set itself as origin on the map
+- read the point on the map where the goal is located
+- call angle_convert
+
+check_distance
+-get current position of robot
+-check distance between robot and goal
+-return
+
+move
+-Tell the robot to move to a location on the map
+-Call check_distance until within distance of goal
+-call face_point
+
+distance_convert
+-Convert location from robot frame to map frame
+-Call move
+

@@ -1,0 +1,5 @@
+<launch>
+	<node pkg="battery_reader" name="batread" type="batread" output="screen">
+	</node>
+</launch>
+

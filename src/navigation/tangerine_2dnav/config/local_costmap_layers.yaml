@@ -1,0 +1,5 @@
+plugins: 
+  - {name: obstacles,        type: "costmap_2d::ObstacleLayer"}
+  - {name: inflation_local,        type: "costmap_2d::InflationLayer"}
+  - {name: check_goal_layer,       type: "new_layer_namespace::NewLayer"}
+# "costmap_2d::VoxelLayer" is for projecting 3 dimensional scanning to 2d

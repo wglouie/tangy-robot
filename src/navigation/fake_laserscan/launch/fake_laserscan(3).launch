@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<launch>
+
+<arg name="camera" default="bottom_camera" />
+<arg name="segment_service" default="segment_plane" />
+
+<node pkg="tf" type="static_transform_publisher" name="fake_laserscan" args="0 0 0 0 0 1.57079632679 /skeleton/openni_depth_frame /link 100" />
+
+<node pkg="tf" type="static_transform_publisher" name="link_to_kinect" args="0 0 0 1.57079632679 0 0 /link /bottom_camera_link 100" />
+
+<!-- openni launch -->
+<!--include file="$(find openni2_launch)/launch/openni2.launch"-->
+<include file="$(find openni_launch)/launch/openni.launch">
+  <arg name="device_id" default="#1" />
+  <arg name="camera" default="$(arg camera)" />
+  <arg name="respawn" default="true" />
+  <arg name="depth_registration" default="true" />
+</include>
+
+<!-- fakelaser_manager -->
+<node pkg="nodelet" type="nodelet" name="laserscan_nodelet_manager" output="screen" args="manager"/>
+<arg name="manager_id" value="laserscan_nodelet_manager"/>
+
+<!--arg name="manager_id" value="$(arg camera)_nodelet_manager" unless="$(arg separate_manager)"/-->
+
+
+
+<!-- process pointclouds -->
+<node pkg="nodelet" type="nodelet" name="cloud_preprocess" args="load fake_laserscan/CloudPreprocess $(arg manager_id)">
+  <param name="max_rate" value="3"/>
+  <param name="voxel_filter_size" value="0.01"/>
+  <param name="mean_k" value="30"/>
+  <param name="std_dev_mult" value="0.5"/>
+  <remap from="cloud_in" to="$(arg camera)/depth_registered/points"/>
+  <remap from="cloud_out" to="cloud_throttled"/>
+</node>
+
+<!-- fake laser scan -->
+<node pkg="nodelet" type="nodelet" name="cloud_to_scan" args="load fake_laserscan/CloudToScan $(arg manager_id)">
+  <!--param name="output_frame_id" value="/bottom_camera_rgb_optical_frame"/-->
+  <remap from="cloud" to="cloud_throttled"/>
+</node>
+
+<!-- segment pointclouds service -->
+<!--node pkg="nodelet" type="nodelet" name="cloud_segment" args="load fake_laserscan/CloudSegment $(arg manager_id)">
+  <param name="~service_name" value="$(arg segment_service)"/>
+  <param name="~inlier_requirement" value="0.4"/>
+</node-->
+
+
+</launch>

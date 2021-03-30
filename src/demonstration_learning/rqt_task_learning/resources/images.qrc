@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/detect_card_green.png</file>
+        <file>images/execute.png</file>
+        <file>images/execute_green.png</file>
+        <file>images/finish_game.png</file>
+        <file>images/finish_game_green.png</file>
+        <file>images/preview.png</file>
+        <file>images/preview_green.png</file>
+        <file>images/undo_action.png</file>
+        <file>images/detect_card.png</file>
+        <file>images/no_gestures.png</file>
+        <file>images/no_talking.png</file>
+        <file>images/gestures.png</file>
+        <file>images/talking.png</file>
+        <file>images/customize_action.png</file>
+        <file>images/record_icon.png</file>
+        <file>images/speech_gesture.png</file>
+        <file>images/gesture.png</file>
+        <file>images/speech.png</file>
+        <file>images/finish_customization.png</file>
+        <file>images/cancel.png</file>
+        <file>images/yes.png</file>
+        <file>images/no.png</file>
+        <file>images/preview_customization.png</file>
+        <file>images/redo_customization.png</file>
+        <file>images/save_customization.png</file>
+        <file>images/redetect_card.png</file>
+        <file>images/perform_action.png</file>
+    </qresource>
+</RCC>

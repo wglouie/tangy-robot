@@ -1,0 +1,5 @@
+#request
+string get_world_state
+---
+#response 
+world_state current_world_state

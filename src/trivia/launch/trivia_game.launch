@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+    <!--<node name="keylog" pkg="trivia" type="store_output.sh" />-->
+
+    <node pkg="trivia" type="trivia_game_server" name="trivia_game_server" output="screen" respawn="true"/>
+     		<param name="index" type="string" value="$(find trivia)/database/Index.txt" />
+    		<param name="General_Knowledge" type="string" value="$(find trivia)/database/General_Knowledge.txt" />
+    		<param name="Animals" type="string" value="$(find trivia)/database/Animals.txt" />
+		    <param name="Movies" type="string" value="$(find trivia)/database/Movies.txt" />
+		    <param name="History" type="string" value="$(find trivia)/database/History.txt" />
+		    <param name="Science" type="string" value="$(find trivia)/database/Science.txt" />
+        <param name="Food" type="string" value="$(find trivia)/database/Food.txt" />
+    		<param name="jokeFile" type="string" value="$(find trivia)/talking/jokes.txt" />
+		    <param name="introFile" type="string" value="$(find trivia)/talking/intro.txt" />
+    		<param name="outroFile" type="string" value="$(find trivia)/talking/outro.txt" />
+    		<param name="helpTextFile" type="string" value="$(find trivia)/talking/help_text.txt" />
+    		<param name="keylog0" type="string" value="$(find trivia)/scripts/keyboard0.txt" />
+    		<param name="keylog1" type="string" value="$(find trivia)/scripts/keyboard1.txt" />
+    		<param name="evID0" type="string" value="/dev/input/event14" />
+    		<param name="evID1" type="string" value="/dev/input/event11" />
+</launch>

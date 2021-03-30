@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<users>
+	<user id="user1">
+		<attribute name="name" type="string" value="Rafael"/>
+		<attribute name="at" type="Location" value="l1" pddl="true"/>
+		<attribute name="available" type="bool" value="true" pddl="true"/>
+		<attribute name="notinteracting" type="bool" value="true" pddl="true"/>		
+	</user>
+	<user id="user2">
+		<attribute name="name" type="string" value="Rafael"/>
+		<attribute name="at" type="Location" value="l2" pddl="true"/>
+		<attribute name="available" type="bool" value="true" pddl="true"/>
+		<attribute name="notinteracting" type="bool" value="true" pddl="true"/>		
+	</user>
+	<user id="user3">
+		<attribute name="name" type="string" value="Geoff"/>
+		<attribute name="at" type="Location" value="l3" pddl="true"/>
+		<attribute name="available" type="bool" value="true" pddl="true"/>
+		<attribute name="notinteracting" type="bool" value="true" pddl="true"/>		
+	</user>
+</users>

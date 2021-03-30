@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find action_executor)/launch/action_executor.launch"/>
+		<include file="$(find world_state_identifier)/launch/world_state_identifier_remote.launch"/>
+		<node pkg="robot_inverse_kinematics" name="kinect_ik" type="kinect_ik.py" output="screen" respawn="true"/>
+    <node pkg="activity_learner" name="random_forest_learner" type="random_forest_learner.py" output="screen" respawn="true"/>
+    <node pkg="collision_avoider" type="collision_avoider" name="collision_avoider" output="screen" respawn="true"/>
+</launch>

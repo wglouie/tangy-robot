@@ -1,0 +1,37 @@
+
+roslaunch tangerine_2dnav my_robot_configuration.launch
+
+roslaunch tangerine_2dnav move_base.launch
+
+roslaunch users_markers users_markers.launch
+
+roslaunch face_detection FaceDetectionServerAXIS.launch
+
+roslaunch user_tracking user_tracking_server.launch
+
+roslaunch robot_gui robot_gui.launch 
+
+roslaunch telepresence_activity telepresence_activity_server.launch 
+
+roslaunch telepresence_activity telepresence_activity_client.launch 
+
+
+FaceDetection error
+OpenCV Error: Insufficient memory (Failed to allocate 307204 bytes) in OutOfMemoryError, file /home/tangerine/Downloads/OpenCV-2.4.0/modules/core/src/alloc.cpp, line 52
+terminate called after throwing an instance of 'cv::Exception'
+  what():  /home/tangerine/Downloads/OpenCV-2.4.0/modules/core/src/alloc.cpp:52: error: (-4) Failed to allocate 307204 bytes in function OutOfMemoryError
+
+[face_detection/FaceDetectionServer-3] process has died [pid 13283, exit code -6, cmd /home/tangerine/ros/tangy/devel/lib/face_detection/FaceDetectionServer in:=/Right_axis_camera/image_raw __name:=FaceDetectionServer __log:=/home/tangerine/.ros/log/124e04cc-8069-11e3-b14a-f0def16157fd/face_detection-FaceDetectionServer-3.log].
+log file: /home/tangerine/.ros/log/124e04cc-8069-11e3-b14a-f0def16157fd/face_detection-FaceDetectionServer-3*.log
+
+
+
+
+User_tracking_server error
+[ERROR] [1390073817.291963374]: Trying to cancelGoal() when no goal is running. You are incorrectly using SimpleActionClient
+[ERROR] [1390073817.292000154]: Trying to cancel() on an inactive ClientGoalHandle. You are incorrectly using a ClientGoalHandle
+
+
+
+
+

@@ -1,0 +1,6 @@
+#request
+demonstration_learning_msgs/world_state current_world_state
+---
+#response
+string[] class_list
+float32[] probabilities

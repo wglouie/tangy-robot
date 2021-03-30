@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<locations>
+	<location id="l0">
+		<attribute name="coordinates" type="string" value="0.550,0.000,0.000,0.000,0.000,-0.707,0.707"/>
+		<attribute name="connected" type="Location" value="l1" pddl="true"/> 
+	</location>
+	<location id="l1">
+		<attribute name="coordinates" type="string" value="3.786,1.590,0.000,0.000,0.000,-0.028,1.000"/>
+		<attribute name="connected" type="Location" value="l0" pddl="true"/>
+		<attribute name="connected" type="Location" value="l2" pddl="true"/> 
+	</location>
+	<location id="l2">
+		<attribute name="coordinates" type="string" value="4.456,3.811,0.000,0.000,0.000,-0.006,1.000"/>
+		<attribute name="connected" type="Location" value="l1" pddl="true"/>
+		<attribute name="connected" type="Location" value="l3" pddl="true"/> 
+	</location>
+	<location id="l3">
+		<attribute name="coordinates" type="string" value="5.456,3.811,0.000,0.000,0.000,-0.006,1.000"/>
+		<attribute name="connected" type="Location" value="l2" pddl="true"/>
+	</location>
+</locations>

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/asblab-ros-pkg/!svn/ver/1654/trunk/ros/tangy/src/navigation/arm_planning/tangy_description/controllers
+END
+hardware_controllers.yaml~
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/asblab-ros-pkg/!svn/ver/1654/trunk/ros/tangy/src/navigation/arm_planning/tangy_description/controllers/hardware_controllers.yaml~
+END
+eff_controllers.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/asblab-ros-pkg/!svn/ver/1654/trunk/ros/tangy/src/navigation/arm_planning/tangy_description/controllers/eff_controllers.yaml
+END
+pos_controllers.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/asblab-ros-pkg/!svn/ver/1654/trunk/ros/tangy/src/navigation/arm_planning/tangy_description/controllers/pos_controllers.yaml
+END

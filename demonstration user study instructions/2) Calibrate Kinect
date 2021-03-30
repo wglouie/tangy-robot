@@ -1,0 +1,12 @@
+1) On robot computer
+
+$ roslaunch bingo_game calibrate_kinect.launch 
+
+2) On sensor computer 
+
+$ roslaunch help_indicators calibrate_kinect.launch
+$ rosrun help_indicators kinect_calibration
+
+3) Copy output numbers into /home/tangy/tangy-robot/src/demonstration_learning/world_state_identifier/launch/help.launch file. Replace the following values:
+
+	<node pkg="tf" type="static_transform_publisher" name="BingoGameServerRemote_1" args="-1.60096 -1.19054 1.52137 0.136696 0.111298 0.194413 0.964951 map remote_kinect_translation1 100" 		respawn="true"/>

@@ -1,0 +1,23 @@
+Speech:Hi!
+Text:Hi!
+
+Speech:My name is Tannjee!
+Text:My name is Tangy.
+
+Speech:I am so excited to play bingo with you today!
+Text:My name is Tangy.
+
+Speech: It is one of my favorite games.
+Text: My name is Tangy.
+
+Speech:I will call a series of numbers, and also display them on my screen. If your card has the same number I called, please mark the number with a red marker
+Text:How to play Bingo
+
+Speech:After six numbers have been called, I will check your card to see how you are doing. 
+Text:How to play Bingo
+
+Speech:Good Luck! 
+Text:Good Luck! 
+
+Speech:Let's play Bingo!
+Text:Let's play Bingo!

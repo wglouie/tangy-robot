@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+    <name>demonstration_learning_msgs</name>
+    <version>0.0.0</version>
+    <description>
+    Messages used for demonstration learning 
+    </description>
+    <maintainer email="Geoffrey.Louie@gmail.com">Geoffrey Louie</maintainer>
+    <license>GPLv2</license>
+
+    <buildtool_depend>catkin</buildtool_depend>
+
+    <depend>std_msgs</depend>
+    <depend>help_indicators</depend>
+    <depend>message_generation</depend>
+    <depend>geometry_msgs</depend>
+
+    <export>
+    </export>
+</package>

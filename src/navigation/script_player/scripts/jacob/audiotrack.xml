@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSetRecord xmlns="http://tempuri.org/DataSetRecord.xsd">
+  <DataTableRecord>
+    <FileName>jacob.wav</FileName>
+    <StartTime>10</StartTime>
+    <EndTime>PT1S</EndTime>
+    <Tag>0</Tag>
+    <ColorIndex>0</ColorIndex>
+  </DataTableRecord>
+</DataSetRecord>

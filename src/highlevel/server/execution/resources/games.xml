@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<games>
+	<bingo id="g1">
+		<attribute name="name" type="string" value="bingogame1"/>
+		<attribute name="location" type="string" value="l0"/>
+		<attribute name="gamelocation" type="Location" value="l0" pddl="true"/> 
+		<attribute name="gameduration" type="int" value="50" pddl="true"/>
+		<attribute name="mustbedone_game" type="bool" value="true" pddl="true"/>
+		<attribute name="not_done_game" type="bool" value="true" pddl="true"/>
+		<attribute name="need_reminder" type="User" value="user1" pddl="true"/>
+		<attribute name="need_reminder" type="User" value="user2" pddl="true"/>
+		<attribute name="need_reminder" type="User" value="user3" pddl="true"/>
+		<attribute name="reminder_duration" type="int" value="10" pddl="true"/>
+		<attribute name="participant" type="User" value="user1" pddl="true"/>
+		<attribute name="participant" type="User" value="user2" pddl="true"/>
+		<attribute name="participant" type="User" value="user3" pddl="true"/>
+	</bingo>
+
+	<bingo id="g2">
+		<attribute name="name" type="string" value="bingogame2"/>
+		<attribute name="location" type="string" value="l0"/>
+		<attribute name="gamelocation" type="Location" value="l0" pddl="true"/> 
+		<attribute name="gameduration" type="int" value="50" pddl="true"/>
+		<attribute name="mustbedone_game" type="bool" value="true" pddl="true"/>
+		<attribute name="not_done_game" type="bool" value="true" pddl="true"/>
+		<attribute name="need_reminder" type="User" value="user1" pddl="true"/>
+		<attribute name="need_reminder" type="User" value="user2" pddl="true"/>
+		<attribute name="reminder_duration" type="int" value="10" pddl="true"/>
+		<attribute name="participant" type="User" value="user1" pddl="true"/>
+		<attribute name="participant" type="User" value="user2" pddl="true"/>
+	</bingo>
+</games>

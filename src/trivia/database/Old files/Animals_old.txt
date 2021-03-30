@@ -1,0 +1,350 @@
+Q:What type of animal is a seahorse?
+A1:Crustacean
+A2:Arachnid
+A3:Fish
+CA:A3
+H:This type of animal is defined by a skeleton formed from bone instead of cartilage.
+
+Q:Which of the following dogs is the smallest?
+A1:Dachshund
+A2:Poodle
+A3:Chihuahua
+CA:A3
+H:This dog weighs less than six pounds.
+
+Q:What color are zebras?
+A1:White skin with black stripes.
+A2:Black skin with white stripes.
+A3:None of the above.
+CA:A2
+H:The zebra has the same skin color to the polar bear.
+
+Q:What existing bird has the largest wingspan?
+A1:Pelican
+A2:Swan
+A3:Albatross
+CA:A3
+H:This bird is indigenous to the region around New Zealand.
+
+Q:What is the biggest animal that has ever lived?
+A1:Blue whale
+A2:African elephant
+A3:T-Rex
+CA:A1
+H:This animal has an average weight of 100 to 150 tons.
+
+Q:What pets do more families own?
+A1:Birds
+A2:Cats
+A3:Dogs
+CA:A3
+H:More than one third of American households owned this pet.
+
+Q:What animal lives the longest?
+A1:Clam
+A2:Sea urchin
+A3:Tortoise
+CA:A1
+H:One species of this animal can live up to 400 years.
+
+Q:What are female elephants called?
+A1:Mares
+A2:Sows
+A3:Cows
+CA:A3
+H:Male elephants are called bulls, while the babies are called calves.
+
+Q:Which of the following animals sleep standing up?
+A1:Elephants
+A2:Flamingos
+A3:Camels
+CA:A2
+H:The salt flats that these animals live on are too caustic to sit down in.
+
+Q:What is the fastest water animal?
+A1:Porpoise
+A2:Sailfish
+A3:Shark
+CA:A2
+H:This animal reaches speeds up to 68 miles per hour.
+
+Q: How many toes does a rhinoceros have on each foot?
+A1:Four
+A2:Two
+A3:Three
+CA:A3
+H:The rhinoceros is one of the few ungulates to have this number of toes.
+
+Q:What do you call a group of dolphins?
+A1:Fleet
+A2:Pod
+A3:Shoal
+CA:A2
+H:A group of whales are called this as well.
+
+Q:Which of these three animal has the longest lifespan?
+A1:Elephant
+A2:Locust
+A3:Giant tortoise
+CA:A3
+H:This animal can live up to 170 years old.
+
+Q:Which is the only mammal capable of true flight?
+A1:Hummingbird
+A2:Bat
+A3:Flying squirrel
+CA:A2
+H:This mammal primarily sleeps upside down.
+
+Q:Which is the fastest flying bird in the world?
+A1:Harpy Eagle
+A2:Peregrine Falcon
+A3:Spine-Tailed Swift
+CA:A2
+H:This animal has also reached the fastest measured speed on the Earth.
+
+Q:A newborn kangaroo is about the size of a...
+A1:Lima bean
+A2:Plum
+A3:Grapefruit
+CA:A1
+H:The newborn kangaroo will usually stay in its mother's pouch for nine months before leaving for small periods of time.
+
+Q:What is the gestation period of a blue whale?
+A1:4-6 months
+A2:10-12 months
+A3:2 years
+CA:A2
+H:The blue whale has a gestation period longer than a human's, but shorter than an elephant's.
+
+Q:Which is the largest of the great apes?
+A1:Orangutan
+A2:Gorilla
+A3:Bonobo
+CA:A2
+H:This great ape can reach a weight up to 400 lbs.
+
+Q:Which is the world's most poisonous spider?
+A1:Brown recluse
+A2:Daddy long-legs
+A3:Brazilian Wandering Spiders
+CA:A3
+H:This spider are found in forests throughout South America.
+
+Q:How many times, per second, can a hummingbird flap its wings?
+A1:40
+A2:80
+A3:160
+CA:A2
+H:During courtship, the ruby-throated hummingbird can speed up its wingbeat rate to 200 beats per second.
+
+Q:Which animal has the highest blood pressure?
+A1:Elephant
+A2:Blue whale
+A3:Giraffe
+CA:A3
+H:This animal has a high blood pressure due to the large distance between its heart and its head.
+
+Q:What colour are flamingos when they are born?
+A1:White
+A2:Blue
+A3:Grey
+CA:A3
+H:Flamingo chicks are the same color as penguin chicks.
+
+Q:What is an infant seal called?
+A1:Pup
+A2:Cub
+A3:Calf
+CA:A1
+H:Infant dogs are also called this.
+
+Q:How many knees does an elephant have?
+A1:2
+A2:4
+A3:8
+CA:A2
+H:An elephant has four legs.
+
+Q:What is the largest rodent in North America?
+A1:Kangaroo rat
+A2:Beaver
+A3:Ground hog
+CA:A2
+H:This animal is the second-largest rodent in the world behind the capybara.
+
+Q:In which of the following American states could you see a long-eared chipmunk?
+A1:California
+A2:Alaska
+A3:Nevada
+CA:A3
+H:This state's name is Spanish for snow covered.
+
+Q:What is the proper term for a baby raccoon?
+A1:A kit
+A2:Whelp
+A3:Joey
+CA:A1
+H:The young of beavers, foxes, and rabbits are also called this.
+
+Q:Which animal that was wiped out in Alaska in the early 1900s was reintroduced in 1935?
+A1:Muskox
+A2:Brown Bear
+A3:Badger
+CA:A1
+H:This animal is noted for its thick coat and its strong odor.
+
+Q:What kind of animal lives mainly on bamboo shoots?
+A1:Elk
+A2:Panda bear
+A3:Kangaroo
+CA:A2
+H:Contrary to its diet, this animal has the digestive system of a carnivore.
+
+Q:What is a female elephant called?
+A1:Ewe
+A2:Cow
+A3:Mare
+CA:A2
+H:This term is also used for female alligators, camels, and moose.
+
+Q:Which of these snakes is not poisonous?
+A1:Mud snake
+A2:Rattlesnake
+A3:Cobra
+CA:A1
+H:The snake is mostly aquatic and prey primarily on amphibians.
+
+Q:Which of these animals is not part of the "dog" family?
+A1:Hyena
+A2:Possum
+A3:Jackal
+CA:A2
+H:This animal is instead in the marsupial family, with koala bears and kangaroos.
+
+Q:What kind of animal lives in a pride?
+A1:Wolf
+A2:Water buffalo
+A3:Lion
+CA:A3
+H:These groups are formed with a majority of females, and only two to four males.
+
+Q:What do carnivores eat?
+A1:Meat
+A2:Fruit
+A3:Insects
+CA:A1
+H:Animals which eat plants are called herbivores.
+
+Q:What kind of creature produces black ink?
+A1:Porcupine
+A2:Vampire bat
+A3:Squid
+CA:A3
+H:This creature uses its black ink to escape predators.
+
+Q:What is a rhinoceros' horn most similar to?
+A1:Bone
+A2:Hair
+A3:Cartilage
+CA:A2
+H:Other horned mammals typically have this material as an outer shell for their horns, with a bony core in the center.
+
+Q:What does a tadpole turn into?
+A1:Perch
+A2:Turtle
+A3:Frog
+CA:A3
+H:The tadpole develops lungs during its metamorphosis.
+
+Q:How fast can a dragonfly fly?
+A1:25 mph
+A2:45 mph
+A3:10 mph
+CA:A2
+H:Dragonflies use their quick flight to hunt a wide variety of insects.
+
+Q:How long do hippos live?
+A1:45 years
+A2:15 years
+A3:100 years
+CA:A1
+H:The hippo reaches maturity around at five to seven years.
+
+Q:What do you call a group of tigers?
+A1:A pod
+A2:A coven
+A3:An ambush
+CA:A3
+H:Adult tigers generally lead solitary lives in their own territory.
+
+Q:How many kinds of bats are there?
+A1:About 50
+A2:About 400
+A3:Over 900
+CA:A3
+H:Bats represent about 20 percent of all mammal species worldwide.
+
+Q:What kind of creature would attack a blue whale?
+A1:Polar bears
+A2:Killer whale
+A3:Sea turtles
+CA:A2
+H:These animals are the only natural predator of the blue whale.
+
+Q:Leatherheads and loggerheads are what kind of animal?
+A1:Frog
+A2:Salmon
+A3:Sea turtle
+CA:A3
+H:This animal is threatened by untended fishing gear, such as fishing nets.
+
+Q:What animal's name means, "Twig Eater"?
+A1:Beaver
+A2:Moose
+A3:Woodpecker
+CA:A2
+H:This animal's primary diet consists of branches, flowering plants and aquatic vegetation.
+
+Q:This fish makes its own 'sleeping bag' each night.
+A1:Parrot fish
+A2:Clown-fish
+A3:Seahorse
+CA:A1
+H:This fish spits out mucus from its mouth, which then forms a protective cocoon around its body.
+
+Q:A mule is the result of crossing what two animals?
+A1:Donkey and goat
+A2:Cattle and horse
+A3:Donkey and horse
+CA:A3
+H:These two parents can also be called jacks and mares.
+
+Q:Which of these is an invertebrate?
+A1:Lobster
+A2:Swordfish
+A3:Possum
+CA:A1
+H:Vertebrates have a column of bone with a tube of nervous tissue running through the length of the animal.
+
+Q:The only land animal to have four leg joints that bend in the same direction
+A1:Horse
+A2:Elephant
+A3:Frog
+CA:A2
+H:This animal can move both forwards and backwards, but cannot trot, jump or gallop.
+
+Q:How many eyes does a tarantula have?
+A1:2
+A2:6
+A3:8
+CA:A3
+H:Despite having so many eyes, the tarantla uses touch as its primary sense for hunting.
+
+Q:A number of geese grouped together is called a?
+A1:Flock
+A2:Gaggle
+A3:Formation
+CA:A2
+H:This term is also used in aviation for a large, loosely organized formation of aircraft.
+

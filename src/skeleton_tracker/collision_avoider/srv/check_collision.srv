@@ -1,0 +1,7 @@
+#request
+float32[4] left_arm_angles
+float32[4] right_arm_angles
+---
+#response 
+bool is_there_collision_left
+bool is_there_collision_right

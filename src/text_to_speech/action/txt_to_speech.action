@@ -1,0 +1,28 @@
+# the sentence to speak
+string speech
+
+# the genders (MALE, FEMALE)
+int8 MALE = 0
+int8 FEMALE = 1
+
+# the gender of the voice which speaks
+int8 gender
+
+# language: en, fr, de, it, uk, pt...
+string language
+
+# webbased or not
+bool webbased
+
+---
+
+# success or not
+bool success
+
+# error if not successfull
+string error
+
+---
+
+# error if not successfull
+float32 speech_length

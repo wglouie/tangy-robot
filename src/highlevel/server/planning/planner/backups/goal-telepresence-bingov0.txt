@@ -1,0 +1,12 @@
+     (and        
+
+        (done s1)
+        (done s2)
+        ;;(done s3)
+        ;;(done s4)
+        ;;(done s5)
+	;;(at r1 l1)
+	;;(at r1 l0)
+
+	(done_game g1)
+      )

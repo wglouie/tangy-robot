@@ -1,0 +1,5 @@
+<library path="lib/libnew_layer">
+  <class type="new_layer_namespace::NewLayer" base_class_type="costmap_2d::Layer">
+    <description>Layer that finds an accessible and safe spot for our goal and changes it to that.</description>
+  </class>
+</library>

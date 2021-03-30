@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<launch>
+	
+	<!--For horizontal scan-->
+	<!--<node pkg="tf" type="static_transform_publisher" name="base_to_laser_broadcaster" args="0.093 0 0.1 0 0 0 /base_link /base_link_robot 100"/>
+	<node pkg="tf" type="static_transform_publisher" name="base_laser_to_lower_torso" args="0.13 0 0 0 0 0 /lower_torso /base_laser 100" />-->
+
+<!--
+	<node pkg="tf" type="static_transform_publisher" name="base_laser_to_lower_torso" args="0.13 0 0 0 0 0 lower_torso base_laser 100" />
+-->
+        <node pkg="tf" type="static_transform_publisher" name="base_to_laser_broadcaster1" args="-0.12 0 0 0 0 0 base_link base_link_robot1 100"/>
+
+        <node pkg="tf" type="static_transform_publisher" name="base_to_laser_broadcaster" args="0 0 0 1.57075 0 0 base_link_robot1 base_link_robot 100"/>
+
+        <node pkg="tf" type="static_transform_publisher" name="base_laser_to_lower_torso" args="-0.075 0 0 0 0 0 base_link base_laser 100" />
+	<!--
+	<node pkg="tf" type="static_transform_publisher" name="tangy_map_odom_tf" args="0 0 0 0 0 0 /map odom 100" /> -->
+
+
+	<!--end of horizontal scan-->
+	
+	<!--For tilting scan-->
+	<!-- Transform Configuration - Base -->
+	<!--<node pkg="tf" type="static_transform_publisher" name="base_to_laser_broadcaster" args="0.093 0 0.1 0 0 0 /base_link /base_link_robot 100" />
+	
+	<node pkg="tf" type="static_transform_publisher" name="static_laser_to_lower_torso" args="0.13 0 0 -0.05 0 0 /lower_torso /static_laser 100" />
+-->
+
+	<!--end of tilting scan-->
+	
+
+
+
+
+
+
+	<!-- <node pkg="tf" type="static_transform_publisher" name="base_to_laser_broadcaster" args="0 0 0.4 0 0 0 /base_link /base_laser 100" />  -->
+
+
+
+	<!-- Transform Configuration - Laser -->
+	<!--node pkg="tf" type="static_transform_publisher" name="torso_to_laser_broadcaster" args="0.13 0 0 0 0 0 /lower_torso /base_laser 100" /-->
+	<!--include file="$(find laser_dynamic_broadcaster)/launch/laser_dynamic_broadcaster.launch" /-->
+  
+</launch>

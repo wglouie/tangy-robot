@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<launch>
+<!--
+ <node pkg="tf" type="static_transform_publisher" name="BingoGameServerRemote_1" args="0.22 -1.08 0 0 0 0 map remote_kinect_translation 100" 		respawn="true"/>
+ <node pkg="tf" type="static_transform_publisher" name="BingoGameServerRemote_1" args="-1.0963 -0.0937432 2.08863 0.0062482 0.34492 -0.00144084 0.93861 map remote_kinect_translation1 100" 		respawn="true"/>
+
+ <node pkg="tf" type="static_transform_publisher" name="BingoGameServerRemote" args="0 -0.0 0 0 0 0 1 remote_kinect_translation1 remote_kinect_translation 100" 		respawn="true"/>
+
+
+
+  <node pkg="tf" type="static_transform_publisher" name="BingoGameServerRemote_2" args="0 0 0 0 -1.57 3.14 map remote_kinect 100" 		respawn="true"/>-->
+<!--
+  <node pkg="tf" type="static_transform_publisher" name="BingoGameServerRemote_2" args="0 0 0 0 0 -1.570796  remote_kinect_translation remote_kinect_rotation1 100" 		respawn="true"/>
+  
+  <node pkg="tf" type="static_transform_publisher" name="BingoGameServerRemote_3" args="0 0 0 0 1.570796 0  remote_kinect_rotation1 remote_kinect_rotation2 100" 		respawn="true"/>
+  
+  <node pkg="tf" type="static_transform_publisher" name="BingoGameServerRemote_4" args="0 0 0 0 0.368695903 0 remote_kinect_rotation2 remote_kinect 100" 		respawn="true"/>
+  
+  <node pkg="tf" type="static_transform_publisher" name="BingoGameServerRemote_4" args="0 0 0 0 0 0 remote_kinect_rotation2 remote_kinect 100" 		respawn="true"/>
+  
+  
+  <node pkg="tf" type="static_transform_publisher" name="BingoGameServerRemote_5" args="0 0 0 0 0 0  remote_kinect bottom_camera_link 100" 		respawn="true"/>
+-->
+ <rosparam file="$(find tangy_description)/controllers/eff_controllers.yaml" command="load"/>
+
+    <include file="$(find tangerine_2dnav)/launch/my_robot_configuration.launch"/>
+    
+    <include file="$(find tangerine_2dnav)/launch/move_base.launch" />
+
+    <node name="arm_player" pkg="drrobot_h20_arm_player" type="arm_player_eff" respawn="true"/>
+    
+    <node name="ArmMovementServer" pkg="drrobot_h20_arm_player" type="ArmMovement" respawn="true"/>
+    
+    <include file="$(find moveit_tangy)/launch/move_group.launch">
+      <arg name="publish_monitored_planning_scene" value="true" />
+    </include>
+
+
+    <!-- tts -->
+    <node pkg="text_to_speech" name="text_to_speech" type="text_to_speech" output="screen" />
+
+     <!-- robot Gui Server -->
+    <include file="$(find robot_gui)/launch/robot_gui.launch"/>
+
+    <include file="$(find face_detection)/launch/FaceDetectionServerAXIS.launch"/>
+    
+    <node pkg="music_player" type="music_player" name="music_player" output="screen" respawn="true"/>
+     		<param name="musicFile1" type="string" value="$(find music_player)/music/file1.mp3" />
+     		<param name="musicFile2" type="string" value="$(find music_player)/music/file2.mp3" />
+     		<param name="musicFile3" type="string" value="$(find music_player)/music/file3.mp3" />
+     		<param name="musicFile4" type="string" value="$(find music_player)/music/file4.mp3" />
+     		<param name="musicFile5" type="string" value="$(find music_player)/music/file5.mp3" />
+     		<param name="musicFile6" type="string" value="$(find music_player)/music/file6.mp3" />
+     		<param name="celebrationMusic" type="string" value="$(find music_player)/music/celebrate.mp3" />
+        <param name="beepSound" type="string" value="$(find music_player)/music/beep.mp3" />
+
+    <!-- TODO Migrate face tracker from bingo game to this package -->
+    <node pkg="tangy_bringup" type="eye_gaze" name="eye_gaze" respawn="true"/>
+
+</launch>

@@ -1,0 +1,16 @@
+#Called Bingo Numbers 
+#Send zero if you are cancelling the goal or send all the called numbers
+int32[] calledBingoNumbers 
+---
+#Bingo Card State
+# Card marked incorrectly = -1
+# No bingo detected = 0
+# Bingo detected = 1
+int32 bingoCardState
+int32[] missingNumbers
+int32[] wrongNumbers
+---
+#Detection state
+# Bingo card not detected = 0
+# Bingo card detected = 1
+int32 cardDetected

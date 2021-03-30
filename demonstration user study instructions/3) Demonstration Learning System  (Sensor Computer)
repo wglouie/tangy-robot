@@ -1,0 +1,7 @@
+On sensor computer run the following:
+
+$ roslaunch world_state_identifier help.launch 
+$ rostopic pub /help_indicators_go std_msgs/String "data: ''" 
+
+
+

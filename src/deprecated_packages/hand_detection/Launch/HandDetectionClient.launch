@@ -1,0 +1,10 @@
+<launch>
+	<node ns="hand_detection" pkg="hand_detection" type="HandDetectionClient" 		name="HandDetectionClient" output="screen">
+	</node>
+</launch>
+
+
+
+
+
+

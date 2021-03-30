@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<launch>
+	
+	<!-- -->
+	<!-- tangerine_3dnav - 3d navigation -->
+<!--	<include file="$(find fake_laserscan)/launch/fake_laserscan.launch" />-->	
+
+	<!-- tangerine_2dnav - my_robot_configuration -->
+	<include file="$(find tangerine_2dnav)/launch/my_robot_configuration.launch" />
+
+	<!-- tangerine_2dnav - move_base -->
+	<include file="$(find tangerine_2dnav)/launch/move_base.launch" />	
+	
+	<!-- face_detection - FaceDetectionServerAXIS -->
+	<include file="$(find face_detection)/launch/FaceDetectionServerAXIS.launch" />
+
+	<!-- users_markers - users_markers -->
+	<include file="$(find users_markers)/launch/users_markers.launch" />
+
+	<!-- user_tracking - UserTrackingServer -->	
+	<include file="$(find user_tracking)/launch/user_tracking_server.launch" />
+
+	<!-- GUI -->
+	<include file="$(find robot_gui)/launch/robot_gui.launch" />
+		
+	<!-- Telepresence -->
+	<include file="$(find telepresence_activity)/launch/telepresence_activity_server.launch" />
+
+	<!--	
+	<node pkg="request_manager" name="request_manager" type="request_manager_server" output="screen"/>
+	<param name="path" value="$(find request_manager)" />
+	-->
+
+</launch>
+

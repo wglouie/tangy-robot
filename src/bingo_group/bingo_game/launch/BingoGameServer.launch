@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<launch>
+
+    <rosparam file="$(find tangy_description)/controllers/eff_controllers.yaml" command="load"/>
+
+    <include file="$(find tangerine_2dnav)/launch/my_robot_configuration.launch"/>
+    
+    <include file="$(find tangerine_2dnav)/launch/move_base.launch" />
+
+    <!--<include file="$(find openni2_launch)/launch/openni2.launch">
+      <arg name="camera" value="bottom_camera"/>
+      <arg name="device_id" value="#1"/>
+    </include>-->
+   
+    <node name="arm_player" pkg="drrobot_h20_arm_player" type="arm_player_eff" respawn="true"/>
+    
+    <node name="ArmMovementServer" pkg="drrobot_h20_arm_player" type="ArmMovement" respawn="true"/>
+    
+    <include file="$(find moveit_tangy)/launch/move_group.launch">
+      <arg name="publish_monitored_planning_scene" value="true" />
+    </include>
+
+    <include file="$(find bingo_search)/launch/bingo_search.launch"/>
+
+     <!-- robot Gui Server -->
+    <include file="$(find robot_gui)/launch/robot_gui.launch"/>
+    
+    <node pkg="bingo_game" type="bingo_game" name="bingo_game" output="screen" respawn="true"/>
+     		<param name="resultFile" type="string" value="$(find bingo_game)/savedState/completedNumbers.txt" />
+    		<param name="bingoNumbers" type="string" value="$(find bingo_game)/savedState/bingoNumbers.txt" />
+    		<param name="introFile" type="string" value="$(find bingo_game)/talking/intro.txt" />
+		<param name="demoIntroFile" type="string" value="$(find bingo_game)/talking/demo_intro.txt" />
+    		<param name="jokeFile" type="string" value="$(find bingo_game)/talking/jokes.txt" />
+    		<param name="outroFile" type="string" value="$(find bingo_game)/talking/outro.txt" />
+    		<param name="smallTalkFile" type="string" value="$(find bingo_game)/talking/smallTalk.txt" />
+    		<param name="progressFile" type="string" value="$(find bingo_game)/talking/progress.txt" />
+    		<param name="helpTextFile" type="string" value="$(find bingo_game)/talking/help_text.txt" />
+    		
+    <node name="help_light" pkg="help_indicators" type="help_light" respawn="true"/>
+		
+    <include file="$(find face_detection)/launch/FaceDetectionServerAXIS.launch"/>
+
+</launch>

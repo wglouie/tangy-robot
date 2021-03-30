@@ -1,0 +1,8 @@
+# Determines when to begin user tracking
+# goal message
+string userName			# sends the name to be tracked
+---
+# result message
+---
+# feedback message
+int32 inRange			# sends 1 if user is in range of robot

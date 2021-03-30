@@ -1,0 +1,10 @@
+# goal message
+geometry_msgs/Pose pose			# List of script files to play
+string group_name
+---
+# result message
+float32[16] result				
+---
+# feedback message
+int32[16] feedback 
+

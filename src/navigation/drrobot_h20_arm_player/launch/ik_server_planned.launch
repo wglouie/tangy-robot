@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find tangerine_2dnav)/launch/new_model.launch" />
+  
+  <node pkg="drrobot_h20_arm_player" name="robot_tf_publisher" type="DrRobot_Arm_Broadcaster" />
+
+  <include file="$(find drrobot_h20_arm_player)/launch/upload_robot.launch"/>
+  
+  <include file="$(find arm_navigation)/launch/planning_context.launch">
+    <arg name="load_robot_description" value="true"/>
+  </include>
+  
+  <node pkg="tf" type="static_transform_publisher" name="virtual_joint_broadcaster_0" args="0 0 0.4 0 0 0 world base_laser 100" />
+  
+  <include file="$(find arm_navigation)/launch/move_group.launch">
+    <arg name="publish_monitored_planning_scene" value="true" />
+  </include>
+
+  <node name="kinematic_model_tutorial" pkg="drrobot_h20_arm_player" type="ik_server_planned" respawn="false" output="screen">
+    <rosparam command="load" file="$(find arm_navigation)/config/kinematics.yaml"/>
+  </node>
+  
+  <node name="rviz" pkg="rviz" type="rviz" respawn="false" />
+</launch>

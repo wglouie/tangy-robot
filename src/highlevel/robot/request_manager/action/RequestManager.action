@@ -1,0 +1,27 @@
+# Request for Robot Request Manager
+int32 newrequest
+string command
+string[] info
+string[] coordinates
+
+---
+# result message
+int32 statusCode                # the status code of the process (0: failed, 1: succeeded) 
+                                # (e.g., execution failed, timeout, etc)
+
+
+---
+# feedback message
+int32 status			# activity status (-1: unknown, 0: started, 1: in progress, 2: succeeded, 3: not succeeded)
+int32 internal_state		# state of the agent
+bool ready
+string action			
+string command
+float32 batterylevel
+float32 batterycapacity
+float64 x_position
+float64 y_position
+
+
+
+

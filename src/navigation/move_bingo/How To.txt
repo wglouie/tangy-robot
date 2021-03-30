@@ -1,0 +1,30 @@
+
+HowTo Bingo Navigation
+
+1) Run drrobot player (odom and cmd vel), tf and sensor in a new terminal
+$ roslaunch tangerine_2dnav my_robot_configuration.launch 
+
+2) Run move base (configurations, map, acml, move base) in a new terminal
+$  roslaunch tangerine_2dnav move_base.launch 
+
+3) Run RVIZ in a new terminal
+$ rviz
+
+4) Run move_bingo node
+$ rosrun move_bingo move_bingo
+
+
+
+HowTo Detect Bingo
+
+1) Run drrobot player (odom and cmd vel), tf and sensor in a new terminal - if not already running
+$ roslaunch tangerine_2dnav my_robot_configuration.launch 
+
+2) Run bingo detection server (camera, detection services) in a new terminal
+$ roslaunch bingo_detection BingoDetection_server.launch
+
+3) Run Bingo detection client in a new terminal
+$ roslaunch move_bingo detection_client.launch 
+
+
+

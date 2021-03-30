@@ -1,0 +1,9 @@
+inflation_radius: 0.5 #0.55 #0.325  #0.4, 0.55
+
+# Both scan and Kinect
+observation_sources: laser_scan_sensor fake_laser_scan
+laser_scan_sensor: {sensor_frame: base_laser, data_type: LaserScan, topic: scan, marking: true, clearing: true}
+fake_laser_scan: {sensor_frame: bottom_camera_rgb_optical_frame, data_type: LaserScan, topic: fake_laserscan, marking: true, clearing: true}
+
+#laser_scan_sensor: {sensor_frame: base_laser, data_type: LaserScan, topic: /scan, marking: true, clearing: true}
+#fake_laser_scan: {sensor_frame: bottom_camera_rgb_optical_frame, data_type: LaserScan, topic: /fake_laserscan, marking: true, clearing: true}

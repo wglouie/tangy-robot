@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSetRecord>
+<DataTableRecord>
+    <FileName>point_wave01.xml</FileName>
+    <StartTime>0</StartTime>
+    <EndTime>PT1S</EndTime>
+    <Tag>0</Tag>
+    <ColorIndex>0</ColorIndex>
+  </DataTableRecord>
+</DataSetRecord>

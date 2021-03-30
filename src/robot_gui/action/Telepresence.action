@@ -1,0 +1,11 @@
+#Start telepresence session
+# Server idle = -1, Show telepresence tab =2
+int32 start
+---
+#Telepresence result
+#Session finished = 1, Session rejected = 2, 
+int32 end
+---
+#Telepresence feedback
+#Waiting interaction = 0, Waiting for user = 1, Sesssio on = 2, Session rejected = 3
+int32 feedback

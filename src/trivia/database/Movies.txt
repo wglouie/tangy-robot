@@ -1,0 +1,398 @@
+Q: Clint Eastwood gave us the immortal line, "Go ahead... make my day", in what film? 
+A1: Dirty Harry  
+A2: Magnum Force 
+A3: Sudden Impact 
+CA: A1 
+H: Eastwood plays a San Francisco Police Department (SFPD) detective in this film. 
+ 
+Q: Julie Andrews won the Academy Award for  best actress in what film? 
+A1. Mary Poppins  
+A2. The Sound of Music 
+A3. Victor Victoria 
+CA: A1 
+H: This movie is about a young Austrian woman studying to become a nun. 
+ 
+Q: In the Ten Commandments movie, who played Moses? 
+A1: Charlton Heston 
+A2: John Wayne 
+A3: Marlon Brando 
+CA: A1 
+H: He also starred in Planet of the Apes and Ben-Hur.  
+ 
+Q:Which Wild West character does Paul Newman play in the 1958 film The Left Handed Gun? 
+A1:Billy the Kid 
+A2:Jesse James 
+A3:Wyatt Earp 
+CA:A1 
+H:The main character was portrayed as a misguided youth caught up in the cattle wars. 
+  
+Q:The 1973 film The Sting is set in which city? 
+A1:Chicago 
+A2:Los Angeles 
+A3:New York 
+CA:A1 
+H:This city is nicknamed the Windy City. 
+  
+Q:What is the name of the inept ice hockey team in the 1973 film Slap Shot? 
+A1:Minnesota Nighthawks 
+A2:Syracuse Bulldogs 
+A3:Charlestown Chiefs 
+CA:A3 
+H:The team is located in a small town in New England. 
+ 
+Q:What is the name of Paul Newman's character in the 1975 film The Drowning Pool? 
+A1:Lieutenant Franks 
+A2:Jay Kilbourne 
+A3:Lew Harper 
+CA:A3 
+H:This film was a sequel to a film named after this character in 1966. 
+ 
+Q:What is the nickname of Eddie Felson in the 1961 film The Hustler? 
+A1:Cool Eddie 
+A2:Fast Eddie 
+A3:Smart Eddie 
+CA:A2 
+H:Eddie plays a quick pool hustler in this role. 
+ 
+Q:Which actress plays opposite Paul Newman in the 1966 film Torn Curtain, directed by Alfred Hitchcock? 
+A1:Julie Andrews 
+A2:Eva Marie Saint 
+A3:Kim Novak 
+CA:A1 
+H:This actress also starred in Mary Poppins and the Sound of Music. 
+  
+Q:The 1958 film Cat on a Hot Tin Roof is based on the play by which author? 
+A1:Tennessee Williams 
+A2:Arthur Miller 
+A3:Neil Simon 
+CA:A1 
+H:This playwright also produced A Streetcar Named Desire, and Sweet Bird of Youth. 
+  
+Q:The 1962 film To Kill a Mockingbird is set during which decade? 
+A1:1930s 
+A2:1940s 
+A3:1950s 
+CA:A1 
+H:The film is set during three years of the Great Depression. 
+ 
+Q:In the 1992 film A Few Good Men, who speaks the famous line 'You can't handle the truth'? 
+A1:Kevin Bacon 
+A2:Tom Cruise 
+A3:Jack Nicholson 
+CA:A3 
+H:This actor was also in movies such as The Shining, Batman and the Bucket List.  
+  
+Q:The title of the 1957 film Paths of Glory is taken from a line of poetry by which poet? 
+A1:Thomas Gray 
+A2:Wilfred Owen 
+A3:William Wordsworth 
+CA:A1 
+H:The line reads: 'The paths of glory lead but to the grave'. 
+ 
+Q:Who plays Lieutenant Commander Challee, the prosecutor, in the 1954 film The Caine Mutiny? 
+A1:Wendell Corey 
+A2:Sterling Hayden 
+A3:E. G. Marshall 
+CA:A3 
+H:This actor also starred in 12 Angry Men. 
+  
+Q:The 1962 film The Trial, directed by Orson Welles, is based on the novel by which author? 
+A1:Joseph Conrad 
+A2:Thomas Mann 
+A3:Franz Kafka 
+CA:A3 
+H:This author's best known work is The Metamorphosis. 
+ 
+Q:What is the 1966 film in which Paul Scofield plays Sir Thomas More? 
+A1:Man and Superman 
+A2:A Man for All Seasons 
+A3:Man of the Moment 
+CA:A2 
+H:This is a film adaptation of the Robert Bolt play of the same name. 
+  
+Q:Who is the murder victim in the 1996 Richard Gere film Primal Fear? 
+A1:An archbishop 
+A2:An army general 
+A3:A judge 
+CA:A1 
+H:A young alter boy is arrested for the murder. 
+  
+Q:What is the title of the 2002 Canadian film about curling? 
+A1:Men With Brooms 
+A2:Men With Ice 
+A3:Men With Stones 
+CA:A1 
+H:The movie starred and was directed by Paul Gross. 
+  
+Q:In the 1972 film Junior Bonner, Steve McQueen plays a rodeo star. Who plays his younger brother? 
+A1:Joe Don Baker 
+A2:Bruce Dern 
+A3:Tommy Lee Jones 
+CA:A1 
+H:The film features the reunion of a verteran rodeo rider with his brother and estranged parents. 
+  
+Q:Who plays the US team coach in the 1969 skiing film Downhill Racer? 
+A1:Robert Duvall 
+A2:Gene Hackman 
+A3:Larry Hagman 
+CA:A2 
+H:Roger Ebert gave this film four out of four movies, calling it the best movie ever made about sports without being about sports. 
+ 
+Q:What is the name of Mickey Rourke's character in the 2008 film The Wrestler? 
+A1:Rocky Rawlinson 
+A2:Randy Robertson 
+A3:Ricky Robertson 
+CA:A2 
+H:Rourke received an Oscar nomination for the role 
+ 
+Q:Who plays the ageing England cricketer in the 1953 film The Final Test? 
+A1:Jack Warner 
+A2:Trevor Howard 
+A3:James Robertson Justice 
+CA:A1 
+H:This actor was first known for his role as PC George Dixon in the film The Blue Lamp. 
+  
+Q:In the 1939 film The Arsenal Stadium Mystery, Arsenal play a friendly match against which fictional side? 
+A1:The Trojans 
+A2:The Macedonians 
+A3:The Spartans 
+CA:A1 
+H:The fictional side featured players from the actual football club, Brentford. 
+  
+Q:Who plays the female lead in the 1964 film The Fall of the Roman Empire? 
+A1:Claudia Cardinale 
+A2:Elsa Martinelli 
+A3:Sophia Loren 
+CA:A3 
+H:The female lead in the film was Lucilla, the second daughter of the Roman Emperor. 
+  
+Q:Who plays Messala, the loser of the chariot race in the 1959 film Ben-Hur? 
+A1:Stanley Baker 
+A2:Stephen Boyd 
+A3:Jack Hawkins 
+CA:A2 
+H:The same actor starred in notable films like The Oscar, The Inspector and The Caper of the Golden Bulls. 
+  
+Q:Leslie Howard plays Ashley Wilkes in the 1939 film Gone with the Wind. What is the name of the Wilkes' family home? 
+A1:The Tara Plantation 
+A2:Seven Trees 
+A3:Twelve Oaks 
+CA:A3 
+H:The film received ten Academy Awards and became the highest-earning film for over a quarter of a century. 
+  
+Q:Which English king is portrayed by Peter O'Toole in the 1968 film The Lion in Winter? 
+A1:Henry II 
+A2:Richard I 
+A3:Henry III 
+CA:A1 
+H:Anthony Hopkins made his film debut in this movie. 
+ 
+Q:Who plays General Robert E Lee in the 1993 film Gettysburg? 
+A1:Martin Sheen 
+A2:Willem Dafoe 
+A3:Tommy Lee Jones 
+CA:A1 
+H:This actor became known for his roles in Badlands and Apocalypse Now. 
+ 
+Q:Who plays Queen Charlotte in the 1994 film The Madness of King George? 
+A1:Brenda Blethyn 
+A2:Judi Dench 
+A3:Helen Mirren 
+CA:A3 
+H:This actress was nominated for the Academy Award for Best Supporting Actress for this role. 
+  
+Q:Who plays the title role in the 1995 film Rob Roy? 
+A1:Pierce Brosnan 
+A2:Robert Carlyle 
+A3:Liam Neeson 
+CA:A3 
+H:This actor made a name for himself playing the leading role in Schindler's List. 
+  
+Q:Who plays Lady Jane Grey in the 1986 film Lady Jane? 
+A1:Helena Bonham Carter 
+A2:Jane Horrocks 
+A3:Elizabeth Hurley 
+CA:A1 
+H:This actress had no formal acting training before making her debut appearance in this film. 
+  
+Q:Who plays Fletcher Christian in the 1962 film Mutiny on the Bounty? 
+A1:Marlon Brando 
+A2:Sean Connery 
+A3:Paul Newman 
+CA:A1 
+H:This actor gained his first Academy Award nomination for his role in the 1951 film A Streetcar Named Desire. 
+  
+Q:Who plays Catherine the Great in the 1934 film The Scarlet Empress? 
+A1:Tallulah Bankhead 
+A2:Marlene Dietrich 
+A3:Greta Garbo 
+CA:A2 
+H:This actress received honors from multiple countries for her work improving morale on the front lines in World War Two. 
+ 
+Q:Who played the character Britt in the 1960 western The Magnificent Seven? 
+A1:Robert Vaughn 
+A2:James Coburn 
+A3:Steve McQueen 
+CA:A2 
+H:This actor also starred in the films The Great Escape, Charade and Major Dundee. 
+ 
+Q:In which 1939 western did John Wayne play The Ringo Kid? 
+A1:Fort Apache 
+A2:Red River 
+A3:Stagecoach 
+CA:A3 
+H:The Ringo Kid was a fugitive who escapes at the end of the film with his love interest, Dallas. 
+  
+Q:Who played Marshal Will Kane in the classic 1952 western High Noon? 
+A1:Gary Cooper 
+A2:Henry Fonda 
+A3:Gregory Peck 
+CA:A1 
+H:This actor established himself as a Western hero in many of his early roles. 
+  
+Q:In the 1966 western, when Clint Eastwood was The Good and Lee Van Cleef was The Bad, who was The Ugly? 
+A1:Jack Elam 
+A2:Jack Palance 
+A3:Eli Wallach 
+CA:A3 
+H:He also played the bandit leader in The Magnificent Seven. 
+ 
+Q:What was the name of Kevin Costner's character in the 1990 film Dances With Wolves? 
+A1:John Dunbar 
+A2:Sergeant Pepper 
+A3:Kicking Bird 
+CA:A1 
+H:His character slowly finds himself drawn into the lifestyle of the indigenous tribe located near his frontier fort. 
+  
+Q:What is the name of the valley on the borders of Arizona and Utah that has long been a favourite location for western film-makers? 
+A1:Death Valley 
+A2:Monument Valley 
+A3:Napa Valley 
+CA:A2 
+H:The temperatures in this valley rarely exceed 38 degrees Celsius in the summer, and rarely dip below 0 degrees in the winter. 
+  
+Q:In which 1964 western did Dustin Hoffman play a character 121 years old? 
+A1:Midnight Cowboy 
+A2:Little Big Man 
+A3:The Graduate 
+CA:A2 
+H:This comedy is about a white male child raised by the Cheyenne nation during the 19th century. 
+ 
+Q:Who directed the violent 1969 western The Wild Bunch? 
+A1:John Ford 
+A2:Howard Hawks 
+A3:Sam Peckinpah 
+CA:A3 
+H:He gained a reputation for the visually innovative and explicit depiction of action and violence in his films. 
+  
+Q:Who wrote the score for the 1973 western Pat Garrett and Billy the Kid? 
+A1:Bob Dylan 
+A2:John Williams 
+A3:Bruce Springsteen 
+CA:A1 
+H:This artist was known for his exploration in traditions in American song, including folk, blues, country and more. 
+  
+Q:In which western film does Clint Eastwood's character drive a train into the town saloon? 
+A1:High Plains Drifter 
+A2:Joe Kidd 
+A3:The Outlaw Josey Wales 
+CA:A2 
+H:Eastwood's character is a former bounty hunter who begins the film in jail for hunting on Indian land and disturbing the peace. 
+  
+Q:What is the name of Clint Eastwood's character in the 1979 film Escape from Alcatraz? 
+A1:Joe Kidd 
+A2:Harry Callahan 
+A3:Frank Morris 
+CA:A3 
+H:His character had the name of the real-life Alcatraz convict upon which the film was based. 
+ 
+Q:In the 1984 film Tightrope, Clint Eastwood plays a cop based in which city? 
+A1:New Orleans 
+A2:Phoenix 
+A3:San Francisco 
+CA:A1 
+H:This city is home to the famous annual celebration Mardi Gras. 
+ 
+Q:How is the serial killer known in the 1971 film Dirty Harry? 
+A1:Dirty Harry 
+A2:Scorpio Killer 
+A3:Fatso Frank 
+CA:A2 
+H:This movie set the style for a whole genre of police films. 
+  
+Q:Who plays Sergeant Oddball in the 1970 film Kelly's Heroes? 
+A1:Clint Eastwood 
+A2:Don Rickles 
+A3:Donald Sutherland 
+CA:A3 
+H:This actor was born in Saint John, New Brunswick and studied at the University of Toronto. 
+ 
+Q:Who plays convict Butch Haynes in the 1993 film A Perfect World? 
+A1:Kevin Costner 
+A2:Tommy Lee Jones 
+A3:Clint Eastwood 
+CA:A1 
+H:This actor also starred in Field of Dreams and The Bodyguard. 
+  
+Q:What is the profession of Clint Eastwood's character in the 1995 film The Bridges of Madison County? 
+A1:Architect 
+A2:Lawyer 
+A3:Photographer 
+CA:A3 
+H:He was commissioned by the National Geographic to create a work. 
+  
+Q:How is Clint Eastwood's character killed in the 1971 film The Beguiled? 
+A1:Drowned 
+A2:Poisoned 
+A3:Shot 
+CA:A2 
+H:His character was killed by the young girl whose pet turtle he killed. 
+  
+Q:Who plays the title role in the 1960 film Spartacus? 
+A1:Tony Curtis 
+A2:Kirk Douglas 
+A3:Charlton Heston 
+CA:A2 
+H:His powerful acting performance as Vincent van Gogh in Lust for Life is considered one of his finest roles. 
+  
+Q:Which character does Mel Gibson play in the 1995 film Braveheart? 
+A1:William Wallace 
+A2:Macbeth 
+A3:Rob Roy McGregor 
+CA:A1 
+H:This character was based on a 13th-century Scottish warrior who fought for Scottish independence. 
+  
+Q:Who is the star of the 2000 film Gladiator? 
+A1:George Clooney 
+A2:Russell Crowe 
+A3:Mel Gibson 
+CA:A2 
+H:This actor also won numerous awards for his portrayal of mathematician John Nash in A Beautiful Mind. 
+  
+Q:Who plays the title role in the 1963 film Cleopatra? 
+A1:Carroll Baker 
+A2:Audrey Hepburn 
+A3:Elizabeth Taylor 
+CA:A3 
+H:This actress won an Academy Award for her performance in Who's Afraid of Virginia Woolf. 
+ 
+Q:Who plays the title role in the 1959 film Ben-Hur? 
+A1:Stephen Boyd 
+A2:Jack Hawkins 
+A3:Charlton Heston 
+CA:A3 
+H:This actor became a five-term president of the National Rifle Association. 
+  
+Q:Who directed the 1982 film Gandhi? 
+A1:Richard Attenborough 
+A2:Steven Spielberg 
+A3:David Lean 
+CA:A1 
+H:This director is recognized for his narration work on nature documentaries. 
+  
+Q:Who plays Sir Thomas More in the 1966 film A Man for All Seasons? 
+A1:John Hurt 
+A2:Peter O'Toole 
+A3:Paul Scofield 
+CA:A3 
+H:This actor actually declined the honour of a knighthood on three occasions.

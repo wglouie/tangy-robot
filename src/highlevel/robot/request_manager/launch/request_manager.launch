@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+	
+	<!-- Manager for the Robot -->	
+	<node pkg="request_manager" name="request_manager" type="request_manager_server" output="screen"/>
+	<param name="path" value="$(find request_manager)" />
+
+</launch>
+

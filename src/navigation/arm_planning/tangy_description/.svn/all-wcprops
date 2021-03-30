@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/asblab-ros-pkg/!svn/ver/1654/trunk/ros/tangy/src/navigation/arm_planning/tangy_description
+END
+model.config
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/asblab-ros-pkg/!svn/ver/1654/trunk/ros/tangy/src/navigation/arm_planning/tangy_description/model.config
+END
+package.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/asblab-ros-pkg/!svn/ver/1654/trunk/ros/tangy/src/navigation/arm_planning/tangy_description/package.xml
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/asblab-ros-pkg/!svn/ver/1654/trunk/ros/tangy/src/navigation/arm_planning/tangy_description/CMakeLists.txt
+END

@@ -1,0 +1,19 @@
+Activity_State	Help_State	Card_State	Robot_State	Action
+START	No	Not Detected	At front of room	GREETING
+FACILITATE	No	Not Detected	At front of room	JOKE
+FACILITATE	No	Not Detected	At front of room	CALL NUMBER
+FACILITATE	No	Not Detected	At front of room	CALL NUMBER
+FACILITATE	No	Not Detected	At front of room	CALL NUMBER
+FACILITATE	No	Not Detected	At front of room	REMOVEMARKER
+FACILITATE	No	Not Detected	At front of room	CALL NUMBER
+FACILITATE	No	Not Detected	At front of room	CALL NUMBER
+FACILITATE	No	Not Detected	At front of room	ENCOURAGE
+FACILITATE	Yes	Not Detected	At front of room	MOVE_TO_HELP
+HELP	Yes	Missing Numbers	At player that needs help	SHOWBINGOCARD
+HELP	Yes	Missing Numbers	At player that needs help	REMOVEMARKER
+FACILITATE	Yes	Not Detected	At player that does not need help	MOVE_TO_HELP
+HELP	Yes	Occluded	At player that needs help	SHOWBINGOCARD
+HELP	Yes	Occluded	At player that needs help	CALL NUMBER
+FACILITATE	No	Not Detected	At player that does not need help	CELEBRATE
+FACILITATE	No	Not Detected	At player that does not need help	VALEDICTION
+FACILITATE	No	Occluded	At player that does not need help	MOVE_TO_FRONT

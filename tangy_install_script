@@ -1,0 +1,120 @@
+#!/bin/sh
+
+# MISSING CLONING FROM GIT
+
+# Install Git
+sudo apt-get install git
+git config --global user.name "username"
+git config --global user.email "e-mail.com"
+git config --global core.editor "gedit -w" 
+
+# Install ROS Indigo
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu trusty main" > /etc/apt/sources.list.d/ros-latest.list'
+wget https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -O - | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install ros-indigo-desktop-full -y
+sudo rosdep init
+rosdep update
+sudo apt-get install python-rosinstall -y
+echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
+
+# Add Tangy to ROS Workspace
+echo "# Tangy Workspace" >> ~/.bashrc
+echo "source ~/tangy-robot/devel/setup.bash" >> ~/.bashrc
+echo "export ROS_WORKSPACE=~/tangy-robot/" >> ~/.bashrc
+echo "export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig" >> ~/.bashrc
+echo "export CMAKE_PREFIX_PATH=$CMAKE_PREFIX_PATH:/usr/local:/opt/ros/indigo/:~/tangy-robot/devel/" >> ~/.bashrc
+
+# General nescessities
+sudo apt-get update
+sudo apt-get remove ffmpeg x264 libx264-dev
+sudo apt-get install ocl-icd-libopencl1 build-essential checkinstall cmake pkg-config yasm libjpeg-dev libjasper-dev libavcodec-dev libavformat-dev libswscale-dev libdc1394-22-dev libxine-dev libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev libv4l-dev python-dev python-numpy libtbb-dev libqt4-dev libgtk2.0-dev libfaac-dev libmp3lame-dev libopencore-amrnb-dev libopencore-amrwb-dev libtheora-dev libvorbis-dev libxvidcore-dev x264 v4l-utils -y
+
+# Install OpenCV 4.9
+mkdir opencv
+# The cmake command fixes the issue with ROS not being able to find the ocl package and nonfree packages for opencv 4.9 and higher
+(cd opencv && wget http://sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.4.9/opencv-2.4.9.zip && unzip opencv-2.4.9.zip && cd opencv-2.4.9 && mkdir build && cd build && cmake -D CMAKE_BUILD_TYPE=RELEASE -D WITH_OPENCL=OFF -D CMAKE_INSTALL_PREFIX=/usr/local .. && make && sudo make install)
+sudo sh -c 'echo "/usr/local/lib \n /usr/local/include" > /etc/ld.so.conf.d/opencv.conf' 
+sudo ldconfig
+
+#Install ROS package dependenencies
+sudo apt-get install ros-indigo-joy -y
+sudo apt-get install ros-indigo-openni-camera -y
+sudo apt-get install ros-indigo-openni2-camera -y
+sudo apt-get install ros-indigo-navigation -y
+sudo apt-get install ros-indigo-controller-manager -y
+sudo apt-get install ros-indigo-moveit-ros -y
+sudo apt-get install ros-indigo-hokuyo-node -y
+sudo apt-get install ros-indigo-axis-camera -y
+sudo apt-get install ros-indigo-effort-controllers -y
+sudo apt-get install ros-indigo-joint-state-controller -y
+sudo apt-get install ros-indigo-joint-trajectory-controller -y
+sudo apt-get install ros-indigo-ros-control -y
+sudo apt-get install ros-indigo-moveit-simple-controller-manager -y
+sudo apt-get install ros-indigo-moveit-plugins -y
+sudo apt-get install ros-indigo-moveit-planners -y
+sudo apt-get install ros-indigo-moveit-planners-ompl -y
+sudo apt-get install ros-indigo-moveit-setup-assistant -y
+sudo apt-get install festival -y
+sudo apt-get install mpg321 -y
+sudo apt-get install libsdl-mixer1.2-dev libsdl1.2-dev -y
+sudo apt-get install ros-indigo-keyboard -y
+sudo apt-get install libsdl2-dev -y
+sudo apt-get install libsdl-mixer1.2-dev -y
+sudo apt-get install ros-indigo-openni2-launch
+
+#Fix qtcreator errors
+sudo apt-get install qtcreator -y
+sudo -s chmod o+w ~/.config/QtProject/qtcreator/*.xml
+sudo chown -R $USER:$USER ~/.config/QtProject/
+(cd ~/tangy-robot/src && rm CMakeLists.txt)
+(cd ~/tangy-robot/src && cp /opt/ros/indigo/share/catkin/cmake/toplevel.cmake CMakeLists.txt)
+
+echo "#Add all files in subdirectories of the project in
+# a dummy_target so qtcreator have access to all files
+FILE(GLOB children \${CMAKE_SOURCE_DIR}/*)
+FOREACH(child \${children})
+  IF(IS_DIRECTORY \${child})
+    file(GLOB_RECURSE dir_files \"\${child}/*\")
+    LIST(APPEND extra_files \${dir_files})
+  ENDIF()
+ENDFOREACH()
+add_custom_target(dummy_\${PROJECT_NAME} SOURCES \${extra_files})" >> ~/tangy-robot/src/CMakeLists.txt
+
+
+# Instlal Scikit-learn
+sudo apt-get install build-essential python-dev python-setuptools \
+                     python-numpy python-scipy \
+                     libatlas-dev libatlas3gf-base
+
+sudo update-alternatives --set libblas.so.3 \
+    /usr/lib/atlas-base/atlas/libblas.so.3
+sudo update-alternatives --set liblapack.so.3 \
+    /usr/lib/atlas-base/atlas/liblapack.so.3
+
+sudo apt-get install python-matplotlib
+sudo apt-get install python-pip
+#sphinx base
+pip install --user --install-option="--prefix=" scikit-learn
+
+#install pycharm IDE
+sudo add-apt-repository ppa:mystic-mirage/pycharm -y
+sudo apt-get update -y 
+sudo apt-get install pycharm-community
+
+#install terminator and make it default terminal
+sudo apt-get install terminator -y
+gsettings set org.gnome.desktop.default-applications.terminal exec 'terminator'
+
+#For Andrew's sound detection stuff
+sudo apt-get install gstreamer0.10
+sudo apt-get install gstreamer-plugins-base0.10
+sudo apt-get install ros-indigo-audio-common
+sudo apt-get install gstreamer1.0
+
+#NLOPT
+sudo wget http://ab-initio.mit.edu/nlopt/nlopt-2.4.2.tar.gz
+tar xvzf nlopt-2.4.2.tar.gz
+(cd nlopt-2.4.2 && sudo ./configure --enable-shared && sudo make && sudo make install)
+
+

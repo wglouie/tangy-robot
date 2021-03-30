@@ -1,0 +1,11 @@
+<HeadServoMotionTable xmlns="http://tempuri.org/headServoMotionTable.xsd">
+	<ServoMotionStep>
+        	<Servo1>0</Servo1>
+	        <Servo2>0</Servo2>
+        	<Servo3>0</Servo3>
+        	<Servo4>0</Servo4>
+	        <Servo5>0</Servo5>
+        	<Servo6>0</Servo6>
+		<Time>1000</Time>
+	</ServoMotionStep>
+  </HeadServoMotionTable>

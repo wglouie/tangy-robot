@@ -1,0 +1,128 @@
+<!DOCTYPE doc>
+<components>
+  <head id = "head">
+    <servo id="head_tilt">
+      <max value="4440" />
+      <reset value="4100" />
+      <min value="3050" />
+    </servo>
+    <servo id="head_pan">
+      <max value="4550" />
+      <reset value="3450" />
+      <min value="2350" />
+    </servo>
+    <servo id="mouth">
+      <max value="3500" />
+      <reset value="3500" />
+      <min value="3000" />
+    </servo>
+    <servo id="eye_tilt">
+      <max value="4600" />
+      <reset value="3600" />
+      <min value="2600" />
+    </servo>
+    <servo id="left_eye_pan">
+      <max value="4100" />
+      <reset value="3600" />
+      <min value="3100" />
+    </servo>
+    <servo id="right_eye_pan">
+      <max value="4050" />
+      <reset value="3350" />
+      <min value="2650" />
+    </servo>
+    <time id ="time">
+      <period value="200"/>
+    </time>
+  </head>
+  <right_arm id = "right">
+    <servo id="8">
+      <max value="2490" />
+      <reset value="780" />
+      <min value="680" />
+    </servo>
+    <servo id="7">
+      <max value="2700" />
+      <reset value="2500" />
+      <min value="1710" />
+    </servo>
+    <servo id="6">
+      <max value="2350" />
+      <reset value="1980" />
+      <min value="1670" />
+    </servo>
+    <servo id="5">
+      <max value="2110" />
+      <reset value="1715" />
+      <min value="1400" />
+    </servo>
+    <servo id="4">
+      <max value="2350" />
+      <reset value="1535" />
+      <min value="580" />
+    </servo>
+    <servo id="3">
+      <max value="2250" />
+      <reset value="1640" />
+      <min value="680" />
+    </servo>
+    <servo id="2">
+      <max value="2400" />
+      <reset value="1240" />
+      <min value="950" />
+    </servo>
+    <servo id="1">
+      <max value="2110" />
+      <reset value="1850" />
+      <min value="590" />
+    </servo>
+    <time id ="time">
+      <period value="2000"/>
+    </time>
+  </right_arm>  
+  <left_arm id = "left">
+    <servo id="8">
+      <max value="2650" />
+      <reset value="2400" />
+      <min value="700" />
+    </servo>
+    <servo id="7">
+      <max value="2015" />
+      <reset value="1265" />
+      <min value="1170" />
+    </servo>
+    <servo id="6">
+      <max value="2580" />
+      <reset value="1950" />
+      <min value="1030" />
+    </servo>
+    <servo id="5">
+      <max value="2450" />
+      <reset value="1380" />      
+			<min value="600" />
+    </servo>
+    <servo id="4">
+      <max value="1835" />
+      <reset value="1525" />
+      <min value="1090" />
+    </servo>
+    <servo id="3">
+      <max value="2460" />
+      <reset value="2165" />
+      <min value="1780" />
+    </servo>
+    <servo id="2">
+      <max value="2460" />
+      <reset value="2165" />
+      <min value="1780" />
+    </servo>
+    <servo id="1">
+      <max value="1550" />
+      <reset value="1100" />
+      <min value="400" />
+    </servo>
+    <time id ="time">
+      <period value="2000"/>
+    </time>
+  </left_arm> 
+</components>

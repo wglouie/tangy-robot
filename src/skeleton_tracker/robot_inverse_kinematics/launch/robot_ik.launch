@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="robot_inverse_kinematics" type="kinect_ik.py" name="robot_ik" output="screen" launch-prefix="valgrind --tool=callgrind -v" />
+</launch>
+
+
+
+
+
+

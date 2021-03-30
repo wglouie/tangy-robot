@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+  	<group >
+		<!-- DrRobot Player -->
+		<include file="$(find drrobot_h20_player)/launch/drrobot_player.launch" />
+
+		<!-- Keyboard -->
+		<node pkg="drrobot_h20_player" name="drrobot_keyboard_teleop" type="drrobot_keyboard_teleop" output="screen"/>
+
+	</group>
+</launch>
+

@@ -1,0 +1,19 @@
+# Request for Planning and Scheduling
+# goal message
+int32 newrequest
+string sender
+
+---
+# result message
+string plan			# the solution
+int32 statusCode                # the status code of the process 
+                                # (e.g., planner failed, no plan exists, timeout, etc) 
+bool solutionExists
+bool isUnsolvable
+string requester
+
+---
+# feedback message
+int32 status			# current state
+
+

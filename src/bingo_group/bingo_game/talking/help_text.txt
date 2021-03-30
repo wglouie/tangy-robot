@@ -1,0 +1,29 @@
+Initial:Let's check your card to see how you are doing.
+
+Initial:Let's take a look at your card.
+
+Initial:Let me take a look to see how you are doing.
+
+Initial:May I take a look to see how you are doing?
+
+Encouragement:Keep up the good work!
+
+Encouragement:You're almost there!
+
+Encouragement:Just a few more numbers before you're there!
+
+Missing Numbers:I think you have some missing markers. Can you place markers on the following spots?
+
+Missing Numbers:I think you have some missing markers. Can you place markers on the following spots?
+
+Wrong Numbers:Oops! You have some misplaced markers. Please remove these markers from the following numbers on your card.
+
+Wrong Numbers:Oops! You have some misplaced markers. Please remove these markers from the following numbers on your card.
+
+Praise:You're doing amazing!
+
+Praise:You must have played this before!
+
+Praise:Your card looks great!
+
+Praise:Wow, you are close to getting Bingo!

@@ -1,0 +1,5 @@
+#request
+string load_state
+---
+#response 
+world_state current_world_state

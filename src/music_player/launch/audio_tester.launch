@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+   
+    <node pkg="music_player" type="audio_player" name="audio_player" output="screen" respawn="true"/>
+
+</launch>

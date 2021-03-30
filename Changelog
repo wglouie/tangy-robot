@@ -1,0 +1,25 @@
+May 29, 2016
+- Robot checks card whenever it is helping a user during the demonstration
+- Help Indicators Package now has topic that notifies subscribers of new triangles detected
+- Task Learning Package now subscribes to help indicator package new triangle notifier and updates the current world state when a new triangle is added (May not work yet)
+- New Bingo number is now automatically selected (Can be unselected by user)
+- New state-action pairs are also now automatically selected
+
+May 30, 2016
+- You can now customize actions in action executor by providing gesture file names (the base name so you don't need left or right)
+- You can also save the database xml for the actions in an xml file
+- Both the aforementioned work using action_execution subscribers so you just need to publish to the topics the necessary messages.
+- Custom gestures now replace default gestures during the interaction
+- Task Learning package makes new save directory named ".../action_executor/database/custom_actions/save[X]" for saving customized gestures and speech for the actions
+- When Bingo game finishes the customized action database is saved in ".../action_executor/database/custom_actions/save[X]/actions.xml" by the Task Learning package
+- Creating gesture directory is now done by action_executor service because we want the computer that processes this node to contain the directory. It is no longer required by the rqt_task_learning package.
+
+June 5, 2016
+- Gesture and speech execution service is not available. Just proivde speech string and gesture file path. Do not need a pre-existing aciton
+- Thread.join() bugs?
+- Tangy should now interact with you and provide feedback when creating gestures
+- Gestures can only be recorded when there is a skeleton & when the gesture process is started.
+
+June 7, 2016
+- Tangy now speaks when gesture recording has started
+

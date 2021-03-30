@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+
+	<!-- Machine Definition  -->
+	<include file="/home/$(env USER)/ros/tangy/project.machine" />
+
+	<group>
+		<!-- script -->
+		<node pkg="script_player" name="script_player_client" type="script_player_client" output="screen" machine="tangerine-central"/>
+		<param name="script_folder" type="str" value="/home/tangerine/ros/tangy/src/navigation/script_player/script/" />
+	</group >
+</launch>

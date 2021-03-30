@@ -1,0 +1,10 @@
+#Goal
+string user
+string skypeUser
+string nameOfCaller
+---
+#Action result
+int32 end
+---
+#Action feedback
+int32 feedback

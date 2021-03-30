@@ -1,0 +1,44 @@
+Activity_State	Help_State	Card_State	Robot_State	Action
+START	No	Not Detected	At front of room	MOVE_TO_FRONT
+FACILITATE	No	Not Detected	At front of room	MOVE_TO_FRONT
+FACILITATE	No	Not Detected	At front of room	GREETING
+FACILITATE	No	Not Detected	At front of room	GREETING
+FACILITATE	No	Not Detected	At front of room	JOKE
+FACILITATE	No	Not Detected	At front of room	CALL NUMBER
+FACILITATE	No	Not Detected	At front of room	CALL NUMBER
+FACILITATE	No	Not Detected	At front of room	CALL NUMBER
+FACILITATE	No	Not Detected	At front of room	SHOWBINGOCARD
+FACILITATE	No	Not Detected	At front of room	REMOVEMARKER
+FACILITATE	No	Not Detected	At front of room	CALL NUMBER
+FACILITATE	No	Not Detected	At front of room	CALL NUMBER
+FACILITATE	No	Not Detected	At front of room	ENCOURAGE
+FACILITATE	No	Not Detected	At front of room	CALL NUMBER
+FACILITATE	No	Not Detected	At front of room	CALL NUMBER
+FACILITATE	No	Not Detected	At front of room	MARKNUMBER
+FACILITATE	Yes	Not Detected	At front of room	MOVE_TO_HELP
+HELP	Yes	Incorrectly Marked	At player that needs help	REMOVEMARKER
+FACILITATE	No	Not Detected	At player that needs help	MOVE_TO_FRONT
+FACILITATE	No	Not Detected	At front of room	CALL NUMBER
+FACILITATE	No	Not Detected	At front of room	CALL NUMBER
+FACILITATE	No	Not Detected	At front of room	GREETING
+FACILITATE	No	Not Detected	At front of room	CALL NUMBER
+FACILITATE	No	Not Detected	At front of room	ENCOURAGE
+FACILITATE	No	Not Detected	At front of room	ENCOURAGE
+FACILITATE	No	Not Detected	At front of room	CALL NUMBER
+FACILITATE	No	Not Detected	At front of room	CALL NUMBER
+FACILITATE	Yes	Not Detected	At front of room	MOVE_TO_HELP
+FACILITATE	No	Not Detected	At player that needs help	MOVE_TO_FRONT
+FACILITATE	No	Not Detected	At front of room	CALL NUMBER
+FACILITATE	No	Not Detected	At front of room	CALL NUMBER
+FACILITATE	No	Not Detected	At front of room	CELEBRATE
+FACILITATE	No	Not Detected	At front of room	ENCOURAGE
+FACILITATE	No	Not Detected	At front of room	ENCOURAGE
+FACILITATE	No	Not Detected	At front of room	CALL NUMBER
+FACILITATE	No	Not Detected	At front of room	CALL NUMBER
+FACILITATE	No	Not Detected	At front of room	CALL NUMBER
+FACILITATE	No	Not Detected	At front of room	ENCOURAGE
+FACILITATE	Yes	Not Detected	At front of room	MOVE_TO_HELP
+HELP	Yes	Incorrectly Marked	At player that needs help	MARKNUMBER
+START	No	Not Detected		MOVE_TO_FRONT
+START	No	Not Detected		CELEBRATE
+FACILITATE	No	Not Detected	At front of room	VALEDICTION

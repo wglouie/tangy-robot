@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<launch>
+	<node pkg="planning" name="planning" type="planning_server" output="screen"/>
+	<param name="path" value="$(find planning)" />
+
+
+	<!-- Planner OPTIC -->
+        <param name="planner" value="optic-clp" />
+	<param name="plannerpath" value="$(find planning)/planner" />
+	<param name="optionsprior" value="-N" />
+	<param name="solutionfoundmarker" value="Solution Found" />
+	<param name="problemunsolvablemarker" value="Problem unsolvable" />
+
+
+	<!-- Planner COLIN -->
+        <!--<param name="planner" value="colin-clp" />
+	<param name="plannerpath" value="$(find planning)/planner" />
+	<param name="solutionfoundmarker" value="Solution Found" />
+	<param name="problemunsolvablemarker" value="Problem unsolvable" />-->
+
+
+	<!-- Planner POPF -->
+        <!--<param name="planner" value="popf3-clp" />
+	<param name="plannerpath" value="$(find planning)/planner" />
+	<param name="solutionfoundmarker" value="Solution Found" />
+	<param name="problemunsolvablemarker" value="Problem unsolvable" />-->
+
+
+</launch>
+

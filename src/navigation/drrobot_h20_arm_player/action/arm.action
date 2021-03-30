@@ -1,0 +1,12 @@
+#goal definition
+float32 x
+float32 y
+float32 z
+string behavior       #a behavior to act out (a script); takes priority over position
+
+---
+#result definition
+bool is_finished
+---
+#feedback
+int32 state           #0 is not executing; 1 is executing

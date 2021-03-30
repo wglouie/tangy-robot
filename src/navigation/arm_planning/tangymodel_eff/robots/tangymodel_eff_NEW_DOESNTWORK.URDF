@@ -1,0 +1,1339 @@
+<robot
+  name="tangymodel_eff">
+
+<!-- ...........................................................Dummy Frame .......................................... -->
+<!--
+  <link
+    name="dummy_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <box size="0.0001 0.0001 0.0001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.392 0.392 0.392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <box size="0.00001 0.00001 0.00001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="dummy_to_base_link"
+    type="fixed">
+    <parent
+      link="base_link" /> 
+    <child
+      link="base_link" />
+    <origin
+      xyz="0.16 0.32 0.52"
+      rpy="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="10"
+      velocity="3"/>
+  </joint>
+-->
+<!--  ............................................................Base Link..................................................   -->
+  <link name="base_link" />
+
+<!--  ............................................................Torso..................................................   -->
+
+  <link
+    name="body_link">
+    <inertial>
+      <origin
+        xyz="-0.15668 -0.28879 -0.1123"
+        rpy="0 0 0" />
+      <mass
+        value="98.584" />
+      <inertia
+        ixx="16.47"
+        ixy="-0.00095546"
+        ixz="0.0055037"
+        iyy="16.277"
+        iyz="1.152"
+        izz="2.8488" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.392 0.392 0.392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="body_to_base_link"
+    type="fixed">
+    <parent
+      link="base_link" /> 
+    <child
+      link="body_link" />
+
+    <origin
+      xyz="-0.22 0.15 0.52"
+
+      rpy="0 0 1.591" />
+    <limit
+
+      lower="0"
+      upper="0"
+
+      effort="10"
+      velocity="3"/>
+
+  </joint>
+
+<!-- ................................................................Head............................................  -->
+
+  <link
+    name="neck_link">
+    <inertial>
+      <origin
+        xyz="-5.5511E-17 0.03245 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.11094" />
+      <inertia
+        ixx="5.0402E-05"
+        ixy="-1.3803E-21"
+        ixz="-1.5165E-22"
+        iyy="3.5718E-05"
+        iyz="-1.782E-20"
+        izz="4.4646E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/neck_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/neck_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="neck_to_z_revolute"
+    type="revolute">
+    <origin
+      xyz="-0.15677 -0.31736 0.68915"
+      rpy="1.5708 0 0" />
+    <parent
+      link="body_link" />
+    <child
+      link="neck_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-0.7853"
+      upper="0.7853"
+      effort="10"
+      velocity="3" />
+  </joint>
+  <link
+    name="head_link">
+    <inertial>
+      <origin
+        xyz="0.00038888 0.10329 0"
+        rpy="0 0 0" />
+      <mass
+        value="4.4164" />
+      <inertia
+        ixx="0.028366"
+        ixy="1.9027E-06"
+        ixz="1.2865E-18"
+        iyy="0.023632"
+        iyz="1.4521E-19"
+        izz="0.015291" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/head_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.416 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/head_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="z_revolute_to_x_revolute"
+    type="revolute">
+    <origin
+      xyz="0 0.05 0"
+      rpy="1.5708 -1.5708 -1.5708" />
+    <parent
+      link="neck_link" />
+    <child
+      link="head_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.3926"
+      upper="0.3926"
+      effort="10"
+      velocity="3" />
+  </joint>
+
+
+<!-- ..............................................................Right Arm...................................................... -->
+
+  <link
+    name="right_shoulder_pitch_link">
+    <inertial>
+      <origin
+        xyz="-0.0050069 0.04493 -0.054937"
+        rpy="0 0 0" />
+      <mass
+        value="1.282" />
+      <inertia
+        ixx="0.0038059"
+        ixy="4.8043E-07"
+        ixz="4.9634E-07"
+        iyy="0.0017545"
+        iyz="-3.6072E-06"
+        izz="0.0034183" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/right_shoulder_pitch_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.392 0.392 0.392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/right_shoulder_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_shoulder_x_revolute"
+    type="revolute">
+    <origin
+      xyz="-0.30977 -0.20989 0.54535"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="body_link" />
+    <child
+      link="right_shoulder_pitch_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.34907"
+      upper="3.35103"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="right_shoulder_roll_link">
+    <inertial>
+      <origin
+        xyz="-0.01 -0.0637 -0.05109"
+        rpy="0 0 0" />
+      <mass
+        value="0.57779" />
+      <inertia
+        ixx="0.0013906"
+        ixy="-6.7526E-20"
+        ixz="-9.213E-21"
+        iyy="0.0012248"
+        iyz="-0.00011954"
+        izz="0.00077311" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/right_shoulder_roll_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.588 0.588 0.588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/right_shoulder_roll_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="upper_right_arm_y_revolute_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.05"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="right_shoulder_pitch_link" />
+    <child
+      link="right_shoulder_roll_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.9199"
+      upper="0"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="upper_right_arm">
+    <inertial>
+      <origin
+        xyz="1.6669E-05 -0.086496 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.76566" />
+      <inertia
+        ixx="0.0022039"
+        ixy="-6.3819E-07"
+        ixz="-4.4538E-20"
+        iyy="0.00058852"
+        iyz="-1.4684E-19"
+        izz="0.0020752" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/upper_right_arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.588 0.588 0.588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/upper_right_arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="upper_right_arm_z_revolute_joint"
+    type="revolute">
+    <origin
+      xyz="-0.01 -0.11 0"
+      rpy="0 0 0" />
+    <parent
+      link="right_shoulder_roll_link" />
+    <child
+      link="upper_right_arm" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.8326"
+      upper="1.8326"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="lower_right_arm">
+    <inertial>
+      <origin
+        xyz="-3.0531E-16 -0.11496 5.5511E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.57079" />
+      <inertia
+        ixx="0.0013783"
+        ixy="2.3875E-18"
+        ixz="-6.9845E-21"
+        iyy="0.00043224"
+        iyz="-1.2881E-19"
+        izz="0.0012882" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/lower_right_arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.416 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/lower_right_arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="upper_to_lower_right_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.1365 0"
+      rpy="0 1.5708 0" />
+    <parent
+      link="upper_right_arm" />
+    <child
+      link="lower_right_arm" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.2515"
+      upper="0"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="right_wrist_link">
+    <inertial>
+      <origin
+        xyz="-9.359E-05 0.031821 5.5511E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.094409" />
+      <inertia
+        ixx="3.9877E-05"
+        ixy="-1.1645E-07"
+        ixz="4.4633E-21"
+        iyy="2.5724E-05"
+        iyz="-1.1782E-20"
+        izz="3.9412E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/right_wrist_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/right_wrist_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist_right_arm_z_revolute_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.19 0"
+      rpy="3.141 0 0" />
+    <parent
+      link="lower_right_arm" />
+    <child
+      link="right_wrist_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="25"
+      velocity="3" />
+  </joint>
+  <link
+    name="right_hand">
+    <inertial>
+      <origin
+        xyz="-5.5511E-17 -2.713E-05 0.061837"
+        rpy="0 0 0" />
+      <mass
+        value="0.19902" />
+      <inertia
+        ixx="0.00022561"
+        ixy="1.0575E-21"
+        ixz="9.7799E-21"
+        iyy="0.00021686"
+        iyz="-1.7907E-07"
+        izz="8.8688E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/right_hand.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.588 0.588 0.588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/right_hand.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lower_to_wrist_right_arm"
+    type="revolute">
+    <origin
+      xyz="0 0.05 0"
+      rpy="-1.5708 -1.5708 0" />
+    <parent
+      link="right_wrist_link" />
+    <child
+      link="right_hand" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.0472"
+      upper="1.48353"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_top_fingers">
+    <inertial>
+      <origin
+        xyz="-0.0072645 -5.5511E-17 0.055647"
+        rpy="0 0 0" />
+      <mass
+        value="0.033357" />
+      <inertia
+        ixx="1.0957E-05"
+        ixy="2.9435E-21"
+        ixz="2.9379E-06"
+        iyy="1.8112E-05"
+        iyz="-8.2775E-22"
+        izz="8.4159E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/right_top_fingers.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.588 0.588 0.588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/right_top_fingers.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist_to_finger1_right_arm"
+    type="revolute">
+    <origin
+      xyz="0.015 0 0.095"
+      rpy="0 0 1.5708" />
+    <parent
+      link="right_hand" />
+    <child
+      link="right_top_fingers" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.68"
+      upper="0"
+      effort="50"
+      velocity="3" />
+  </joint>
+  <link
+    name="right_bottom_fingers">
+    <inertial>
+      <origin
+        xyz="0.016728 0.042728 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.018277" />
+      <inertia
+        ixx="4.798E-06"
+        ixy="-9.3943E-07"
+        ixz="-1.8907E-22"
+        iyy="1.8711E-06"
+        iyz="9.6009E-22"
+        izz="5.9803E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/right_bottom_fingers.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.588 0.588 0.588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/right_bottom_fingers.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist_to_finger2_right_arm"
+    type="revolute">
+    <origin
+      xyz="-0.015 0 0.095"
+      rpy="1.5708 0 -1.5708" />
+    <parent
+      link="right_hand" />
+    <child
+      link="right_bottom_fingers" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0.68"
+      effort="50"
+      velocity="3" />
+  </joint>
+
+
+<!-- .................................................................Left Shoulder.............................................  -->
+
+  <link
+    name="left_shoulder_pitch_link">
+    <inertial>
+      <origin
+        xyz="0.0050069 0.04493 -0.051164"
+        rpy="0 0 0" />
+      <mass
+        value="1.282" />
+      <inertia
+        ixx="0.0038059"
+        ixy="-4.8043E-07"
+        ixz="-4.9634E-07"
+        iyy="0.0017545"
+        iyz="-3.6072E-06"
+        izz="0.0034183" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/left_shoulder_pitch_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.588 0.588 0.588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/left_shoulder_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_shoulder_x_revolute"
+    type="revolute">
+    <origin
+      xyz="0 -0.20989 0.54535"
+      rpy="1.5708 0 -1.5708" />
+    <parent
+      link="body_link" />
+    <child
+      link="left_shoulder_pitch_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.34907"
+      upper="3.35103"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="left_shoulder_roll_link">
+    <inertial>
+      <origin
+        xyz="0.0062272 -0.0637 -0.05109"
+        rpy="0 0 0" />
+      <mass
+        value="0.57779" />
+      <inertia
+        ixx="0.0013906"
+        ixy="4.8396E-20"
+        ixz="-2.5898E-19"
+        iyy="0.0012248"
+        iyz="-0.00011954"
+        izz="0.00077311" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/left_shoulder_roll_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.588 0.588 0.588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/left_shoulder_roll_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="upper_left_arm_y_revolute_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.05"
+      rpy="0 1.5708 0" />
+    <parent
+      link="left_shoulder_pitch_link" />
+    <child
+      link="left_shoulder_roll_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.9198"
+      upper="0"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="upper_left_arm">
+    <inertial>
+      <origin
+        xyz="1.6671E-05 -0.085974 -8.3267E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.76557" />
+      <inertia
+        ixx="0.0022032"
+        ixy="-6.3806E-07"
+        ixz="-7.4539E-20"
+        iyy="0.00058852"
+        iyz="1.3527E-18"
+        izz="0.0020746" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/upper_left_arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.588 0.588 0.588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/upper_left_arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="upper_left_arm_z_revolute_joint"
+    type="revolute">
+    <origin
+      xyz="0.0062272 -0.11003 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_shoulder_roll_link" />
+    <child
+      link="upper_left_arm" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.8326"
+      upper="1.8326"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="lower_left_arm">
+    <inertial>
+      <origin
+        xyz="-1.3878E-16 -0.11496 8.9512E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.57079" />
+      <inertia
+        ixx="0.0013783"
+        ixy="7.8732E-19"
+        ixz="1.3553E-19"
+        iyy="0.00043224"
+        iyz="-6.3072E-18"
+        izz="0.0012882" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/lower_left_arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.416 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/lower_left_arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="upper_to_lower_left_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.13597 0"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="upper_left_arm" />
+    <child
+      link="lower_left_arm" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.2515"
+      upper="0"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="left_wrist_link">
+    <inertial>
+      <origin
+        xyz="-9.359E-05 0.031809 -9.0206E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.094409" />
+      <inertia
+        ixx="3.9877E-05"
+        ixy="-1.1645E-07"
+        ixz="-2.8058E-21"
+        iyy="2.5724E-05"
+        iyz="-3.121E-20"
+        izz="3.9412E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/left_wrist_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/left_wrist_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist_left_arm_z_revolute_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.19001 0"
+      rpy="3.141 0 0" />
+    <parent
+      link="lower_left_arm" />
+    <child
+      link="left_wrist_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="25"
+      velocity="3" />
+  </joint>
+  <link
+    name="left_hand">
+    <inertial>
+      <origin
+        xyz="0 -2.713E-05 0.061825"
+        rpy="0 0 0" />
+      <mass
+        value="0.19902" />
+      <inertia
+        ixx="0.00022561"
+        ixy="-4.5316E-20"
+        ixz="8.7405E-20"
+        iyy="0.00021686"
+        iyz="-1.7907E-07"
+        izz="8.8688E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/left_hand.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.588 0.588 0.588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/left_hand.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lower_to_wrist_left_arm"
+    type="revolute">
+    <origin
+      xyz="0 0.05 0"
+      rpy="-1.5708 1.5708 0" />
+    <parent
+      link="left_wrist_link" />
+    <child
+      link="left_hand" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.0472"
+      upper="1.48353"
+      effort="25"
+      velocity="3" />
+  </joint>
+  <link
+    name="left_top_fingers">
+    <inertial>
+      <origin
+        xyz="-0.0072645 0 0.055647"
+        rpy="0 0 0" />
+      <mass
+        value="0.033357" />
+      <inertia
+        ixx="1.0957E-05"
+        ixy="-1.8449E-20"
+        ixz="2.9379E-06"
+        iyy="1.8112E-05"
+        iyz="-7.0054E-21"
+        izz="8.4159E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/left_top_fingers.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.588 0.588 0.588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/left_top_fingers.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist_to_finger1_left_arm"
+    type="revolute">
+    <origin
+      xyz="-0.015 0 0.094988"
+      rpy="0 0 1.5708" />
+    <parent
+      link="left_hand" />
+    <child
+      link="left_top_fingers" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.68"
+      upper="0"
+      effort="10"
+      velocity="3" />
+  </joint>
+  <link
+    name="left_bottom_fingers">
+    <inertial>
+      <origin
+        xyz="0.0167281620288509 -0.0427282906188924 -4.85722573273506E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0182768252295753" />
+      <inertia
+        ixx="4.7979749986511E-06"
+        ixy="9.39430284405547E-07"
+        ixz="-2.39551505395357E-21"
+        iyy="1.87112397057946E-06"
+        iyz="-2.00425862421599E-21"
+        izz="5.98034326538814E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/left_bottom_fingers.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.588 0.588 0.588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tangymodel_eff/meshes/left_bottom_fingers.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist_to_finger2_left_arm"
+    type="revolute">
+    <origin
+      xyz="0.015 0 0.094988"
+      rpy="-1.5708 0 -1.5708" />
+    <parent
+      link="left_hand" />
+    <child
+      link="left_bottom_fingers" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0.68"
+      effort="10"
+      velocity="3" />
+  </joint>
+
+
+<!-- ............................................................Kinect Sensors................................................ -->
+<!-- KINECT 1 -->
+  <joint name="kinect_joint" type="fixed">
+    <limit effort="1000.0" lower="0" upper="0" velocity="0"/>
+    <parent link="body_link"/>
+    <child link="kinect_link"/>
+    <origin rpy="0 2.7 -1.5705" xyz="-.15 -0.40 1.10"/>
+  </joint>
+  <link name="kinect_link">
+    <visual>
+      <geometry>
+        <box size="0.02 0.18 0.04"/>
+      </geometry>
+      <material name="grey">
+        <color rgba="0 0 0 0.5"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.0001 0.0001 0.0001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.01"/>
+      <inertia ixx=".0001" ixy="0.0" ixz="0.0" iyy=".0001" iyz="0.0" izz=".0001"/>
+    </inertial>
+  </link>
+  <joint name="kinect_depth_joint" type="fixed">
+    <limit effort="1000.0" lower="0" upper="0" velocity="0"/>
+    <parent link="kinect_link"/>
+    <child link="kinect_depth_frame"/>
+    <origin rpy="0 -0.05 -1.5705" xyz="0 0 0"/>
+  </joint>
+  <link name="kinect_depth_frame" >
+    <visual>
+      <geometry>
+        <box size="0.0001 0.0001 0.0001"/>
+      </geometry>
+      <material name="grey">
+        <color rgba="0 0 0 0.5"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.0001 0.0001 0.0001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.01"/>
+      <inertia ixx=".0001" ixy="0.0" ixz="0.0" iyy=".0001" iyz="0.0" izz=".0001"/>
+    </inertial>
+  </link>
+  <joint name="kinect_optical_joint" type="fixed">
+    <origin rpy="0 0.0 0" xyz="0 0.001 0"/>
+    <parent link="kinect_depth_frame"/>
+    <child link="kinect_rgb_optical_frame"/>
+  </joint>
+  <link name="kinect_rgb_optical_frame" >
+    <visual>
+      <geometry>
+        <box size="0.0001 0.0001 0.0001"/>
+      </geometry>
+      <material name="grey">
+        <color rgba="0 0 0 0.5"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.0001 0.0001 0.0001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.01"/>
+      <inertia ixx=".0001" ixy="0.0" ixz="0.0" iyy=".0001" iyz="0.0" izz=".0001"/>
+    </inertial>
+  </link>
+
+<!-- KINECT 2 (LOWER) -->
+
+  <joint name="kinect2_joint" type="fixed">
+    <limit effort="1000.0" lower="0" upper="0" velocity="0"/>
+    <parent link="body_link"/>
+    <child link="kinect2_link"/>
+    <origin rpy="0 0 3.14" xyz="-0.15 -0.45 0.60"/>
+  </joint>
+  <link name="kinect2_link">
+    <visual>
+      <geometry>
+        <box size="0.02 0.18 0.04"/>
+      </geometry>
+      <material name="grey">
+        <color rgba="0 0 0 0.5"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.0001 0.0001 0.0001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.01"/>
+      <inertia ixx=".0001" ixy="0.0" ixz="0.0" iyy=".0001" iyz="0.0" izz=".0001"/>
+    </inertial>
+  </link>
+  <joint name="kinect2_depth_joint" type="fixed">
+    <limit effort="1000.0" lower="0" upper="0" velocity="0"/>
+    <parent link="kinect2_link"/>
+    <child link="kinect2_depth_frame"/>
+    <origin rpy="0 -0.05 -1.5705" xyz="0 0 0"/>
+  </joint>
+  <link name="kinect2_depth_frame" >
+    <visual>
+      <geometry>
+        <box size="0.0001 0.0001 0.0001"/>
+      </geometry>
+      <material name="grey">
+        <color rgba="0 0 0 0.5"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.0001 0.0001 0.0001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.01"/>
+      <inertia ixx=".0001" ixy="0.0" ixz="0.0" iyy=".0001" iyz="0.0" izz=".0001"/>
+    </inertial>
+  </link>
+  <joint name="kinect2_optical_joint" type="fixed">
+    <origin rpy="0 0.0 0" xyz="0 0.001 0"/>
+    <parent link="kinect2_depth_frame"/>
+    <child link="kinect2_rgb_optical_frame"/>
+  </joint>
+  <link name="kinect2_rgb_optical_frame" >
+    <visual>
+      <geometry>
+        <box size="0.0001 0.0001 0.0001"/>
+      </geometry>
+      <material name="grey">
+        <color rgba="0 0 0 0.5"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.0001 0.0001 0.0001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.01"/>
+      <inertia ixx=".0001" ixy="0.0" ixz="0.0" iyy=".0001" iyz="0.0" izz=".0001"/>
+    </inertial>
+  </link>
+
+
+</robot>

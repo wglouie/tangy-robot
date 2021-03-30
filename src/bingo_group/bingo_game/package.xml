@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>bingo_game</name>
+  <version>0.1.0</version>
+  <description>
+
+	bingo_game
+  
+  </description>
+  <maintainer email="despond.frank@gmail.com">frank</maintainer>
+  <author>frank</author>
+  <license>BSD</license>
+ 
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>actionlib_msgs</depend>
+  <depend>actionlib</depend>
+  <depend>std_msgs</depend>
+  <depend>message_generation</depend>
+  <depend>robot_gui</depend>
+  <depend>roscpp</depend>
+  <depend>rospy</depend>
+  <depend>qt_build</depend>
+  <depend>libqt4-dev</depend>
+  <depend>drrobot_h20_arm_player</depend>
+  <depend>message_runtime</depend>
+
+</package>

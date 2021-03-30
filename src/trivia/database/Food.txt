@@ -1,0 +1,272 @@
+Q:Which of the following vegetables is not one of the ingredients of V 8 juice?
+A1:beet
+A2:carrot
+A3:cabbage
+CA:A3
+H:This vegetable is used in the Korean delicacy, kim chi.
+
+Q:What country produces the most potatoes?
+A1:China
+A2:United States
+A3:Ireland
+CA:A1
+H:This country also produces the most rice as well.
+
+Q:What soft-drink company introduced the brand Slice?
+A1:Dr. Pepper
+A2:Coca Cola
+A3:Seven Up
+CA:A2
+H:This soft-drink company's flagship product was launched in 1886.
+
+Q:In a 1980s poll of four hundred bartenders, the average male customer's favorite drink was found to be what?
+A1:beer
+A2:bourbon
+A3:scotch
+CA:A1
+H:This drink is the third most widely consumed drink after water and tea.
+
+Q:In a 1980s poll of four hundred bartenders, the average female customer's favorite drink was found to be what?
+A1:beer
+A2:margarita
+A3:white wine
+CA:A3
+H:This drink is created by fermenting grapes.
+
+Q:Which grade of olive oil is considered the best?
+A1:extra virgin
+A2:virgin
+A3:refined virgin
+CA:A1
+H:This grade of olive oil has the lowest fatty acid content.
+
+Q:What vegetable has varieties known as Bell, Cayenne, and Ghost?
+A1:onion
+A2:pepper
+A3:squash
+CA:A2
+H:This vegetable can be extremely spicy.
+
+Q:In the drink called a zombie, what is the main alcoholic ingredient?
+A1:beer
+A2:brandy
+A3:rum
+CA:A3
+H:This ingredient has spiced and non-spiced variants.
+
+Q:Which of the following ingredients are not used in a Bloody Mary?
+A1:tomato juice
+A2:sugar
+A3:tabasco sauce
+CA:A2
+H:This ingredient is used in many other cocktails.
+
+Q:The original Bellini was a mixture of sparkling Italian white wine and what type of fruit juice?
+A1:apple
+A2:orange
+A3:peach
+CA:A3
+H:This ingredient has a large pit.
+
+Q:The sandwich known as the "Reuben" does not have which of the following ingredients?
+A1:boiled ham
+A2:corned beef
+A3:swiss cheese
+CA:A1
+H:The Reuben is an American hot beef sandwich.
+
+Q:Which of the following is not a favorable adjective when discussing wine?
+A1:sharp
+A2:dry
+A3:vigorous
+CA:A1
+H:This adjective describes wines that are bitter and unpleasant with hard edges.
+ 
+Q:Europeans first learned of chocolate from whom?
+A1:Africans
+A2:Aztecs
+A3:East Indians
+CA:A2
+H:This civilization imported the ingredients for chocolate from Mexico.
+
+Q:Which of the following foods were introduced to America from Europe?
+A1:the white potato
+A2:the tomato
+A3:the pumpkin
+CA:A1
+H:This vegetable is the world's fourth largest food crop.
+
+Q:In 1925, how many restaurants were in New York City?
+A1:3000
+A2:17000
+A3:500
+CA:A2
+H:The population of New York City was over 11 million people in 1925.
+
+Q:The slang term 'moxie', meaning the ability to face difficulty with spirit and courage, comes from what?
+A1:the name of a breakfast cereal
+A2:the name of a soft drink
+A3:the name of a cigarette brand
+CA:A2
+H:The meaning of moxie came about through widespread brand advertising.
+
+Q:Hershey introduced the 5 cent Hershey bar in 1903. For how long did the price remain a nickel?
+A1:21 years
+A2:43 years
+A3:67 years
+CA:A3
+H:The size of the candy bar considerably shrank in order to maintain the same price.
+
+Q:Milton Hershey first became rich selling what candy product?
+A1:caramels
+A2:salt water taffy
+A3:chocolate bars
+CA:A1
+H:He sold this initial business in 1900 for 1 million dollars.
+
+Q:More than 75% of the world's supply of maple syrup comes from where?
+A1:Vermont
+A2:Minnesota
+A3:Quebec
+CA:A3
+H:This region is famous for its maple syrup production.
+
+Q:A dried plum is properly known as a what?
+A1:prune
+A2:raisin
+A3:date
+CA:A1
+H:This dried fruit contains mild laxatives.
+
+Q:Strawberries, raspberries, peaches and cherries are all related to which type of flower?
+A1:the rose
+A2:the daffodil
+A3:the lily
+CA:A1
+H:Other fruits related to this flower are apples, apricots, plums and pears.
+
+Q:From where do potatoes originate?
+A1:Ireland
+A2:South America
+A3:Greenland
+CA:A2
+H:This vegetable was most likely first cultivated by the Incans.
+
+Q:Up until about 400 years ago the majority of carrots eaten in Europe was what color?
+A1:green
+A2:orange
+A3:white
+CA:A3
+H:Many colorful variants of carrots still exist, including purple, black, red, and yellow carrots.
+
+Q:Moistening meat or vegetables with melted fat while it is cooking is called what?
+A1:basting
+A2:baking
+A3:blending
+CA:A1
+H:This technique is frequently used while baking a turkey.
+
+Q:Cooking in boiling water till partially done is called what?
+A1:boiling
+A2:parboiling
+A3:broiling
+CA:A2
+H:This technique is also called "leaching".
+
+Q:Shredding a food finely by rubbing against a rough or jagged surface is called what?
+A1:chopping
+A2:blending
+A3:grating
+CA:A3
+H:This technique is frequently used with cheeses.
+
+Q:Boiling at a very low temperature is called what?
+A1:simmering
+A2:broiling
+A3:frying
+CA:A1
+H:This technique is used in slow cooking.
+
+Q:What part of the lobster is most prized?
+A1:the tail meat
+A2:the stomach meat
+A3:the leg meat
+CA:A1
+H:Some people also argue that the claw meat is just as good as this part of the lobster.
+
+Q:What two vitamins does milk contain?
+A1:C and D
+A2:A and D
+A3:A and C
+CA:A2
+H:These vitamins can also be gained from many different vegetables, and spending some time in the sun.
+
+Q:What is the most frequently used of the unfermented dairy products?
+A1:Milk
+A2:Cheese
+A3:Cream
+CA:A1
+H:This type of dairy product provides excellent protection against brittle bones.
+
+Q:What kind of milk can be highly toxic?
+A1:Full fat milk.
+A2:Raw cow's milk.
+A3:Raw goat's milk.
+CA:A2
+H:This type of milk can carry harmful bacteria which can cause foodborne illnesses.
+
+Q:Food can be kept for long periods of time by adding salt or sugar because these substances do what?
+A1:make the food too acidic for spoilage to occur
+A2:bind to water, thereby making it unavailable to bacteria
+A3:dissolve the cell walls in plant foods
+CA:A2
+H:Salt and sugar do not change the acidity of foods.
+
+Q:It is unwise to thaw meats or poultry in what way?
+A1:in a microwave oven
+A2:in the refrigerator
+A3:at room temperature
+CA:A3
+H:This method allows harmful bacteria to grow in the food.
+
+Q:A biological method of food preservation is what?
+A1:freezing
+A2:drying
+A3:fermentation.
+CA:A3
+H:This method takes place when cells do not have enough oxygen to generate energy from sugars.
+
+Q:The majority of daily calories should come from what?
+A1:breads, cereals, rice and pasta products
+A2:fruits and vegetables
+A3:milk, yogurt and cheese
+CA:A1
+H:These foods' calories come from carbohydrates.
+
+Q:The major nutrient found in fruits is what?
+A1:B vitamins
+A2:Vitamin C
+A3:Iron
+CA:A2
+H:This vitamin helps to keep skin healthy.
+
+Q:Major nutrients found in fats and oils include which of the following?
+A1:Vitamin A
+A2:Vitamin D
+A3:Vitamin C
+CA:A2
+H:The human body also naturally produces this vitamin when exposed to sunlight.
+
+Q:Which of the following foods include high sources of protein?
+A1:chicken and fish
+A2:celery and carrots
+A3:rice and bread
+CA:A1
+H:Protein is most abundant in animal-derived products.
+
+Q:The average person puts on 10 to 20 pounds from 45 to 65. This is what?
+A1:quite normal
+A2:to be avoided
+A3:caused by aging
+CA:A2
+H:Dramatic changes to weight can lead to negative health effects.

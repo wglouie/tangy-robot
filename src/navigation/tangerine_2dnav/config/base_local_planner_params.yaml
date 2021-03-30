@@ -1,0 +1,61 @@
+TrajectoryPlannerROS:
+  # for details see: http://www.ros.org/wiki/base_local_planner
+
+
+  # Robot Configuration Parameters
+
+  max_vel_x: 0.3                   # The maximum forward velocity allowed for the base in meters/sec (default 0.1)
+  min_vel_x: 0.3                 # The minimum forward velocity allowed for the base in meters/sec (default 0.1)
+  max_rotational_vel: 2         # The maximum rotational velocity allowed for the base in radians/sec (0.1 rad/sec = 5.7 degree/sec) (default 1.0)
+  min_in_place_rotational_vel: 0.4 # The minimum rotational velocity allowed for the base while performing in-place rotations in radians/sec (default 0.4)
+
+  escape_vel: -0.1                 #speed used for driving during escapes in meters/sec. (default -0.1)
+
+  acc_lim_theta: 3.2                  # The rotational acceleration limit of the robot in radians/sec2 (default 3.2)
+  acc_lim_x: 2.5                   # The x acceleration limit of the robot in meters/sec2 (default 2.5)
+  acc_lim_y: 2.5                   # The y acceleration limit of the robot in meters/sec2 (default 2.5)
+
+  holonomic_robot: false
+
+  path_distance_bias: 0.6               #default .6
+
+  # Goal Tolerance Parameters
+  yaw_goal_tolerance: 3          # 0.1 means 5.7 degrees. The tolerance in radians for the controller in yaw/rotation when achieving its
+                                  # goal (default 0.05)
+  xy_goal_tolerance: 0.01 #0.5            # The tolerance in meters for the controller in the x & y distance when achieving a goal (default 0.1)
+  latch_xy_goal_tolerance: false   # If goal tolerance is latched, if the robot ever reaches the goal xy location it will simply rotate in place (default false)
+
+
+  # Forward Simulation Parameters
+
+  sim_time: 1                # The amount of time to forward-simulate trajectories in seconds (default: 1.0)
+  sim_granularity: 0.025           # The step size, in meters, to take between points on a given trajectory (default: 0.025)
+  angular_sim_granularity: 0.025   # The step size, in radians, to take between angular samples on a given trajectory. (default 0.025)
+  vx_samples: 20                   # The number of samples to use when exploring the x velocity space (default 3)
+  vtheta_samples: 20               # The number of samples to use when exploring the theta velocity space (default 20)
+
+
+  # Trajectory Scoring Parameters
+  meter_scoring: true # If true, distances are expressed in meters; otherwise grid cells default (false)
+  pdist_scale: 0.6 # The weighting for how much the controller should stay close to 	the path it was given (default 0.6)
+  gdist_scale: 0.8 # The weighting for how much the controller should attempt to reach its local goal, also controls speed (default 0.8)
+  occdist_scale: 1.5 # The weighting for how much the controller should attempt to avoid obstacles (before 1.5)
+# occdist_scale * (maximum obstacle cost along the trajectory in obstacle cost (0-254)) (default 0.01)
+
+  heading_lookahead: 1 # How far to look ahead in meters when scoring different in-place-rotation trajectories
+  heading_scoring: true # Whether to score based on the robot's heading to the path or its distance from the path (default false)
+  heading_scoring_timestep: 0.8 # How far to look ahead in time in seconds along the simulated trajectory when using heading scoring (default 0.8)
+   
+  dwa: true  # Whether to use the Dynamic Window Approach (DWA)_ or whether to use Trajectory Rollout
+
+# (NOTE: In our experience DWA worked as well as Trajectory Rollout and is computationally less expensive.
+
+# It is possible that robots with extremely poor acceleration limits could gain from running Trajectory
+
+# Rollout, we recommend trying DWA first.)
+
+  publish_cost_grid_pc: false # Whether or not to publish the cost grid that the planner will use when planning. (default false)
+
+# Oscillation Prevention Parameters
+
+  oscillation_reset_dist: 0 # How far the robot must travel in meters before oscillation flags are reset  (default 0.05)

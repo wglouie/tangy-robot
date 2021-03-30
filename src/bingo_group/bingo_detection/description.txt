@@ -1,0 +1,32 @@
+Bingo Detection:
+
+
+package: 
+bingo_detection 
+
+	Launch files:	BingoDetection_server.launch
+			BingoDetection_client.launch
+
+Description:
+
+	BingoDetection_server.launch:
+
+		Topics:
+
+			Subscribes to:	/Bingo/BingoDetection/goal
+					/Bingo/BingoDetection/cancel
+
+			Publishes:	/Bingo/BingoDetection/feedback
+					/Bingo/BingoDetection/status
+					/Bingo/BingoDetection/result
+
+	BingoDetection_client.launch:
+
+		Topics:
+
+			Subscribes to:
+
+			Publishes:
+
+
+

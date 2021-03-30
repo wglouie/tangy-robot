@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- User to track -->
+	<param name="user" value="Chris" />
+
+	<!-- User tracling client -->	
+	<node pkg="user_tracking" type="UserTrackingClient" name="user_tracking_client" output="screen" />
+
+</launch>

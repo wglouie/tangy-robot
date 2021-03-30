@@ -1,0 +1,128 @@
+#tangy:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 75  
+  
+  # Position Controllers ---------------------------------------
+  r_arm_controller_1:
+    type: effort_controllers/JointTrajectoryController
+    joints: 
+      - lower_to_wrist_right_arm
+    gains:
+      lower_to_wrist_right_arm:
+         p: 10
+         i: 0
+         d: 0
+         i_clamp: 0
+  r_arm_controller_2:
+    type: effort_controllers/JointTrajectoryController
+    joints: 
+      - wrist_right_arm_z_revolute_joint
+    gains:
+      wrist_right_arm_z_revolute_joint:
+         p: 10
+         i: 0
+         d: 0
+         i_clamp: 0
+  r_arm_controller_3:
+    type: effort_controllers/JointTrajectoryController
+    joints: 
+      - upper_to_lower_right_joint
+    gains:
+      upper_to_lower_right_joint:
+         p: 10
+         i: 0
+         d: 0
+         i_clamp: 0
+  r_arm_controller_4:
+    type: effort_controllers/JointTrajectoryController
+    joints: 
+      - upper_right_arm_z_revolute_joint
+    gains:
+      upper_right_arm_z_revolute_joint:
+         p: 10
+         i: 0
+         d: 0
+         i_clamp: 0
+  r_arm_controller_5:
+    type: effort_controllers/JointTrajectoryController
+    joints: 
+      - upper_right_arm_y_revolute_joint
+    gains:
+      upper_right_arm_y_revolute_joint:
+         p: 10
+         i: 0
+         d: 0
+         i_clamp: 0
+  r_arm_controller_6:
+    type: effort_controllers/JointTrajectoryController
+    joints: 
+      - right_shoulder_x_revolute
+    gains:
+      right_shoulder_x_revolute:
+         p: 10
+         i: 0
+         d: 0
+         i_clamp: 0
+
+  l_arm_controller_1:
+    type: effort_controllers/JointTrajectoryController
+    joints: 
+      - lower_to_wrist_left_arm
+    gains:
+      lower_to_wrist_left_arm:
+         p: 10
+         i: 1
+         d: 0
+         i_clamp: 0.0
+  l_arm_controller_2:
+    type: effort_controllers/JointTrajectoryController
+    joints: 
+      - wrist_left_arm_z_revolute_joint
+    gains:
+      wrist_left_arm_z_revolute_joint:
+         p: 10
+         i: 1
+         d: 0
+         i_clamp: 0.0
+  l_arm_controller_3:
+    type: effort_controllers/JointTrajectoryController
+    joints: 
+      - upper_to_lower_left_joint
+    gains:
+      upper_to_lower_left_joint:
+         p: 10
+         i: 1
+         d: 0
+         i_clamp: 0.0
+  l_arm_controller_4:
+    type: effort_controllers/JointTrajectoryController
+    joints: 
+      - upper_left_arm_z_revolute_joint
+    gains:
+      upper_left_arm_z_revolute_joint:
+         p: 10
+         i: 1
+         d: 0
+         i_clamp: 0.0
+  l_arm_controller_5:
+    type: effort_controllers/JointTrajectoryController
+    joints: 
+      - upper_left_arm_y_revolute_joint
+    gains:
+      upper_left_arm_y_revolute_joint:
+         p: 10
+         i: 1
+         d: 0
+         i_clamp: 0.0
+  l_arm_controller_6:
+    type: effort_controllers/JointTrajectoryController
+    joints: 
+      - left_shoulder_x_revolute
+    gains:
+      left_shoulder_x_revolute:
+         p: 10
+         i: 1
+         d: 0
+         i_clamp: 0.0

@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSetRecord xmlns="http://tempuri.org/DataSetRecord.xsd">
+  <DataTableRecord>
+    <FileName>Milk_vid.wav</FileName>
+    <StartTime>0</StartTime>
+    <EndTime>PT3S</EndTime>
+    <Tag>27</Tag>
+    <ColorIndex>3</ColorIndex>
+  </DataTableRecord>
+</DataSetRecord>

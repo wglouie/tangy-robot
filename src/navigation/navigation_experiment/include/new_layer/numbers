@@ -1,0 +1,52 @@
+ns: basic_shapes_1
+id: 0
+type: 3
+action: 0
+pose: 
+  position: 
+    x: 3.65000154451
+    y: -0.299998514354
+    z: 0.0
+
+
+ns: basic_shapes_2
+id: 0
+type: 3
+action: 0
+pose: 
+  position: 
+    x: 3.45000154153
+    y: -1.49999853224
+    z: 0.0
+
+ns: basic_shapes_3
+id: 0
+type: 3
+action: 0
+pose: 
+  position: 
+    x: 3.45000154153
+    y: -0.149998512119
+    z: 0.0
+
+ns: basic_shapes_4
+id: 0
+type: 3
+action: 0
+pose: 
+  position: 
+    x: 3.50000154227
+    y: -0.199998512864
+    z: 0.0
+
+ns: test_shapes
+id: 0
+type: 3
+action: 0
+pose: 
+  position: 
+    x: 3.55
+    y: -0.3
+    z: 0.0
+
+double locations[7] = {3.55, -0.3, 0.000, 0.000, 0.000, 0.0, 0.0};

@@ -1,0 +1,335 @@
+Q:This vitamin helps maintain the skin, eyes, and healthy bones and teeth. Which vitamin is it?
+A1:Vitamin A
+A2:Vitamin B
+A3:Vitamin C
+CA:A1
+H:It is found in milk, liver, eggs, butter, and vegetables.
+
+Q:Saltwater oceans cover approximately what percentage of the earth's surface?
+A1:50%
+A2:70%
+A3:90%
+CA:A2
+H:Scientists estimate about less than 5% of the world's oceans have been explored.
+
+Q:Which blood type is called the universal recipient?
+A1:Type O
+A2:Type A
+A3:Type AB
+CA:A3
+H:The universal recipient can receive blood from any type.
+
+Q:What common metal is liquid at room temperature?
+A1:Lead
+A2:Uranium
+A3:Mercury
+CA:A3
+H:This metal is considered a well-known hazardous substance.
+
+Q:Protons and Neutrons are subatomic particles located in the:
+A1:Quark
+A2:Electron
+A3:Nucleus
+CA:A3
+H:These particles are responsible for the majority of the mass in atoms.
+
+Q:What is the term for the amount of heat required to raise the temperature of 1 gram of a substance by 1°C?
+A1:Specific heat capacity
+A2:Thermal conductivity
+A3:Heat transfer coefficient
+CA:A1
+H:In some other languages, the term thermal capacity is used instead.
+
+Q:What is the name for the transparent outer covering of the front of the eye?
+A1:Lens
+A2:Cornea
+A3:Retina
+CA:A2
+H:This covering is frequently changed in laser eye surgery.
+
+Q:What form of vegetation is the highly poisonous death cap?
+A1:Mushroom
+A2:Fern
+A3:Root
+CA:A1
+H:The death cap grows on various species of hardwood trees.
+
+Q:Is a light-year a measure of speed, time, or distance?
+A1:Speed
+A2:Time
+A3:Distance
+CA:A3
+H:Our sun is approximately 4.22 lightyears away from the nearest star.
+
+Q:Which star lies closest to the earth?
+A1:Sirius
+A2:The Sun
+A3:Alpha Centauri
+CA:A2
+H:The Greek name for this star is Helios, and the Latin name is Sol.
+
+Q:The fastest growing plant can increase up to 35 inches (or 90 cm) in one day. What is it?
+A1:Dandelion
+A2:Beansprout
+A3:Bamboo
+CA:A3
+H:A panda's main diet consists primarily of this plant.
+
+Q:Which has a higher boiling temperature?
+A1:Water
+A2:Alcohol
+A3:Oil
+CA:A3
+H:This substance is used in very high-temperature cooking applications.
+
+Q:The name of what disease means, in Italian, bad air?
+A1:Polio
+A2:Malaria
+A3:Influenza
+CA:A2
+H:This disease is spread through mosquitoes.
+
+Q:What is the index used to measure the quantity of harmful particles and chemicals in the air?
+A1:Quality of Life Index
+A2:Air Quality Index
+A3:Air Speed Record
+CA:A2
+H:Different countries have different indices, corresponding to different national air quality standards.
+
+Q:The first vaccine, developed by the English physician Edward Jenner in 1796, protected people against what disease?
+A1:Influenza
+A2:Smallpox
+A3:Polio
+CA:A2
+H:The British used this disease as a biological warfare agent against the Native Americans.
+
+Q:Which organ in the human body is the most commonly transplanted from one human to another?
+A1:Kidney
+A2:Liver
+A3:Heart
+CA:A1
+H:This organ removes excess organic molecules from the blood and excretes the waste into urine.
+
+Q:What is the primary ingredient of diamond?
+A1:Carbon
+A2:Silicon
+A3:Nitrogen
+CA:A1
+H:This element is also the primary ingredient in pencil lead.
+
+Q:How many pairs of ribs do adult human beings have?
+A1:5
+A2:12
+A3:20
+CA:A2
+H:The ribs provide attachments for the muscles of the neck, chest, upper abdomen and back.
+
+Q:What is the black circular opening through which light passes to the retina in the eye?
+A1:Pupil
+A2:Lens
+A3:Aqueous humour
+CA:A1
+H:This opening is round in humans, but can be vertical slits in cats.
+
+Q:What is the branch of biology that deals with plants?
+A1:Botany
+A2:Zoology
+A3:Herbalism
+CA:A1
+H:A person who studies this can also be called a botanist.
+
+Q:What is the branch of biology that deals with animals?
+A1:Zoology
+A2:Herbalism
+A3:Botany
+CA:A1
+H:The name of this branch is derived from the Greek words for animal and study.
+
+Q:Which human organ produces bile?
+A1:Gall bladder
+A2:Kidney
+A3:Liver
+CA:A3
+H:This organ also has other functions such as forming blood proteins, and storing vitamins.
+
+Q:Which planet has the shortest day of any planet in our solar system?
+A1:Jupiter
+A2:Mercury
+A3:Mars
+CA:A1
+H:This planet's day lasts only 9 hours and 55 minutes.
+
+Q:What is the process by which green plants convert the energy of sunlight into chemical energy?
+A1:Osmosis
+A2:Hydrolysis
+A3:Photosynthesis
+CA:A3
+H:This process uses carbon dioxide, water, and sunlight to produce sugar and oxygen.
+
+Q:What does the Doppler Effect cause?
+A1:The sound of a moving object to change pitch as it approaches and leaves
+A2:The bending of light through water
+A3:The temperature increase of the world as greenhouse gases fill the atmosphere
+CA:A1
+H:The Doppler Effect is frequently demonstrated by emergency vehicles.
+
+Q:What is the name given to molten rocks erupted by a volcano?
+A1:Firestone
+A2:Crater
+A3:Lava
+CA:A3
+H:The molten rocks are known for their destructive flows down the sides of the volcanos.
+
+Q:Which rare element would you associate with Marie and Pierre Curie?
+A1:Gold
+A2:Radium
+A3:Uranium
+CA:A2
+H:Marie Curie died due to high exposure to radiation from extended exposure to this element.
+ 
+Q:How many planets are there in our solar system?
+A1:8
+A2:9
+A3:10
+CA:A1
+H:Pluto's status as a planet was demoted in 2005.
+
+Q:Which gas is produced when pure charcoal is burnt?
+A1:Water Vapor
+A2:Carbon Dioxide
+A3:Nitrogen
+CA:A2
+H:The only other product of this chemical reaction is heat.
+
+Q:What is known as the universal solvent?
+A1:Water
+A2:Sulphuric Acid
+A3:Hydrochloric Acid
+CA:A1
+H:This solvent can dissolve both acidic and basic solutes.
+
+Q:Which of the following is necessary for combustion?
+A1:Oxygen
+A2:Carbon
+A3:Petrol
+CA:A1
+H:A wide variety of fuels can be used for burning, but the following substance is always required.
+
+Q:Which planet is known as the Red Planet?
+A1:Mars
+A2:Mercury
+A3:Jupiter
+CA:A1
+H:This is the fourth planet from the Sun.
+
+Q:What is the total number of bones in the adult human body?
+A1:32
+A2:196
+A3:206
+CA:A3
+H:A newborn actually has 270 bones. However, many fuse together as the body grow older.
+
+Q:The insulating blanket of gases which protect the Earth from the Sun's light is called the:
+A1:Biosphere
+A2:Atmosphere
+A3:Hydrosphere
+CA:A2
+H:This blanket is held in place by the Earth's gravity.
+
+Q:What is the Sun?
+A1:A comet
+A2:A star
+A3:A satellite
+CA:A2
+H:The moon is a natural satellite.
+
+Q:Which gas in the atmosphere protects us from harmful ultraviolet radiations?
+A1:Ozone
+A2:Carbon Dioxide
+A3:Nitrogen
+CA:A1
+H:This gas is created when ultraviolet radiation hits oxygen molecules.
+
+Q:Enzymes and anti-bodies are mainly made of:
+A1:Carbohydrates
+A2:Vitamins
+A3:Proteins
+CA:A3
+H:You can gain this important nutrient by consuming meat.
+
+Q:Where is the Sea of Tranquility?
+A1:On the Moon
+A2:In the Pacific Ocean
+A3:In the Atlantic Ocean
+CA:A1
+H:The first human excursion to this sea established the Tranquility Base.
+
+Q:Where is the thickest skin found on the human body?
+A1:The bum
+A2:The palm
+A3:The back
+CA:A2
+H:The sole of the foot also has extremely thick skin.
+
+Q:What did Canadian inventor Joseph-Armand Bombardier invent in 1936?
+A1:Electric car
+A2:Solar battery
+A3:Modern snowmobile
+CA:A3
+H:His invention was first sold under the brand name Ski-Doo.
+
+Q:Bamboo is known for being?
+A1:The fastest growing plant in the world
+A2:Having two colors of flowers
+A3:Having above ground roots
+CA:A1
+H:Bamboo reaches their final size in a single growing season of three to four months.
+
+Q:Which culture is credited with inventing the abacus?
+A1:Chinese
+A2:Russian
+A3:Egyptian
+CA:A1
+H:The earliest known documentation of the abacus in this culture dates back to the 2nd century BC.
+
+Q:When was the electric battery invented?
+A1:1876
+A2:1967
+A3:1800
+CA:A3
+H:The concept of a battery was first described by Benjamin Franklin in 1748.
+
+Q:Venus and which other planet are sometimes called the "Blue Planet"?
+A1:Neptune
+A2:Earth
+A3:Mercury
+CA:A2
+H:This planet's blue color comes from its large oceans.
+
+Q:Which of these inventions dates back to about 3500 BC?
+A1:Steel tools
+A2:Abacus
+A3:Glass
+CA:A3
+H:This invention was first made in Mesopotamia or Ancient Egypt.
+
+Q:Which planet did Mariner 9 orbit in 1971?
+A1:Mercury
+A2:Mars
+A3:Jupiter
+CA:A2
+H:The mission of the probe was to map 70% of this planet's surface from an altitude of 1500 km.
+
+Q:About the size of a fist, which organ helps fight infections from foreign objects?
+A1:Spleen
+A2:Pancreas
+A3:Kidney
+CA:A1
+H:The organ is brownish in color and is located in the left upper quadrant of the abdomen.
+
+Q:Where is the strongest muscle in the human body?
+A1:The back
+A2:The leg
+A3:The jaw
+CA:A3
+H:In other animals, this muscle is particularly strong in order to crush plant matter.

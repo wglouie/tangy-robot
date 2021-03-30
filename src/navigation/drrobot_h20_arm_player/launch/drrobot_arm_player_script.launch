@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+	<group>
+	
+		<node pkg="drrobot_h20_arm_player" name="DrRobot_Arm_Player" type="DrRobot_Arm_Player" output="screen"/>
+		<!-- script -->
+		<node pkg="drrobot_h20_arm_player" name="drrobot_script_teleop" type="drrobot_script_teleop" output="screen"/>
+		
+	</group >
+</launch>

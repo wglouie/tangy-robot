@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="amcl" type="amcl" name="amcl" output="screen">
+    <!-- Publish scans from best pose at a max of 10 Hz -->
+    <param name="odom_model_type" value="diff"/>  <!-- differential drive robot 0-->
+    <param name="gui_publish_rate" value="10.0"/>  <!-- scans and paths published at 10hz for visualization  -->
+    <param name="laser_max_beams" value="30"/> <!-- use 30 evenly spaced beams in every scan -->
+    <param name="laser_max_range" value="4.0"/>		<!--range = 4m from URG-04LX-UG01 spec sheet (can use -1 for default reported max range)-->
+
+    <param name="min_particles" value="500"/>  <!-- number of points to consider probability of when certainty is high OLD VALUE: 500-->
+    <param name="max_particles" value="5000"/> <!-- number of points when low certainty OLD VALUE: 5000-->
+
+    <param name="kld_err" value="0.05"/> <!-- max error between true and estimated distribution -->
+    <param name="kld_z" value="0.95"/> <!-- probability that the error will be less than kld_err -->
+    <param name="odom_alpha1" value="0.2"/> <!-- rotation noise from rotation -->
+    <param name="odom_alpha2" value="0.2"/> <!-- rotation noise from translation -->
+    <param name="odom_alpha3" value="0.8"/> <!-- translation noise from translation--> <!--seems right for diff drive -->
+    <param name="odom_alpha4" value="0.2"/> <!-- translation noise from rotation -->
+    <!--param name="odom_alpha5" value="0.0"/--> <!--not used in diff model is used -->
+    <param name="laser_z_hit" value="0.5"/>
+    <param name="laser_z_short" value="0.05"/>
+    <param name="laser_z_max" value="0.05"/>
+    <param name="laser_z_rand" value="0.5"/>
+    <param name="laser_sigma_hit" value="0.2"/>
+    <param name="laser_lambda_short" value="0.1"/>
+    <param name="laser_model_type" value="likelihood_field"/>
+    <!-- <param name="laser_model_type" value="beam"/> -->
+    <param name="laser_likelihood_max_dist" value="2.0"/>
+    <param name="update_min_d" value="0.2"/>
+    <param name="update_min_a" value="0.5"/>
+    <param name="odom_frame_id" value="odom"/>
+    <param name="resample_interval" value="1"/>
+    <!-- Increase tolerance because the computer can get quite busy -->
+    <param name="transform_tolerance" value="0.01"/>
+    <param name="recovery_alpha_slow" value="0.0"/>
+    <param name="recovery_alpha_fast" value="0.0"/>
+
+    <!-- Things seem to be better with use_map_topic set to true -->
+    <param name="use_map_topic" value="true"/>
+    <!-- <param name="first_map_only" value="true"/> -->
+
+    <param name="odom_frame_id" value="odom"/>
+    <!-- <remap from="scan" to="scan"/> -->
+    <remap from="map" to="/map"/>
+    <!--<remap from="static_map" to="/static_map"/>-->
+    <!-- tilting and flat laser scan -->
+    <!--remap from="scan" to="flat_scan"/-->
+
+    <!--
+	- AMCL is configured for URG-04LX-UG01 laser scanner:
+
+		. 240-degree range
+		. angular resolution= 0.352 degree
+		. accuracy +-30 mm
+		. distance detection = 4.0 m
+    -->
+  </node>	
+</launch>

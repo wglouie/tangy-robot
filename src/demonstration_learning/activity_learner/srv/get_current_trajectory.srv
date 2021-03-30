@@ -1,0 +1,6 @@
+#request
+string go
+---
+#response
+string[] trajectory_header
+string[] trajectory_data

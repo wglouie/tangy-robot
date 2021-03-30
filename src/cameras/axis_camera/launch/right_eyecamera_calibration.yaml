@@ -1,0 +1,15 @@
+!!python/unicode 'camera_matrix':
+  !!python/unicode 'data': !!python/tuple [838.177348, 0.0, 330.210941,
+    0.0, 839.723527, 263.288030, 0.0, 0.0, 1.0]
+!!python/unicode 'camera_name': !!python/unicode '192_168_0_97_8083'
+!!python/unicode 'distortion_coefficients':
+  !!python/unicode 'data': !!python/tuple [-0.501546, 0.212996, -0.000036, -0.002820, 0.0]
+!!python/unicode 'distortion_model': plumb_bob
+!!python/unicode 'image_height': 480
+!!python/unicode 'image_width': 640
+!!python/unicode 'projection_matrix':
+  !!python/unicode 'data': !!python/tuple [769.501404, 0.0, 330.186086, 0.0,
+0.0, 800.697083, 264.909656, 0.0, 0.0, 0.0, 1.0, 0.0]
+!!python/unicode 'rectification_matrix':
+  !!python/unicode 'data': !!python/tuple [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0,
+    1.0]

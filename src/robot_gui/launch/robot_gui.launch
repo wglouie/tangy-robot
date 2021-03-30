@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- TTS Settings -->
+                <!-- main window -->
+		<rosparam param="/tts/language">en_us</rosparam>
+		<rosparam param="/tts/gender">female</rosparam>
+		<rosparam param="/tts/webbased">true</rosparam>
+
+	<!-- main window -->
+	<node pkg="robot_gui" name="robot_gui" type="robot_gui" output="screen" />
+</launch>

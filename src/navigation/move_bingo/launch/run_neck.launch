@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+	<group>
+
+		<!--<node pkg="drrobot_h20_arm_player" name="DrRobot_Arm_Player" type="DrRobot_Arm_Player" output="screen"/>-->
+		<!--<node pkg="drrobot_h20_player" name = "drrobot_player" type = "drrobot_player" output="screen"/>-->
+		
+		<!-- DrRobot Player -->
+		<include file="$(find drrobot_h20_player)/launch/drrobot_player.launch" />
+
+		<!-- script -->
+		<!--<node pkg="move_bingo" name="neck_movement" type="neck_movement" output="screen"/>-->
+		
+	</group >
+</launch>

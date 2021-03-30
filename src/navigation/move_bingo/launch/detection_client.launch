@@ -1,0 +1,6 @@
+<launch>
+	<node ns="Bingo" pkg="move_bingo" type="detection" 		name="detection" output="screen">
+		<param name="calledNumbersFile" type="string" value="$(find bingo_detection)/CalledNumbers.txt" />
+	</node>
+</launch>
+

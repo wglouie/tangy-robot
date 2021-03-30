@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<actions>
+	<action name="GREETING" gui_text="Greet players" speech="Hi! My name is Tangy. I am so excited to play Bingo with you today. " gesture="wave" locationX="0" locationY="0" image_file="none.txt" music_file="none.txt" />
+	<action name="CALL NUMBER" gui_text="Call a random Bingo number" speech=" lucky number " gesture="/home/tangy/tangy-robot/src/demonstration_learning/action_executor/database/custom_actions/save69/CALL NUMBER" locationX="NONE" locationY="NONE" image_file="none.txt" music_file="none.txt" />
+	<action name="REMOVEMARKER" gui_text="Ask a player to remove the incorrectly marked numbers on his/her Bingo card" speech="Oops! You have some misplaced markers. Please remove these markers from the following numbers on your card." gesture="/home/tangy/tangy-robot/src/demonstration_learning/action_executor/database/demonstration_gestures/point" locationX="NONE" locationY="NONE" image_file="none.txt" music_file="none.txt" />
+	<action name="MARKNUMBER" gui_text="Ask a player to mark numbers missing on his/her Bingo card" speech="I think you have some missing markers. Can you place markers on the following spots?" gesture="/home/tangy/tangy-robot/src/demonstration_learning/action_executor/database/demonstration_gestures/point" locationX="NONE" locationY="NONE" image_file="none.txt" music_file="none.txt" />
+	<action name="ENCOURAGE" gui_text="Encourage a player" speech="Wow, you are close to getting Bingo!" gesture="" locationX="NONE" locationY="NONE" image_file="none.txt" music_file="none.txt" />
+	<action name="CELEBRATE" gui_text="Celebrate a winning Bingo card" speech="Congratulations, you won Bingo!" gesture="celebrate" locationX="NONE" locationY="NONE" image_file="none.txt" music_file="none.txt" />
+	<action name="JOKE" gui_text="Tell a joke" speech="Why wouldn't the shrimp share his treasure? Because he was a little shellfish." gesture="laugh_gesture" locationX="NONE" locationY="NONE" image_file="none.txt" music_file="none.txt" />
+	<action name="MOVE_TO_FRONT" gui_text="Move to the front of the room" speech="" gesture="" locationX="0" locationY="0" image_file="none.txt" music_file="none.txt" />
+	<action name="MOVE_TO_HELP" gui_text="Move to a player that requires help" speech="" gesture="" locationX="0" locationY="0" image_file="none.txt" music_file="none.txt" />
+	<action name="VALEDICTION" gui_text="Say goodbye to players" speech="Well that's it! Wasn't that fun? Thank you very much for playing Bingo with me. I had so much fun! Goodbye!" gesture="wave" locationX="NONE" locationY="NONE" image_file="none.txt" music_file="none.txt" />
+	<action name="SHOWBINGOCARD" gui_text="Ask a player to show his/her Bingo card" speech="Please push bingo card forward." gesture="" locationX="NONE" locationY="NONE" image_file="none.txt" music_file="none.txt" />
+</actions>

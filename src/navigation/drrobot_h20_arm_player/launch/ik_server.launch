@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find drrobot_h20_arm_player)/launch/upload_robot.launch"/>
+
+  <node name="kinematic_model_tutorial" pkg="drrobot_h20_arm_player" type="ik_server" respawn="false" output="screen">
+    <rosparam command="load" file="$(find arm_navigation)/config/kinematics.yaml"/>
+  </node>
+</launch>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+   
+    <node pkg="music_player" type="music_player" name="music_player" output="screen" respawn="true"/>
+     		<param name="musicFile1" type="string" value="$(find music_player)/music/file1.mp3" />
+     		<param name="musicFile2" type="string" value="$(find music_player)/music/file2.mp3" />
+     		<param name="musicFile3" type="string" value="$(find music_player)/music/file3.mp3" />
+     		<param name="musicFile4" type="string" value="$(find music_player)/music/file4.mp3" />
+     		<param name="musicFile5" type="string" value="$(find music_player)/music/file5.mp3" />
+     		<param name="musicFile6" type="string" value="$(find music_player)/music/file6.mp3" />
+        <param name="celebrationMusic" type="string" value="$(find music_player)/music/celebrate.mp3" />
+        <param name="beepSound" type="string" value="$(find music_player)/music/beep.mp3" />
+
+</launch>

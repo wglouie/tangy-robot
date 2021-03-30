@@ -1,0 +1,9 @@
+<launch>
+	<arg name="tf_prefix" value="/upper_frames" />
+	<include file="$(find users_markers)/launch/users_markers.launch"/>
+	<node pkg="raised_hand_detection" name="raised_hand" type="raised_hand" output="screen">
+		<rosparam file="$(find raised_hand_detection)/params/marker_params.yaml" command="load" />
+		<param name="tf_prefix" value="$(arg tf_prefix)" />
+		<param name="fixed_frame" value="openni_depth_frame" />
+	</node>
+</launch>

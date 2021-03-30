@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<launch>
+	<node pkg="telepresence_activity" name="telepresence_activity_server" type="telepresence_activity_server" output="screen"/>
+</launch>

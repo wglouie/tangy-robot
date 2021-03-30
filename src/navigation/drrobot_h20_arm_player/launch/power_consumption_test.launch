@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+
+
+ <rosparam file="$(find tangy_description)/controllers/eff_controllers.yaml" command="load"/>
+
+    <include file="$(find tangerine_2dnav)/launch/my_robot_configuration.launch"/>
+
+    <include file="$(find bingo_detection)/Launch/BingoDetection_server.launch"/>
+
+    <node name="arm_player" pkg="drrobot_h20_arm_player" type="arm_player_eff" respawn="true"/>
+    
+    <node name="ArmMovementServer" pkg="drrobot_h20_arm_player" type="ArmMovement" respawn="true"/>
+    
+    <include file="$(find moveit_tangy)/launch/move_group.launch">
+      <arg name="publish_monitored_planning_scene" value="true" />
+    </include>
+
+
+</launch>

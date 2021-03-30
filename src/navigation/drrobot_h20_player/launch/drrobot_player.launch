@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  	<group >
+		<!-- DrRobot Player -->
+		<rosparam file="$(find drrobot_h20_player)/drrobotplayer_h20.yaml" command="load" />
+		<node pkg="drrobot_h20_player" name="drrobot_player" type="drrobot_player" output="screen"/>
+		<node pkg="drrobot_h20_player" name="drrobotMsgTester" type="drrobotMsgTester"/>
+
+	</group>
+</launch>
+

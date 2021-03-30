@@ -1,0 +1,3 @@
+From http://answers.ros.org/question/33622/openni_launch-not-working-in-fuerte-ubuntu-precise-1204/
+
+$ killall XnSensorServer

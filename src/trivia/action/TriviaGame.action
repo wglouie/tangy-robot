@@ -1,0 +1,8 @@
+#Goal -> If 0-new game, if 1-recover from old game state
+int32 start
+---
+#Results
+int32 done
+---
+#Feedback ->String of where the process is currently
+char[] info

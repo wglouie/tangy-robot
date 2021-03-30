@@ -1,0 +1,33 @@
+(Note: use the openni camera that DOES NOT say "doesn't work")
+
+Steps to make tangy follow people:
+1. Make sure tangy's base is turned on. Open a new terminal. Type in the following: 		roslaunch openni2_launch openni2.launch
+2. Open a new terminal. Type in  the following: 	sudo chmod a+rw /dev/ttyACM0
+3. Turn base one. Type in the following: 		roslaunch tangerine_2dnav my_robot_configuration.launch
+4. Open a new terminal. Type in the following: 		roslaunch tangerine_2dnav move_base.launch
+5. Open a new terminal. Type in the following:		cd ~/tangy-robot
+6. Type in the following:				rosrun silhouette_detection silhouette_detection
+7. Open a new terminal. Type in the following:		rosrun silhouette_detection sil_subscriber
+
+Steps to create a new svm_map (the green and blue blobs):
+1. Open a new terminal. Type in the following:		roslaunch openni2_launch openni2.launch
+2. Open a new terminal. Type in the following:		cd ~/tangy-robot
+3. Open a new terminal. Type in the following:		rosrun silhouette_detection silhouette_capture_ros.cpp
+4. Follow the instruction onscreen to create your SVM map.
+5. E-mail me at ervin.ibadula@gmail.com with svm_data.csv attached so that I can calculate it, tangy's silhouette_svm executable doesn't work because it is using the wrong version of opencv.
+6. I'll send back a new file that will be read by silhouette_detection
+
+Depth topics that can be read by rqt_image_view:
+
+/camera/depth/image
+/camera/depth/image/compressedDepth
+/camera/depth/image_raw
+/camera/depth/image_raw/compressedDepth
+/camera/depth/image_rect
+/camera/depth/image_rect/compressedDepth
+/camera/depth/image_rect_raw
+/camera/depth/image_rect_raw/compressedDepth
+/camera/depth_registered/image_raw
+/camera/depth_registered/image_raw/compressedDepth
+/camera/depth_registered/sw_registered/image_rect_raw
+/camera/depth_registered/sw_registered/image_rect_raw/compressedDepth

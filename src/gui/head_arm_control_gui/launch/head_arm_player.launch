@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+	<group>
+
+		<arg name="log_file" value="log_file.txt"/>
+		<node pkg="head_arm_control_gui" name="qttest" type="qttest" launch-prefix="valgrind --log-file=$(arg log_file) " output="screen"/>
+		
+		
+	</group >
+</launch>

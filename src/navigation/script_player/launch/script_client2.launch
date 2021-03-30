@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+	<group>
+		<!-- script -->
+		<node pkg="script_player" name="script_player_client" type="script_player_client" output="screen"/>
+		<param name="script_folder" type="str" value="$(find script_player)/scripthello/" />
+	</group >
+</launch>

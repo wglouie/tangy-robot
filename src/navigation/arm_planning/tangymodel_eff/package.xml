@@ -1,0 +1,21 @@
+<package>
+  <name>tangymodel_eff</name>
+  <version>0.2.0</version>
+  <description>tangymodel_eff</description>
+  <author email="assistant@moveit.ros.org">MoveIt Setup Assistant</author>
+  <maintainer email="assistant@moveit.ros.org">MoveIt Setup Assistant</maintainer>
+
+  <license>BSD</license>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>convex_decomposition</build_depend>
+  <build_depend>ivcon</build_depend>
+
+  <run_depend>xacro</run_depend>
+
+  <test_depend>gtest</test_depend>
+  <test_depend>urdfdom</test_depend>
+
+</package>

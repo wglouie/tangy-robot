@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NewGuiWidget</class>
+ <widget class="QWidget" name="NewGuiWidget">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1245</width>
+    <height>796</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>640</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Demonstration Learning</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/*
+QPushButton{font-size: 30px;        border: 1px solid #6593cf;
+        border-radius: 2px;
+        padding: 5px 15px 2px 5px;
+        background: qlineargradient(x1 : 0, y1 : 0, x2 : 0, y2 :   1, stop :   0.0 #f5f9ff,
+                stop :   0.5 #c7dfff, stop :   0.55 #afd2ff, stop :   1.0 #c0dbff);
+        color: #006aff;
+        font: bold large &quot;Arial&quot;;
+        height: 30px;}
+QPushButton{border:none;}
+*/
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="0,0">
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QGroupBox" name="robot_command_centre">
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QGroupBox {
+    font-size: 20px;
+    border: 1px solid gray;
+    border-radius: 9px;
+    margin-top: 0.5em;
+	 font: bold;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 3px 0 3px;
+}</string>
+          </property>
+          <property name="title">
+           <string>Robot Command Centre</string>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <item>
+              <widget class="QListView" name="action_list">
+               <property name="styleSheet">
+                <string notr="true">QListView { font-size: 16pt; }</string>
+               </property>
+               <property name="editTriggers">
+                <set>QAbstractItemView::NoEditTriggers</set>
+               </property>
+               <property name="showDropIndicator" stdset="0">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_7">
+               <item>
+                <widget class="QCheckBox" name="cont_act_select_check_box">
+                 <property name="text">
+                  <string>Continuous Action Selection</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignHCenter">
+                <widget class="QCheckBox" name="show_gestures_check_box">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{font-size: 30px}</string>
+                 </property>
+                 <property name="text">
+                  <string>Show gestures (turn off to speed up actions)</string>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>200</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_9">
+               <item>
+                <widget class="QPushButton" name="customize_action_button">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/images.qrc">
+                   <normaloff>:/images/customize_action.png</normaloff>:/images/customize_action.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>250</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="autoRepeatDelay">
+                  <number>293</number>
+                 </property>
+                 <property name="flat">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="perform_action_button">
+                 <property name="styleSheet">
+                  <string notr="true">/*QPushButton{font-size: 30px;        border: 1px solid #6593cf;
+        border-radius: 2px;
+        padding: 5px 15px 2px 5px;
+        background: qlineargradient(x1 : 0, y1 : 0, x2 : 0, y2 :   1, stop :   0.0 #f5f9ff,
+                stop :   0.5 #c7dfff, stop :   0.55 #afd2ff, stop :   1.0 #c0dbff);
+        color: #006aff;
+        font: bold large &quot;Arial&quot;;
+        height: 30px;}
+*/</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../resources/images.qrc">
+                   <normaloff>:/images/perform_action.png</normaloff>:/images/perform_action.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>250</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="flat">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+         <widget class="QTabWidget" name="image_view_tabs">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>640</width>
+            <height>480</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>640</width>
+            <height>480</height>
+           </size>
+          </property>
+          <property name="currentIndex">
+           <number>2</number>
+          </property>
+          <widget class="QWidget" name="robot_tab">
+           <attribute name="title">
+            <string>Robot View</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <widget class="rqt_task_learning::RatioLayoutedFrame" name="eye_image_frame" native="true">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>640</width>
+                <height>480</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>640</width>
+                <height>480</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="help_tab">
+           <attribute name="title">
+            <string>Help View</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="rqt_task_learning::RatioLayoutedFrame" name="help_image_frame" native="true">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>640</width>
+                <height>480</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>640</width>
+                <height>480</height>
+               </size>
+              </property>
+              <widget class="QTextBrowser" name="help_state_text">
+               <property name="geometry">
+                <rect>
+                 <x>90</x>
+                 <y>0</y>
+                 <width>431</width>
+                 <height>61</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QTextBrowser{ border:1px solid black;
+font-size: 14pt; }</string>
+               </property>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="card_tab">
+           <attribute name="title">
+            <string>Card View</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="rqt_task_learning::RatioLayoutedFrame" name="card_image_frame" native="true">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>640</width>
+                <height>480</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>640</width>
+                <height>480</height>
+               </size>
+              </property>
+              <widget class="QTextBrowser" name="card_state_text">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>411</width>
+                 <height>91</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QTextBrowser{ border: 1px solid black;
+font-size: 14pt; }</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="detect_card_button">
+               <property name="geometry">
+                <rect>
+                 <x>424</x>
+                 <y>10</y>
+                 <width>200</width>
+                 <height>70</height>
+                </rect>
+               </property>
+               <property name="focusPolicy">
+                <enum>Qt::NoFocus</enum>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{font-size: 50px}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="../../resources/images.qrc">
+                 <normaloff>:/images/redetect_card.png</normaloff>:/images/redetect_card.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>200</width>
+                 <height>200</height>
+                </size>
+               </property>
+               <property name="flat">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="demonstration_information">
+       <property name="styleSheet">
+        <string notr="true">QGroupBox {
+    font-size: 20px;
+	 font: bold;
+    border: 1px solid gray;
+    border-radius: 9px;
+    margin-top: 0.5em;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 8px;
+	padding-right: 8px;
+	
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 3px 0 3px;
+}</string>
+       </property>
+       <property name="title">
+        <string>Information</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="styleSheet">
+           <string notr="true">QLabel{
+	 font-size: 16px;
+	 font: bold;}</string>
+          </property>
+          <property name="text">
+           <string>Game Scenario and Learned Actions</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableView" name="trajectory_table">
+          <property name="styleSheet">
+           <string notr="true">QHeaderView { font-size: 16pt; }
+QTableView{font-size: 16pt; }</string>
+          </property>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+         </widget>
+        </item>
+        <item>
+         <widget class="Line" name="line">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="styleSheet">
+           <string notr="true">QLabel{
+	 font-size: 16px;
+	 font: bold;
+}</string>
+          </property>
+          <property name="text">
+           <string>Called Bingo Numbers</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableView" name="bingo_numbers_table">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QHeaderView { font-size: 16pt; }
+QTableView{font-size: 16pt; }</string>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QPushButton" name="undo_action_button">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="../../resources/images.qrc">
+              <normaloff>:/images/undo_action.png</normaloff>:/images/undo_action.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>200</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="end_task_button">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="../../resources/images.qrc">
+              <normaloff>:/images/finish_game.png</normaloff>:/images/finish_game.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>250</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_8">
+     <item>
+      <widget class="QPushButton" name="train_button">
+       <property name="text">
+        <string>Train</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="prob_predict_button">
+       <property name="text">
+        <string>Probabilistic Predict</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="predict_button">
+       <property name="text">
+        <string>Predict</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="predicted_action_text_box"/>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>rqt_task_learning::RatioLayoutedFrame</class>
+   <extends>QWidget</extends>
+   <header location="global">rqt_task_learning/ratio_layouted_frame.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../resources/images.qrc"/>
+ </resources>
+ <connections/>
+</ui>

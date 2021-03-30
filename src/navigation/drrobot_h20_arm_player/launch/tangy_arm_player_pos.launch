@@ -1,0 +1,24 @@
+<launch>
+
+  <param name="robot_description" textfile="$(find tangy_description)/urdf/tangymodel_pos.urdf"/>
+
+  <rosparam file="$(find tangy_description)/controllers/pos_controllers.yaml" command="load"/>
+
+  <node name="arm_player" pkg="drrobot_h20_arm_player" type="arm_player_pos" respawn="false"/>
+  
+  <!-- Controllers that come up started -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" args="r_arm_controller_1 r_arm_controller_2 r_arm_controller_3 r_arm_controller_4 r_arm_controller_5 r_arm_controller_6 l_arm_controller_1 l_arm_controller_2 l_arm_controller_3 l_arm_controller_4 l_arm_controller_5 l_arm_controller_6"/>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="true" output="screen">
+    <remap from="/joint_states" to="/tangy/joint_states" /> 
+  </node>
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <remap from="/joint_states" to="/tangy/joint_states" /> 
+  </node>
+
+
+
+</launch>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="skeletontracker_nu" type="skele_bug_fix.sh" name="skele_bug_fix" output="screen"/>
+  <!-- args -->
+  <arg name="driver" default="true" />
+
+	<node pkg="tf" type="static_transform_publisher" name="skeletontracker_nu" args="0 -0.0 0 0 1.570796 0  camera_depth_frame skeleton_kinect1 100" 		respawn="true"/>
+
+	<node pkg="tf" type="static_transform_publisher" name="skeletontracker_nu2" args="0 -0.0 0 1.570796 0 0 skeleton_kinect1 skeleton_kinect2  100" 		respawn="true"/>
+
+  <!-- Launch kinect sensor with openni_camera... -->
+  <group if="$(arg driver)" >
+	<include file="$(find openni_launch)/launch/openni.launch"/>
+  </group>
+
+
+
+</launch>

@@ -1,0 +1,6 @@
+1) Grab bag file (rosbag record -O <filename> <image topic>
+2) Bring to rosbag_video_creation directory and make rosbag_video_creation the working directory
+3) roslaunch the export_video.launch file
+4) Take images from .ros folder and bring to Images folder
+5) Make images folder the working directory
+6) Type mencoder "mf://*.jpg" -mf type=jpg:fps=15 -o output.mpg -speed 1 -ofps 30 -ovc lavc -lavcopts vcodec=mpeg2video:vbitrate=2500 -oac copy -of mpeg

@@ -1,0 +1,8 @@
+ <!DOCTYPE RCC><RCC version="1.0">
+ <qresource prefix="/">
+     <file>images/head.jpg</file>
+     <file>images/right_arm.jpg</file>
+     <file>images/left_arm.jpg</file>
+     <file>images/icon.png</file>
+ </qresource>
+ </RCC>

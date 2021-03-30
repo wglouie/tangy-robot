@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSetRecord>
+  <DataTableRecord>
+    <FileName>Pose_arm.xml</FileName>
+    <StartTime>10</StartTime>
+    <EndTime>PT6S</EndTime>
+    <Tag>0</Tag>
+    <ColorIndex>0</ColorIndex>
+  </DataTableRecord>
+  <DataTableRecord>
+    <FileName>Pose2_arm.xml</FileName>
+    <StartTime>20</StartTime>
+    <EndTime>PT10S</EndTime>
+    <Tag>1</Tag>
+    <ColorIndex>1</ColorIndex>
+  </DataTableRecord>
+</DataSetRecord>

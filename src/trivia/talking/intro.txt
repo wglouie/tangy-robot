@@ -1,0 +1,23 @@
+Speech:Hello!
+Text:Hi!
+
+Speech:My name is Tan gee!
+Text:My name is Tangy.
+
+Speech:I am so excited to play trivia with you today!
+Text:My name is Tangy.
+
+Speech: I love playing this game!
+Text: My name is Tangy.
+
+Speech:To begin, I will call out a series of categories. You can then choose a category you would like to play using the buttons on your keyboard!
+Text:How to play Trivia
+
+Speech:Once we have a category, I will give a question, and then three possible answers. To answer the question, first buzz in using the big red button on your keyboard!
+Text:How to play Trivia
+
+Speech:I'll be asking you if you want to switch categories every few questions. If you want to continue with the same category, or if you want to change categories, just let me know by pressing the button on your keyboard!
+Text:How to play Trivia
+
+Speech:Let's play Trivia!
+Text:Let's play Trivia!

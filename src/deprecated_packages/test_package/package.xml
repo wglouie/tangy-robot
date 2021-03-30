@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>test_package</name>
+  <version>0.0.0</version>
+  <description>The test package</description>
+  <maintainer email="chrismohamed91@gmail.com">Sharaf</maintainer>
+  <license>GPLv2</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>roscpp</depend>
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+
+  <export>
+  </export>
+</package>

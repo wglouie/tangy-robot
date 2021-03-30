@@ -1,0 +1,8 @@
+#Goal -> Execute gesture file with the following file_name
+string file_name
+---
+#Results
+int8 done           # Action Does not Exist = -1, Success = 1
+---
+#Feedback -> String of where the process is currently
+float32 time_left   # Time left for executing gestures

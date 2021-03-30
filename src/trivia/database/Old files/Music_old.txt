@@ -1,0 +1,12 @@
+What nationality is jazz singer Diana Krall?
+A1:American
+A2:Canadian
+A3:Irish
+CA:B
+ 
+ 
+Q:In which American city did jazz music originate in the early 1900s?
+A1:Chicago
+A2:New Orleans
+A3:New York
+CA:B

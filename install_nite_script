@@ -1,0 +1,18 @@
+#!/bin/sh
+# General dependencies needed
+sudo apt-get install git-core cmake freeglut3-dev pkg-config build-essential libxmu-dev libxi-dev  libusb-1.0-0-dev openjdk-6-jdk doxygen graphviz mono-complete -y
+
+# OpenNI-Package
+(mkdir ~/kinect && cd ~/kinect && git clone https://github.com/OpenNI/OpenNI.git && cd OpenNI/Platform/Linux/CreateRedist/ && chmod +x RedistMaker && ./RedistMaker && cd Final && tar -xjf OpenNI-Bin-Dev-Linux-x64-v1.5.7.10.tar.bz2 && cd OpenNI-Bin-Dev-Linux-x64-v1.5.7.10 && sudo ./install.sh)
+
+# SesorKinect Driver
+
+(cd ~/kinect && git clone git://github.com/ph4m/SensorKinect.git && cd SensorKinect/Platform/Linux/CreateRedist/ && chmod +x RedistMaker && ./RedistMaker && cd Final && tar -xjf Sensor-Bin-Linux-x64-v5.1.2.1.tar.bz2 && cd Sensor-Bin-Linux-x64-v5.1.2.1 && sudo ./install.sh)
+
+# NITE
+
+(cd ~/tangy-robot/external_libraries/NITE-Bin-Dev-Linux-x64-v1.5.2.23 && sudo ./install.sh)
+
+# ROS PACKAGES
+sudo apt-get install ros-indigo-openni-camera -y
+sudo apt-get install ros-indigo-openni-launch -y

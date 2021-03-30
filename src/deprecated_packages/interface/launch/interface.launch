@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+	<!-- Interface -->
+	<node pkg="interface" name="interface" type="interface" output="screen"/>
+	<param name="script_folder" type="str" value="$(find interface)/script/" />
+</launch>

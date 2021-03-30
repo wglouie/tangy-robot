@@ -1,0 +1,11 @@
+<launch>
+	<env name="GSCAM_CONFIG" value="v4l2src device=/dev/video9 ! video/x-raw-rgb ! ffmpegcolorspace"/>
+	<node ns="camera" pkg="gscam" type="gscam" 		name="gscam" output="screen" cwd = "node">
+		<param name="width" type="int" value="1280" /> <!--1600*1400-->
+		<param name="height" type="int" value="800" />
+		<param name="fps" type="int" value="30" />
+		<param name="frame" type="string" value="webcam" />
+		<param name="device" type="string" value="/dev/video9" />
+	</node>
+</launch>
+

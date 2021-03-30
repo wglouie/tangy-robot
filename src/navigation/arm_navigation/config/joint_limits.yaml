@@ -1,0 +1,61 @@
+joint_limits:
+  left_shoulder_x_revolute:
+    has_velocity_limits: true
+    max_velocity: 5
+    has_acceleration_limits: true
+    max_acceleration: 1
+  wrist_left_arm_z_revolute:
+    has_velocity_limits: true
+    max_velocity: 5
+    has_acceleration_limits: true
+    max_acceleration: 1
+  upper_right_arm_x_revolute:
+    has_velocity_limits: false
+    max_velocity: 0
+    has_acceleration_limits: true
+    max_acceleration: 0
+  wrist_right_arm_z_revolute:
+    has_velocity_limits: true
+    max_velocity: 5
+    has_acceleration_limits: true
+    max_acceleration: 1
+  wrist_right_arm_x_revolute:
+    has_velocity_limits: true
+    max_velocity: 5
+    has_acceleration_limits: true
+    max_acceleration: 1
+  right_shoulder_x_revolute:
+    has_velocity_limits: true
+    max_velocity: 5
+    has_acceleration_limits: true
+    max_acceleration: 1
+  wrist_left_arm_x_revolute:
+    has_velocity_limits: true
+    max_velocity: 5
+    has_acceleration_limits: true
+    max_acceleration: 1
+  left_shoulder_y_revolute:
+    has_velocity_limits: true
+    max_velocity: 5
+    has_acceleration_limits: true
+    max_acceleration: 1
+  upper_left_arm_z_revolute:
+    has_velocity_limits: true
+    max_velocity: 5
+    has_acceleration_limits: true
+    max_acceleration: 1
+  right_shoulder_y_revolute:
+    has_velocity_limits: true
+    max_velocity: 5
+    has_acceleration_limits: true
+    max_acceleration: 1
+  upper_right_arm_z_revolute:
+    has_velocity_limits: true
+    max_velocity: 5
+    has_acceleration_limits: true
+    max_acceleration: 1
+  upper_left_arm_x_revolute:
+    has_velocity_limits: false
+    max_velocity: 0
+    has_acceleration_limits: true
+    max_acceleration: 0

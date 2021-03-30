@@ -1,0 +1,24 @@
+<library path="lib/libcloud_to_scan">
+  <class name="fake_laserscan/CloudPreprocess" type="laserscan::CloudPreprocess" base_class_type="nodelet::Nodelet">
+    <description>
+      Throttle, filter, and transform pointclouds into a target frame
+    </description>
+  </class>
+  <class name="fake_laserscan/CloudToScan" type="laserscan::CloudToScan" base_class_type="nodelet::Nodelet">
+    <description>
+      Converts pointcloud into laserscan
+    </description>
+  </class>
+  <!--class name="fake_laserscan/CloudSegment" type="laserscan::CloudSegment" base_class_type="nodelet::Nodelet">
+    <description>
+      ROS Service node, segments pointcloud with plane model and returns parameters
+    </description>
+  </class-->
+  <!--</class>
+    <class name="fake_laserscan/CloudSync" type="laserscan::CloudSync" base_class_type="nodelet::Nodelet">
+    <description>
+      ROS Service node, syncs pointclouds from multiple sources
+    </description>
+  </class>-->
+</library>
+

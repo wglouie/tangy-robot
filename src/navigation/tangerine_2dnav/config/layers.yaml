@@ -1,0 +1,48 @@
+publish_frequency: 4.0 #5
+
+static:
+  #Can pull data from gmapping, map_server or a non-rolling costmap
+  map_topic: /map
+  #map_topic: move_base/global_costmap/costmap
+  subscribe_to_updates: true
+
+obstacles:
+  observation_sources: laser_scan_sensor clear_laser_scan # infrared_sensors clear_infrared fake_laser_scan  sonar0 sonar1 sonar2 sonar3 kinect_pointcloud2 kinect_clear
+
+  observation_persistence: 0
+
+  inf_is_valid: true 
+# Laser Scan Sensor Related:
+  laser_scan_sensor: {topic: /scan, sensor_frame: base_laser, data_type: LaserScan,  marking: true, clearing: true}
+
+  clear_laser_scan: {topic: /clear_scan, sensor_frame: base_laser, data_type: LaserScan,  marking: false, clearing: true}
+
+# Kinect Sensor Related:
+  #kinect_pointcloud2: {topic: /kinect_filtered, sensor_frame: skeleton/openni_link, expected_update_rate: 10, data_type: PointCloud2, marking: true, clearing: false}
+
+  #kinect_clear: {topic: /cloud_throttled, sensor_frame: skeleton/openni_link, expected_update_rate: 10, data_type: PointCloud2, marking: false, clearing: true}
+
+ #fake_laser_scan: {topic: /fake_laserscan, sensor_frame: bottom_camera_rgb_optical_frame, expected_update_rate: 1, data_type: LaserScan, marking: true, clearing: true}
+
+# Infrared Sensor Related:
+  #infrared_sensors: {topic: /ir_data_pcl, sensor_frame: base_link_robot, data_type: PointCloud2, marking: true, clearing: true, obstacle_range: 3.0, min_obstacle_height: -1}
+
+  #clear_infrared: {topic: /clear_ir_data_pcl, sensor_frame: infrared_sensors, data_type: PointCloud2, marking: false, clearing: true, obstacle_range: 2.0, raytrace_range: 2.0, min_obstacle_height: -1}
+
+# Sonar Sensor Related:
+  #sonar0: {topic: /Sonar_Data0, sensor_frame: drrobot_sonar_3, data_type: PointCloud2, marking: true, clearing: true, obstacle_range: 3.0, min_obstacle_height: -1}
+  
+  #sonar1: {topic: /Sonar_Data1, sensor_frame: drrobot_sonar_3, data_type: PointCloud2, marking: true, clearing: true, obstacle_range: 3.0, min_obstacle_height: -1}
+
+  #sonar2: {topic: /Sonar_Data2, sensor_frame: drrobot_sonar_3, data_type: PointCloud2, marking: true, clearing: true, obstacle_range: 3.0, min_obstacle_height: -1}
+
+  #sonar3: {topic: /Sonar_Data3, sensor_frame: drrobot_sonar_3, data_type: PointCloud2, marking: true, clearing: true, obstacle_range: 3.0, min_obstacle_height: -1}
+
+ 
+# Inflation Parameters
+inflation_global:
+   inflation_radius: 0.44 #0.05 #0.15 #2
+
+inflation_local:
+   inflation_radius: 0.01 #0.05 #0.15 #2 
+

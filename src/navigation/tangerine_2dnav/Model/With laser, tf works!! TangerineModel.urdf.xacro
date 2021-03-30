@@ -1,0 +1,658 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="tangerige">
+
+
+<!-- .......................MACROS.................... -->
+  
+  <xacro:macro name="default_physics" params="mass len rad">
+  	<collision>
+      <geometry>
+        <cylinder length="${len}" radius="${rad}"/>
+      </geometry>
+    </collision>
+  	<inertial>
+  		<mass value="${mass}" />
+  		<inertia ixx="1.0" ixy="0.0" ixz="0.0"
+  											 iyy="1.0" iyz="0.0"
+  											 izz="1.0" />
+  	</inertial>
+  	<dynamics damping="0.7" friction="1000.0"/>
+  </xacro:macro>
+  
+  <xacro:macro name="gazebo_colors" params="name color">
+  	<gazebo reference="${name}">
+    	<material>Gazebo/${color}</material>
+  	</gazebo>
+  </xacro:macro>
+  
+<!-- ....................... END MACROS.................... -->
+
+<!-- ................BASE................. -->
+  
+  <link name="base_link_robot">
+    <visual>
+      <geometry>
+        <box size="0.51 0.51 0.2"/>
+      </geometry>
+      <material name="orange">
+      	<color rgba=".8 .2 0 1"/>
+      </material>
+    </visual>
+    <origin xyz="0 0 -.1"/>
+    <xacro:default_physics mass="10" len="0.2" rad="0.31"/>
+  </link>
+  
+  <xacro:gazebo_colors name="base_link_robot" color="Red" />
+
+
+  <link name="lower_torso">
+    <visual>
+      <geometry>
+        <box size="0.15 0.176 0.4"/>
+      </geometry>
+      <material name="grey">
+      	<color rgba="0.5 0.5 0.5 1"/>
+      </material>
+      <origin rpy="0 0 0"/>
+    </visual>
+    <xacro:default_physics mass="6" len="0.55" rad="0.13"/>
+  </link>
+  
+  <xacro:gazebo_colors name="lower_torso" color="Red" />
+  
+  <joint name="base_to_laser_link" type="revolute">
+  	<axis xyz="1 0 0"/>
+  	<limit effort="1000.0" lower="0" upper="0" velocity="0"/>
+    <parent link="base_link_robot"/>
+    <child link="lower_torso"/>
+    <origin xyz="-0.093 0 0.3"/>
+  </joint>
+
+<!--newly added laser link and joint with the lower torso -->
+
+<link name="base_laser">
+    <visual>
+      <geometry>
+        <box size="0.07 0.05 0.07"/>
+      </geometry>
+      <material name="orange">
+      	<color rgba=".8 .2 0 1"/>
+      </material>
+    </visual>
+    <origin xyz="0 0 0"/>
+    <xacro:default_physics mass="6" len="0.1" rad="0.1"/>
+  </link>
+  
+  <xacro:gazebo_colors name="base_laser" color="Red" />
+
+  <joint name="lower_torso_to_laser_link" type="revolute">
+  	<axis xyz="0 1 0"/>
+  	<limit effort="1000.0" lower="-0.57" upper="0.57" velocity="1"/>
+    <parent link="lower_torso"/>
+    <child link="base_laser"/>
+    <origin xyz="0.13 0 0" rpy="0 -0.523 0"/>
+  </joint>
+
+
+
+<!-- the link and joint end here -->
+
+  <link name="upper_base_laser">
+    <visual>
+      <geometry>
+        <box size="0.176 0.15 0.15"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+    <xacro:default_physics mass="6" len="0.55" rad="0.13"/>
+  </link>
+  
+  <xacro:gazebo_colors name="upper_base_laser" color="Gray" />
+   
+  <joint name="base_to_upper_base" type="revolute">
+  	<axis xyz="1 0 0"/>
+  	<limit effort="1000.0" lower="0" upper="0" velocity="0"/>
+    <parent link="base_link_robot"/>
+    <child link="upper_base_laser"/>
+    <origin rpy="0 0 -1.57075" xyz="-0.093 0 0.575"/>
+  </joint>
+  
+  <link name="superior_link">
+    <visual>
+      <geometry>
+        <box size="0.305 0.360 0.4"/>
+      </geometry>
+      <material name="black">
+      	<color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <xacro:default_physics mass="8" len="0.4" rad="0.22"/>
+  </link>
+  
+  <xacro:gazebo_colors name="superior_link" color="Black" />
+  
+  <joint name="upper_base_to_superior_link" type="revolute">
+  	<axis xyz="1 0 0"/>
+  	<limit effort="1000" lower="0" upper="0" velocity="0"/>
+    <parent link="upper_base_laser"/>
+    <child link="superior_link"/>
+    <origin xyz="0 0 0.275"/>
+  </joint>
+
+ <link name="skeleton/openni_depth_frame">
+  <visual>
+    <geometry>
+      <box size="0.04 0.18 0.04"/>
+     </geometry>
+     <material name="grey">
+      <color rgba="0 0 0 0.5"/>
+     </material>
+  </visual>
+  <xacro:default_physics mass="0.01" len="0.01" rad="0.01"/>
+  </link>
+
+ <joint name="superior_link_to_openni_depth_frame" type="revolute">
+  	<axis xyz="1 0 0"/>
+  	<limit effort="1000.0" lower="0" upper="0" velocity="0"/>
+    <parent link="superior_link"/>
+    <child link="skeleton/openni_depth_frame"/>
+    <origin rpy="0 0 1.57075" xyz="0 0.1325 0.22"/>
+  </joint>
+  
+  
+  
+  <!-- ................END BASE................. -->
+  
+  
+  <!-- ................HEAD................. -->
+  
+  <link name="neck_link">
+    <visual>
+      <geometry>
+        <box size="0.05 0.08 0.07"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+    <xacro:default_physics mass="0.5" len="0.07" rad="0.036"/>
+  </link>
+  
+  <xacro:gazebo_colors name="neck_link" color="Red" />
+  
+  <joint name="superior_to_neck_link" type="revolute">
+  	<axis xyz="1 0 0"/>
+  	<limit effort="1000.0" lower="0" upper="0" velocity="0"/>
+    <parent link="superior_link"/>
+    <child link="neck_link"/>
+    <origin xyz="0 0 0.235"/>
+  </joint>
+  
+  <link name="neck_z_revolute">
+  	<xacro:default_physics mass="0.01" len="0.01" rad="0.01"/>
+  </link>
+  
+  <joint name="neck_to_z_revolute" type="revolute">
+  	<axis xyz="0 0 1"/>
+  	<limit effort="1000.0" lower="-0.7853" upper="0.7853" velocity="5"/>
+    <parent link="neck_link"/>
+    <child link="neck_z_revolute"/>
+  </joint>
+  
+  <link name="neck_x_revolute">
+  	<xacro:default_physics mass="0.01" len="0.01" rad="0.01"/>
+  </link>
+  
+  <joint name="z_revolute_to_x_revolute" type="revolute">
+  	<axis xyz="1 0 0"/>
+  	<limit effort="1000.0" lower="-0.3926" upper="0.3926" velocity="5"/>
+    <parent link="neck_z_revolute"/>
+    <child link="neck_x_revolute"/>
+  </joint>
+  
+  <link name="head">
+    <visual>
+      <geometry>
+        <box size="0.222 0.065 0.18"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+    <xacro:default_physics mass="4" len="0.18" rad="0.16"/>
+  </link>
+  
+  <xacro:gazebo_colors name="head" color="Red" />
+  
+  <joint name="revolute_head" type="revolute">
+  	<axis xyz="1 0 0"/>
+  	<limit effort="1000.0" lower="0" upper="0" velocity="0"/>
+    <parent link="neck_x_revolute"/>
+    <child link="head"/>
+    <origin xyz="0 0 0.125"/>
+  </joint>
+  
+  <link name="right_eye">
+    <visual>
+      <geometry>
+        <cylinder length="0.015" radius="0.015"/>
+      </geometry>
+      <material name="black"/>
+      <origin rpy="-1.57075 0 0" />
+    </visual>
+    <xacro:default_physics mass="0.2" len="0.03" rad="0.01"/>
+  </link>
+  
+  <joint name="right_eye_to_head" type="revolute">
+  	<axis xyz="1 0 0"/>
+  	<limit effort="1000.0" lower="0" upper="0" velocity="0"/>
+    <parent link="head"/>
+    <child link="right_eye"/>
+    <origin xyz="0.05 0.03 0.03"/>
+  </joint>
+  
+  <link name="left_eye">
+    <visual>
+      <geometry>
+        <cylinder length="0.015" radius="0.015"/>
+      </geometry>
+      <material name="black"/>
+      <origin rpy="-1.57075 0 0" />
+    </visual>
+    <xacro:default_physics mass="0.2" len="0.03" rad="0.01"/>
+  </link>
+  
+  <joint name="left_eye_to_head" type="revolute">
+  	<axis xyz="1 0 0"/>
+  	<limit effort="1000.0" lower="0" upper="0" velocity="0"/>
+    <parent link="head"/>
+    <child link="left_eye"/>
+    <origin xyz="-0.05 0.03 0.03"/>
+  </joint>
+  
+  <!-- ................END HEAD................. -->
+  
+  
+  <!-- ................RIGHT ARM................. -->
+  
+  <link name="right_shoulder_link">
+    <visual>
+      <geometry>
+        <box size="0.07 0.14 0.17"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+    <xacro:default_physics mass="2" len="0.23" rad="0.13"/>
+  </link>
+  
+  <xacro:gazebo_colors name="right_shoulder_link" color="Gray" />
+  
+  <joint name="superior_link_to_right_shoulder_link" type="revolute">
+  	<axis xyz="1 0 0"/>
+  	<limit effort="1000.0" lower="-0.785375" upper="1.57075" velocity="5"/>
+    <parent link="superior_link"/>
+    <child link="right_shoulder_link"/>
+    <origin xyz="0.1875 0 0.07"/>
+  </joint>
+
+  <link name="right_shoulder">
+    <visual>
+      <geometry>
+        <box size="0.10 0.14 0.17"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+    <xacro:default_physics mass="2" len="0.23" rad="0.13"/>
+  </link>
+  
+  <xacro:gazebo_colors name="right_shoulder" color="Gray" />
+  
+  <joint name="right_shoulder_x_revolute" type="revolute">
+  	<axis xyz="1 0 0"/>
+  	<limit effort="1000.0" lower="-0.785375" upper="1.57075" velocity="5"/>
+    <parent link="superior_link"/>
+    <child link="right_shoulder"/>
+    <origin xyz="0.2725 0 0.12"/>
+  </joint>
+  
+  <link name="upper_right_arm_z_revolute">
+  	<xacro:default_physics mass="0.01" len="0.01" rad="0.01"/>
+  </link>
+  
+  <joint name="upper_right_arm_z_revolute" type="revolute">
+  	<axis xyz="0 0 1"/>
+  	<limit effort="1000.0" lower="-0.3926" upper="0.3926" velocity="5"/>
+    <parent link="right_shoulder"/>
+    <child link="upper_right_arm_z_revolute"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+  
+  <link name="upper_right_arm_y_revolute">
+  	<xacro:default_physics mass="0.01" len="0.01" rad="0.01"/>
+  </link>
+  
+  <joint name="upper_right_arm_y_revolute" type="revolute">
+  	<axis xyz="0 1 0"/>
+  	<limit effort="1000.0" lower="-0.3926" upper="0" velocity="5"/>
+    <parent link="upper_right_arm_z_revolute"/>
+    <child link="upper_right_arm_y_revolute"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+  
+  <link name="upper_right_arm">
+    <visual>
+      <geometry>
+        <box size="0.065 0.08 0.17"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+    <xacro:default_physics mass="3" len="0.17" rad="0.046"/>
+  </link>
+  
+  <xacro:gazebo_colors name="upper_right_arm" color="Gray" />
+  
+  <joint name="shoulder_to_upper_right_arm" type="revolute">
+  	<axis xyz="1 0 0"/>
+  	<limit effort="1000.0" lower="0" upper="0" velocity="0"/>
+    <parent link="upper_right_arm_y_revolute"/>
+    <child link="upper_right_arm"/>
+    <origin xyz="0 0 -0.17"/>
+  </joint>
+  
+  <link name="lower_right_arm">
+    <visual>
+      <geometry>
+        <box size="0.065 0.08 0.21"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+    <xacro:default_physics mass="0.5" len="0.21" rad="0.046"/>
+  </link>
+  
+  <xacro:gazebo_colors name="lower_right_arm" color="Gray" />
+  
+  <joint name="upper_to_lower_right_arm" type="revolute">
+  	<axis xyz="1 0 0"/>
+  	<limit effort="1000.0" lower="0" upper="0.3926" velocity="5"/>
+    <parent link="upper_right_arm"/>
+    <child link="lower_right_arm"/>
+    <origin xyz="0 0 -0.19"/>
+  </joint>
+  
+  <link name="wrist_right_arm_z_revolute">
+  	<xacro:default_physics mass="0.01" len="0.01" rad="0.01"/>
+  </link>
+  
+  <joint name="wrist_right_arm_z_revolute" type="revolute">
+  	<axis xyz="0 0 1"/>
+  	<limit effort="1000.0" lower="-2" upper="2" velocity="5"/>
+    <parent link="lower_right_arm"/>
+    <child link="wrist_right_arm_z_revolute"/>
+  </joint>
+  
+  <link name="wrist_right_arm_x_revolute">
+  	<xacro:default_physics mass="0.01" len="0.01" rad="0.01"/>
+  </link>
+  
+  <joint name="wrist_right_arm_x_revolute" type="revolute">
+  	<axis xyz="1 0 0"/>
+  	<limit effort="1000.0" lower="-0.3926" upper="0.3926" velocity="5"/>
+    <parent link="wrist_right_arm_z_revolute"/>
+    <child link="wrist_right_arm_x_revolute"/>
+  </joint>
+  
+  <link name="wrist_right_arm">
+    <visual>
+      <geometry>
+        <sphere radius="0.0325"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <xacro:default_physics mass="1" len="0.0325" rad="0.0325"/>
+  </link>
+  
+  <xacro:gazebo_colors name="wrist_right_arm" color="Black" />
+  
+  <joint name="lower_to_wrist_right_arm" type="revolute">
+  	<axis xyz="1 0 0"/>
+  	<limit effort="1000.0" lower="0" upper="0" velocity="0"/>
+    <parent link="wrist_right_arm_x_revolute"/>
+    <child link="wrist_right_arm"/>
+    <origin xyz="0 0 -0.105"/>
+  </joint>
+  
+  <link name="finger1_right_arm">
+    <visual>
+      <geometry>
+        <box size="0.01 0.01 0.05"/>
+      </geometry>
+      <origin xyz="0 0 -0.025" />
+      <material name="grey"/>
+    </visual>
+    <xacro:default_physics mass="0.2" len="0.05" rad="0.005"/>
+  </link>
+  
+  <xacro:gazebo_colors name="finger1_right_arm" color="Gray" />
+  
+  <joint name="wrist_to_finger1_right_arm" type="revolute">
+  	<axis xyz="0 1 0"/>
+  	<limit effort="1000.0" lower="0" upper="-0.68" velocity="5"/>
+    <parent link="wrist_right_arm"/>
+    <child link="finger1_right_arm"/>
+    <origin rpy="0 0.3926875 0" xyz="-0.01875 0 -0.0375"/>
+  </joint>
+  
+  <link name="finger2_right_arm">
+    <visual>
+      <geometry>
+        <box size="0.01 0.03 0.05"/>
+      </geometry>
+      <origin xyz="0 0 -0.025" />
+      <material name="grey"/>
+    </visual>
+    <xacro:default_physics mass="0.2" len="0.05" rad="0.005"/>
+  </link>
+  
+  <xacro:gazebo_colors name="finger2_right_arm" color="Gray" />
+  
+  <joint name="wrist_to_finger2_right_arm" type="revolute">
+  	<axis xyz="0 1 0"/>
+  	<limit effort="1000.0" lower="0.68" upper="0" velocity="5"/>
+    <parent link="wrist_right_arm"/>
+    <child link="finger2_right_arm"/>
+    <origin rpy="0 -0.3926875 0" xyz="0.01875 0 -0.0375"/>
+  </joint>
+  
+  <!-- ................END RIGHT ARM................. -->
+  
+  
+  
+    <!-- ................LEFT ARM................. -->
+
+  <link name="left_shoulder_link">
+    <visual>
+      <geometry>
+        <box size="0.07 0.14 0.17"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+    <xacro:default_physics mass="2" len="0.23" rad="0.13"/>
+  </link>
+  
+  <xacro:gazebo_colors name="left_shoulder_link" color="Gray" />
+  
+  <joint name="superior_link_to_left_shoulder_link" type="revolute">
+  	<axis xyz="1 0 0"/>
+  	<limit effort="1000.0" lower="-0.785375" upper="1.57075" velocity="5"/>
+    <parent link="superior_link"/>
+    <child link="left_shoulder_link"/>
+    <origin xyz="-0.1875 0 0.07"/>
+  </joint>
+
+  <link name="left_shoulder">
+    <visual>
+      <geometry>
+        <box size="0.10 0.14 0.17"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+    <xacro:default_physics mass="2" len="0.23" rad="0.13"/>
+  </link>
+  
+  <xacro:gazebo_colors name="left_shoulder" color="Gray" />
+  
+  <joint name="left_shoulder_x_revolute" type="revolute">
+  	<axis xyz="1 0 0"/>
+  	<limit effort="1000.0" lower="-0.785375" upper="1.57075" velocity="5"/>
+    <parent link="superior_link"/>
+    <child link="left_shoulder"/>
+    <origin xyz="-0.2725 0 0.12"/>
+  </joint>
+  
+  <link name="upper_left_arm_z_revolute">
+  	<xacro:default_physics mass="0.01" len="0.01" rad="0.01"/>
+  </link>
+  
+  <joint name="upper_left_arm_z_revolute" type="revolute">
+  	<axis xyz="0 0 1"/>
+  	<limit effort="1000.0" lower="-0.3926" upper="0.3926" velocity="5"/>
+    <parent link="left_shoulder"/>
+    <child link="upper_left_arm_z_revolute"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+  
+  <link name="upper_left_arm_y_revolute">
+  	<xacro:default_physics mass="0.01" len="0.01" rad="0.01"/>
+  </link>
+  
+  <joint name="upper_left_arm_y_revolute" type="revolute">
+  	<axis xyz="0 1 0"/>
+  	<limit effort="1000.0" lower="-0.3926" upper="0" velocity="5"/>
+    <parent link="upper_left_arm_z_revolute"/>
+    <child link="upper_left_arm_y_revolute"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+  
+  <link name="upper_left_arm">
+    <visual>
+      <geometry>
+        <box size="0.065 0.08 0.17"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+    <xacro:default_physics mass="0.5" len="0.17" rad="0.046"/>
+  </link>
+  
+  <xacro:gazebo_colors name="upper_left_arm" color="Gray" />
+  
+  <joint name="shoulder_to_upper_left_arm" type="revolute">
+  	<axis xyz="1 0 0"/>
+  	<limit effort="1000.0" lower="0" upper="0" velocity="0"/>
+    <parent link="upper_left_arm_y_revolute"/>
+    <child link="upper_left_arm"/>
+    <origin xyz="0 0 -0.17"/>
+  </joint>
+  
+  <link name="lower_left_arm">
+    <visual>
+      <geometry>
+        <box size="0.065 0.08 0.21"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+    <xacro:default_physics mass="3" len="0.21" rad="0.046"/>
+  </link>
+  
+  <xacro:gazebo_colors name="lower_left_arm" color="Gray" />
+  
+  <joint name="upper_to_lower_left_arm" type="revolute">
+  	<axis xyz="1 0 0"/>
+  	<limit effort="1000.0" lower="0" upper="0.3926" velocity="5"/>
+    <parent link="upper_left_arm"/>
+    <child link="lower_left_arm"/>
+    <origin xyz="0 0 -0.19"/>
+  </joint>
+  
+  <link name="wrist_left_arm_z_revolute">
+  	<xacro:default_physics mass="0.01" len="0.01" rad="0.01"/>
+  </link>
+  
+  <joint name="wrist_left_arm_z_revolute" type="revolute">
+  	<axis xyz="0 0 1"/>
+  	<limit effort="1000.0" lower="-2" upper="2" velocity="5"/>
+    <parent link="lower_left_arm"/>
+    <child link="wrist_left_arm_z_revolute"/>
+  </joint>
+  
+  <link name="wrist_left_arm_x_revolute">
+  	<xacro:default_physics mass="0.01" len="0.01" rad="0.01"/>
+  </link>
+  
+  <joint name="wrist_left_arm_x_revolute" type="revolute">
+  	<axis xyz="1 0 0"/>
+  	<limit effort="1000.0" lower="-0.3926" upper="0.3926" velocity="5"/>
+    <parent link="wrist_left_arm_z_revolute"/>
+    <child link="wrist_left_arm_x_revolute"/>
+  </joint>
+  
+  <link name="wrist_left_arm">
+    <visual>
+      <geometry>
+        <sphere radius="0.0325"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <xacro:default_physics mass="1" len="0.075" rad="0.0375"/>
+  </link>
+  
+  <xacro:gazebo_colors name="wrist_left_arm" color="Black" />
+  
+  <joint name="lower_to_wrist_left_arm" type="revolute">
+  	<axis xyz="1 0 0"/>
+  	<limit effort="1000.0" lower="0" upper="0" velocity="0"/>
+    <parent link="wrist_left_arm_x_revolute"/>
+    <child link="wrist_left_arm"/>
+    <origin xyz="0 0 -0.105"/>
+  </joint>
+  
+  <link name="finger1_left_arm">
+    <visual>
+      <geometry>
+        <box size="0.01 0.01 0.05"/>
+      </geometry>
+      <origin xyz="0 0 -0.025" />
+      <material name="grey"/>
+    </visual>
+    <xacro:default_physics mass="0.2" len="0.05" rad="0.005"/>
+  </link>
+  
+  <xacro:gazebo_colors name="finger1_left_arm" color="Gray" />
+  
+  <joint name="wrist_to_finger1_left_arm" type="revolute">
+  	<axis xyz="0 1 0"/>
+  	<limit effort="1000.0" lower="0.68" upper="0" velocity="5"/>
+    <parent link="wrist_left_arm"/>
+    <child link="finger1_left_arm"/>
+    <origin rpy="0 -0.3926875 0" xyz="0.01875 0 -0.0375"/>
+  </joint>
+  
+  <link name="finger2_left_arm">
+    <visual>
+      <geometry>
+        <box size="0.01 0.03 0.05"/>
+      </geometry>
+      <origin xyz="0 0 -0.025" />
+      <material name="grey"/>
+    </visual>
+    <xacro:default_physics mass="0.2" len="0.05" rad="0.005"/>
+  </link>
+  
+  <xacro:gazebo_colors name="finger2_left_arm" color="Gray" />
+  
+  <joint name="wrist_to_finger2_left_arm" type="revolute">
+  	<axis xyz="0 1 0"/>
+  	<limit effort="1000.0" lower="0" upper="-0.68" velocity="5"/>
+    <parent link="wrist_left_arm"/>
+    <child link="finger2_left_arm"/>
+    <origin rpy="0 0.3926875 0" xyz="-0.01875 0 -0.0375"/>
+  </joint>
+  
+  <!-- ................END LEFT ARM................. -->
+  
+</robot>

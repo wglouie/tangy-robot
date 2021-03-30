@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<launch>
+
+	<!--Things to launch for non-tilting laser -->	
+	<!-- Transform -->
+ <!-- 	<node pkg="tf" type="static_transform_publisher" name="base_to_laser_broadcaster" args="0 0 0 0 0 0 /base_link /base_laser 100" />
+-->
+	<!--<node pkg="tf" type="static_transform_publisher" name="base_robot_to_laser_broadcaster" args="-0.093 0 0.3 0 0 0 /base_link_robot /lower_torso 100" />-->
+
+	<!-- Things to launch for tilting laser -->
+	<include file="$(find robot_setup_tf)/launch/robot_setup_tf.launch" />
+	<!--- Run Tangerine Model -->
+	<include file="$(find tangerine_2dnav)/launch/tangerine_model.launch" />
+	
+	<!-- Tilting Scan-->
+	<!--<include file="$(find laser_dynamic_broadcaster)/launch/laser_dynamic_broadcaster.launch" />-->
+
+	<!-- Sensor Information - Hokuyo node -->
+  	<node name="hokuyo" pkg="hokuyo_node" type="hokuyo_node" respawn="false" output="screen">
+		<param name="frame_id" type="str" value="/base_laser"/>   
+    		<!-- Starts up faster, but timestamps will be inaccurate. --> 
+    		<param name="calibrate_time" type="bool" value="false"/> 
+    		<!-- Set the port to connect to here -->
+    		<param name="port" type="string" value="/dev/ttyACM0"/> 
+    		<param name="intensity" type="bool" value="false"/>
+    		<param name="hokuyoLaserModel04LX" type="bool" value="true" />
+    		<!-- <param name="min_ang" type="double" value="-2.08621" /> -->
+    		<!-- <param name="max_ang" type="double" value="2.09234" /> -->
+    		<param name="min_ang" type="double" value="-1.57" />
+    		<param name="max_ang" type="double" value="1.57" />
+		<!--param name="min_ang" type="double" value="-0.5" /-->
+    		<!--param name="max_ang" type="double" value="0.5" /--> 
+
+	</node>
+	<!--<node name="rviz" pkg="rviz" type="rviz" respawn="false" output="screen" args="-d $(find hokuyo_node)/hokuyo_test.vcg"/>-->
+
+
+	<!-- H20 Player - Odometry and Control base -->
+  	<group >
+		<!-- DrRobot Player -->
+		<include file="$(find drrobot_h20_player)/launch/drrobot_player.launch" />
+
+		<!-- Keyboard -->
+		<!-- <node pkg="drrobot_h20_player" name="drrobot_keyboard_teleop" type="drrobot_keyboard_teleop" output="screen"/>-->
+
+		<!-- Joystick -->
+		<!-- <param name="joy_node/dev" value="/dev/input/js1" />-->
+		<!--<param name="joy_node/deadzone" value="0.25" />-->
+		<!--<param name="joy_node/coalesce_interval" value="0.05" />-->
+		<!--<param name="joy_node/autorepeat_rate" value="10" />-->
+		<!-- <node pkg="joy" name="joy_node" type="joy_node" output="screen"/>-->
+		<!-- <node pkg="drrobot_h20_player" name="drrobot_joystick_teleop" type="drrobot_joystick_teleop" output="screen"/>-->
+	</group>
+</launch>
+

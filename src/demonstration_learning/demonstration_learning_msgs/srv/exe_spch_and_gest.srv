@@ -1,0 +1,8 @@
+#request
+string speech
+string gesture_containing_package       #e.g. "action_executor"
+string gesture_relative_file_path       #e.g. "/database/demonstration_gestures/psi_pose" left_arm.gesture will be appended automatically
+bool turn_off_display
+---
+#response 
+bool success

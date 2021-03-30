@@ -1,0 +1,5 @@
+#request
+both_arm_trajectory trajectory
+---
+#response 
+bool success

@@ -1,0 +1,8 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: tangymodel_eff
+    relative_path: robots/tangymodel_eff.URDF
+  SRDF:
+    relative_path: config/tangymodel_eff.srdf
+  CONFIG:
+    generated_timestamp: 1423254813

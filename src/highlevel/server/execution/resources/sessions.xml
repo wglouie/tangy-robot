@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<sessions>
+
+	<session id="s1">
+		<attribute name="visitor" type="string" value="Tiago"/>
+		<attribute name="skype_name" type="string" value="echo123"/> 
+		<attribute name="localuser" type="User" value="user1" pddl="true"/> 
+		<attribute name="sessionlocation" type="Location" value="l1" pddl="true"/> 
+		<attribute name="sessionduration" type="int" value="20" pddl="true"/>
+		<attribute name="mustbedone" type="bool" value="true" pddl="true" time_stamp="50.0"/>
+		<attribute name="mustbedone" type="bool" value="false" pddl="true" time_stamp="80.0"/>
+	</session>
+
+	<session id="s2" visitor="Matthew" visitor_skype="echo123">
+		<attribute name="visitor" type="string" value="Matthew"/>
+		<attribute name="skype_name" type="string" value="echo123"/> 
+		<attribute name="localuser" type="User" value="user2" pddl="true"/> 
+		<attribute name="sessionlocation" type="Location" value="l2" pddl="true"/> 
+		<attribute name="sessionduration" type="int" value="20" pddl="true"/>
+		<attribute name="mustbedone" type="bool" value="true" pddl="true" time_stamp="100.0"/>
+		<attribute name="mustbedone" type="bool" value="false" pddl="true" time_stamp="150.0"/>
+	</session>
+
+	<session id="s3" visitor="Tiago" visitor_skype="echo123">
+		<attribute name="visitor" type="string" value="Tiago"/>
+		<attribute name="skype_name" type="string" value="echo123"/> 
+		<attribute name="localuser" type="User" value="user3" pddl="true"/> 
+		<attribute name="sessionlocation" type="Location" value="l1" pddl="true"/> 
+		<attribute name="sessionduration" type="int" value="20" pddl="true"/>
+		<attribute name="mustbedone" type="bool" value="true" pddl="true" time_stamp="200.0"/>
+		<attribute name="mustbedone" type="bool" value="false" pddl="true" time_stamp="230.0"/>
+	</session>
+</sessions>

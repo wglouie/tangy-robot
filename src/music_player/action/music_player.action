@@ -1,0 +1,11 @@
+#Goal -> If 0-play music, 1-pause music, 2-resume music, 3-stop music
+string start
+#Volume -> from 0 to 100%
+int32 volume
+---
+#Results
+int32 done
+---
+#Feedback
+char[] info
+

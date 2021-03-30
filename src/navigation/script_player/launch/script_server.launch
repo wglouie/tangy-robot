@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+	<group>
+
+		<node pkg="drrobot_h20_arm_player" name="DrRobot_Arm_Player" type="DrRobot_Arm_Player" output="screen"/>
+		
+		<!-- DrRobot Player 
+		<include file="$(find drrobot_h20_player)/launch/drrobot_player.launch" />-->
+		
+		<!-- script -->
+		<node pkg="script_player" name="drrobot_master_script_reader" type="drrobot_master_script_reader" output="screen"/>
+		
+	</group >
+</launch>

@@ -1,0 +1,13 @@
+<launch>
+	<node ns="hand_detection" pkg="openni_tracker" type="openni_tracker" 		name="openni_tracker" output="screen">
+	</node>
+	
+	<node ns="hand_detection" pkg="hand_detection" type="HandDetectionServer" 		name="HandDetectionServer" output="screen">
+	</node>
+</launch>
+
+
+
+
+
+

@@ -1,0 +1,2 @@
+string[] bingo_numbers					 
+

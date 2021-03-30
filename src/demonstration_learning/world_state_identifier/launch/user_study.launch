@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+	<node pkg="head_arm_control_gui" type="qttest" name="qttest" respawn="true"/>
+	<node pkg="tangy_move" type="controller" name="controller" respawn="true" output="screen"/>
+
+
+</launch>

@@ -1,0 +1,43 @@
+<launch>
+ # The planning and execution components of MoveIt! configured to
+ # publish the current configuration of the robot (simulated or real)
+ # and the current state of the world as seen by the planner
+
+  <param name="robot_description" textfile="$(find tangymodel_eff)/robots/tangymodel_eff.URDF"/>
+
+  <rosparam file="$(find tangy_description)/controllers/eff_controllers.yaml" command="load"/>
+  
+  <!--<include file="$(find openni_launch)/launch/openni.launch">
+    <arg name="camera" value="kinect"/>
+    <arg name="depth_registration" value="false" />
+    <arg name="rgb_frame_id"   value="kinect_optical_frame" />
+    <arg name="depth_frame_id" value="kinect_depth_frame" />
+  </include>-->
+  
+  <!-- Controllers that come up started
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="true"
+    output="screen" args="r_arm_controller_1 r_arm_controller_2 r_arm_controller_3 r_arm_controller_4 r_arm_controller_5 r_arm_controller_6 l_arm_controller_1 l_arm_controller_2 l_arm_controller_3 l_arm_controller_4 l_arm_controller_5 l_arm_controller_6"/>-->
+
+ <node name="arm_player" pkg="drrobot_h20_arm_player" type="arm_player_eff" respawn="true"/>
+
+ <node name="ArmMovementServer" pkg="drrobot_h20_arm_player" type="ArmMovement" respawn="true"/>
+
+ <include file="$(find moveit_tangy)/launch/move_group.launch">
+  <arg name="publish_monitored_planning_scene" value="true" />
+ </include>
+ 
+   <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="true" output="screen">
+    <remap from="/joint_states" to="/tangy/joint_states" />
+  </node>
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <remap from="/joint_states" to="/tangy/joint_states" />
+  </node>
+
+ # The visualization component of MoveIt!
+  <include file="$(find moveit_tangy)/launch/moveit_rviz.launch">
+    <arg name="config" value="true"/>
+  </include>
+
+</launch>

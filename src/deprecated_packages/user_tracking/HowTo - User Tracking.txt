@@ -1,0 +1,36 @@
+How to use User Tracking
+
+1) Run drrobot player (odom and cmd vel), tf and sensor in a new terminal using the command:
+
+roslaunch tangerine_2dnav my_robot_configuration.launch 
+
+
+2) Run move base (configurations, map, acml, move base) in a new terminal using the command:
+
+roslaunch tangerine_2dnav move_base.launch 
+
+
+3) Run FaceDetection in a new terminal using the following command:
+
+roslaunch face_detection FaceDetectionServerAXIS.launch
+
+
+4) Run transform sensor detection in a new terminal:
+
+roslaunch users_markers users_markers.launch
+
+
+5) Run UserTrackingServer in a new terminal:
+
+roslaunch user_tracking user_tracking_server.launch 
+ 
+  //Old: roslaunch user_tracking UserTracking.launch
+
+
+6) Run UserTrackingClient in a new terminal the server:
+
+roslaunch user_tracking user_tracking_client.launch 
+
+
+
+

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+    <param name="server_wait_time" type="string" value="1" />
+    <param name="progress_file" type="string" value="$(find action_executor)/called_numbers.txt" />
+    <param name="default_gesture_mode" type="string" value="true" />
+    <param name="nav_goal_tolerence" type="double" value="0.4" />
+    <param name="default_action_file" type="string" value="$(find action_executor)/database/actions.xml" />
+
+    <node pkg="text_to_speech" name="text_to_speech" type="text_to_speech" output="screen" />
+    <node pkg="robot_gui" name="robot_gui" type="robot_gui" output="screen" />
+    <node pkg="action_executor" type="action_executor_server" name="action_executor_server" output="screen" respawn="true"/>
+</launch>

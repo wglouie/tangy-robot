@@ -1,0 +1,8 @@
+sensors: 
+ - sensor_plugin: occupancy_map_monitor/PointCloudOctomapUpdater
+   point_cloud_topic: /kinect/depth/points
+   max_range: 2.5
+   padding_offset: 0.05
+   padding_scale: 1
+   frame_subsample: 1
+   point_subsample: 1

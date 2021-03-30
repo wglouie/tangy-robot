@@ -1,0 +1,279 @@
+Q:How many legs do crabs have?
+A1:4 legs
+A2:6 legs
+A3:8 legs
+CA:A3
+H:Crabs are sometimes compared to arachnids because of their legs.
+
+Q:How many tentacles do squids have?
+A1:5 
+A2:10 
+A3:14 
+CA:A2
+H:The squid has more tentacles than the octopus.
+
+Q:Which Apollo mission landed the first humans on the Moon?
+A1:Apollo 7
+A2:Apollo 9
+A3:Apollo 11
+CA:A3
+H:The Apollo 10 mission was the second manned mission to orbit the Moon.
+
+Q:The Chernobyl nuclear disaster site is now in which country?
+A1:Ukraine
+A2:Slovakia
+A3:Hungary
+CA:A1
+H:This country was under the direct jurisdiction of the Soviet Union during the time of the disaster.
+
+Q:Who plays Lara Croft in the Tomb Raider series of films?
+A1:Angelina Jolie
+A2:Minnie Driver
+A3:Julia Roberts
+CA:A1
+H:This actress is married to the popular actor Brad Pitt.
+
+Q:A gosling is the young of which bird?
+A1:Swan
+A2:Goose
+A3:Hen
+CA:A2
+H:This waterfowl typically weighs more than ducks.
+
+Q:For what occupation was Jesus trained?
+A1:Accountant
+A2:Carpenter
+A3:Electrician
+CA:A2
+H:This profession could also include building objects using various materials.
+ 
+Q:Who was the most famous escape artist of the 20th century?
+A1:Harry Belafonte
+A2:Harry Potter
+A3:Harry Houdini
+CA:A3
+H:His signature acts included breaking out of handcuffs and straitjackets.
+
+Q:What was the painter Picasso's first name?
+A1:Pablo
+A2:Pedro
+A3:Peter
+CA:A1
+H:This name is the Spanish form of the name Paul.
+
+Q:Which country was once ruled by warlords called shoguns?
+A1:Australia
+A2:France
+A3:Japan
+CA:A3
+H:This country also was home to the famous covert mercenaries commonly known as ninjas.
+
+Q:What is the name of the rocket that powered the Apollo 11 moon landings?
+A1:Jupiter 10
+A2:Neptune 2
+A3:Saturn 5
+CA:A3
+H:This rocket is also named for the sixth planet from the Sun.
+
+Q:Who directed 'The Lord of the Rings' trilogy?
+A1:Steven Spielberg
+A2:George Lucas
+A3:Peter Jackson
+CA:A3
+H:This director also directed the 2005 remake of King Kong.
+
+Q:What is the name of the rapid transit system in Paris?
+A1:Metro
+A2:Transit
+A3:Subway
+CA:A1
+H:Paris has the most closely spaced subway stations in the world in the Paris Metropolitan Area.
+ 
+Q:In terms of time, what is the Latin meaning of A.M.?
+A1:After Morning
+A2:Before Mid-day
+A3:Before Morning
+CA:A2
+H:The Latin meaning of P.M. means post mid-day.
+
+Q:Which company sold the famous candy bar Snickers?
+A1:Mars
+A2:Hershey
+A3:Kraft
+CA:A1
+H:This company also released the popular chocolate bar, 3 Musketeers.
+
+Q:Where does guacamole originate from?
+A1:Chile
+A2:Greece
+A3:Mexico
+CA:A3
+H:The avocado-based dip was first created by the Aztecs.
+
+Q:In which present day country was the Battle of Waterloo fought in 1815?
+A1:Belgium
+A2:France
+A3:Germany
+CA:A1
+H:Napolean suffered his famous defeat during this battle.
+
+Q:Where does the Wizard of Oz live?
+A1:The Diamond City
+A2:The Emerald City
+A3:The Ruby City
+CA:A2
+H:The walls of this city were green, but the rest of the city is not.
+
+Q:What was the English term for a German submarine during World War Two?
+A1:G-boat
+A2:U-boat
+A3:S-boat
+CA:A2
+H:This term comes from the German word for "undersea boat".
+ 
+Q:What was Leonardo DiCaprio's character in the 1997 film 'Titanic'?
+A1:Cal Hockley
+A2:Thomas Ryan
+A3:Jack Dawson
+CA:A3
+H:His character sacrifices his life to save Rose.
+
+Q:Which Space Shuttle broke apart 73 seconds into its flight on January 28, 1986?
+A1:Atlantis
+A2:Challenger
+A3:Colombia
+CA:A2
+H:This highly-televised event caused a 32 month hiatus in manned launches.
+
+Q:Which planet is the fifth from the sun?
+A1:Saturn
+A2:Jupiter
+A3:Mars
+CA:A2
+H:This planet is the largest gas giant in the solar system.
+ 
+Q:Which element has the atomic number 26?
+A1:Copper
+A2:Gold
+A3:Iron
+CA:A3
+H:This element is a primary component in making steel.
+
+Q:In 1843, what popular form of communication was introduced?
+A1:Christmas card
+A2:Message in a bottle
+A3:Telegraph
+CA:A1
+H:The first of these were commissioned by Sir Henry Cole, an English civil servant.
+
+Q:Which cereal grain is traditionally used to make pumpernickel bread?
+A1:Rye
+A2:Oats
+A3:Wheat
+CA:A1
+H:The majority of this grain is produced in Germany, Poland and Russia.
+
+Q:Pittsburgh is a major city in which American state?
+A1:Pennsylvania
+A2:Maryland
+A3:Minnesota
+CA:A1
+H:Pittsburgh is the second largest city in this state, following Pennsylvania.
+
+Q:In Christianity, how many Stations of the Cross are there?
+A1:10
+A2:12
+A3:14
+CA:A3
+H:The stations of the cross are a series of pictures depicting Jesus Christ, often arranged in a numbered order around a church.
+
+Q:The plant that provides the spice turmeric is native to which continent?
+A1:Africa
+A2:Asia
+A3:North America
+CA:A2
+H:The turmeric plant thrives around 20 to 30 degrees celsius, and requires considerable rainfall to survive.
+
+Q:Which Canadian city was once called By-town?
+A1:Edmonton
+A2:Montreal
+A3:Ottawa
+CA:A3
+H:By-town remains a nickname for this city, which also hosts the By-town museum and By-town cinema.
+
+Q:What was the nickname of the Chicago gangster George Nelson?
+A1:Baby Face
+A2:Cheeky Face
+A3:Dog Face
+CA:A1
+H:George Nelson was given this name for his small stature and youthful appearance.
+
+Q:What is the title of the best-selling popular science book published by Stephen Hawking in 1988?
+A1:A Brief History of Earth
+A2:A Brief History of Space
+A3:A Brief History of Time
+CA:A3
+H:This book was on the best-selling list for a record-breaking 237 weeks.
+
+Q:English, Gordon and Irish are all breeds of what type of dog?
+A1:Hound
+A2:Retriever
+A3:Setter
+CA:A3
+H:This type of dog was used for hunting small game such as pheasant, quail, and grouse.
+
+Q:Country singer Johnny Cash was born in which US state?
+A1:Alabama
+A2:Arkansas
+A3:Arizona
+CA:A2
+H:This state was also the birthplace of former President Bill Clinton.
+
+Q:In which country is the city of Timbuktu?
+A1:Mali
+A2:Mexico
+A3:Mongolia
+CA:A1
+H:This country is landlocked with a population of 14.5 million.
+
+Q:Kris Kringle is an alternative name for whom?
+A1:Peter Pan
+A2:Robin Hood
+A3:Santa Claus
+CA:A3
+H:This figure is often depicted as a portly, joyous white-bearded man.
+
+Q:In the North American west, a mustang is a feral what?
+A1:Buffalo
+A2:Horse
+A3:Dog
+CA:A3
+H:The Mustang car brand features this animal as its logo.
+
+Q:What type of creature is a booby?
+A1:Beetle
+A2:Seabird
+A3:Fish
+CA:A2
+H:The booby feeds primarily on underwater prey.
+
+Q:The cause of death of Nobel Prize-winning physicist Pierre Curie was what?
+A1:Radiation poisoning
+A2:Struck by horse-drawn wagon
+A3:Tuberculosis
+CA:A2
+H:Pierre Curie was the husband of Marie Curie, the first woman to win a Nobel Prize.
+
+Q:In arithmetic, what name is given to the number below the line in a fraction?
+A1:Denominator
+A2:Numerator
+A3:Product
+CA:A1
+H:A fraction typically consists of a denominator and a numerator.
+
+Q:The Pharaohs were the rulers of which ancient civilization?
+A1:Aztec
+A2:Egyptian
+A3:Greek
+CA:A2
+H:The pyramids were believed to be burial mounds for these kings.

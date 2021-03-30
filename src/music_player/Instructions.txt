@@ -1,0 +1,21 @@
+Instructions:
+
+The package music player contains three important files:
+1) music_player.cpp
+2) music_player_client.cpp
+3) audio_player.cpp
+
+The music_player is for the action server for playing background music and celebration music.
+The music_player_client is the action client for playing background music.
+
+Both of the above have been integrated into the bingo game already.
+
+The audio_player is a helper class (NOT an action library) for playing mp3 audio clips. It's based on music_player.
+
+Once you initialize an instance of audio_player, just call play_file( ... ) to play a file.
+
+Ex.
+	music_player::audioPlayer player;
+	player.play_file(filePath);
+
+The function play_file is blocking.

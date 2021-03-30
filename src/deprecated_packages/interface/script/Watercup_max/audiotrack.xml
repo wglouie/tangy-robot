@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSetRecord xmlns="http://tempuri.org/DataSetRecord.xsd">
+  <DataTableRecord>
+    <FileName>Watercup_max.wav</FileName>
+    <StartTime>0</StartTime>
+    <EndTime>PT4S</EndTime>
+    <Tag>45</Tag>
+    <ColorIndex>1</ColorIndex>
+  </DataTableRecord>
+</DataSetRecord>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<stations>
+	<station id="cs1">
+		<attribute name="name" type="string" value="chargingstation1"/>
+		<attribute name="idle" type="bool" value="true" pddl="true"/>
+		<attribute name="availableat" type="Location" value="l0" pddl="true"/> 
+	</station>
+
+</stations>

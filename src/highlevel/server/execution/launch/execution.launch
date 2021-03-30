@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+	<node pkg="execution" name="execution" type="execution_server" output="screen"/>
+	<param name="path" value="$(find execution)" />
+	<param name="plannerspath" value="$(find planning)/planner" />
+
+</launch>
+

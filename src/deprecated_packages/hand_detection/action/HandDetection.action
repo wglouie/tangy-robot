@@ -1,0 +1,16 @@
+# Identifies user using hand detection
+# goal message
+int32 captureMode			# 0 = On, 1 = Off
+---
+# result message
+int32 numberOfHands			# number of hands
+float32[] x				# x position of user	
+float32[] y 				# y position of user
+float32[] z				# z position of user
+---
+# feedback message
+int32 numberOfHands			# number of hands
+float32[] x				# x position of user	
+float32[] y 				# y position of user
+float32[] z				# z position of user
+

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+	<node pkg="tf" type="static_transform_publisher" name="BingoGameServerRemote_1" args="-1.15064 -0.132016 2.27235 0.000754433 0.302331 -0.0122112 0.953125 map remote_kinect_translation1 100" respawn="true"/>
+
+	<node pkg="tf" type="static_transform_publisher" name="BingoGameServerRemote" args="0 -0.0 0 0 0 0 1 remote_kinect_translation1 remote_kinect_translation 100" 		respawn="true"/>
+
+	<node pkg="tf" type="static_transform_publisher" name="BingoGameServerRemote_2" args="0 0 0 0 0 -1.570796  remote_kinect_translation remote_kinect_rotation1 100" 		respawn="true"/>
+
+	<node pkg="tf" type="static_transform_publisher" name="BingoGameServerRemote_3" args="0 0 0 0 1.570796 0  remote_kinect_rotation1 remote_kinect_rotation2 100" 		respawn="true"/>
+
+	<node pkg="tf" type="static_transform_publisher" name="BingoGameServerRemote_4" args="0 0 0 0 0 0 remote_kinect_rotation2 remote_kinect 100" 		respawn="true"/>
+
+	<node pkg="tf" type="static_transform_publisher" name="BingoGameServerRemote_5" args="0 0 0 0 0 0  remote_kinect bottom_camera_link 100" 		respawn="true"/>
+
+	<include file="$(find help_indicators)/launch/help_indicators.launch"/>
+</launch>

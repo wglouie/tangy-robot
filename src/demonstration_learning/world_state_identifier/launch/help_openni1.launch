@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<launch>
+	<node pkg="tf" type="static_transform_publisher" name="BingoGameServerRemote_1" args="-1.14691 -0.404017 2.10231 -0.0253785 0.325484 0.0532849 0.943704 map remote_kinect_translation1 100" 		respawn="true"/>
+
+	<node pkg="tf" type="static_transform_publisher" name="BingoGameServerRemote" args="0 -0.0 0 0 0 0 1 remote_kinect_translation1 remote_kinect_translation 100" 		respawn="true"/>
+
+	<node pkg="tf" type="static_transform_publisher" name="BingoGameServerRemote_2" args="0 0 0 0 0 -1.570796  remote_kinect_translation remote_kinect_rotation1 100" 		respawn="true"/>
+
+	<node pkg="tf" type="static_transform_publisher" name="BingoGameServerRemote_3" args="0 0 0 0 1.570796 0  remote_kinect_rotation1 remote_kinect_rotation2 100" 		respawn="true"/>
+
+	<node pkg="tf" type="static_transform_publisher" name="BingoGameServerRemote_4" args="0 0 0 0 0 0 remote_kinect_rotation2 remote_kinect 100" 		respawn="true"/>
+
+	<node pkg="tf" type="static_transform_publisher" name="BingoGameServerRemote_5" args="0 0 0 0 0 0  remote_kinect bottom_camera_link 100" 		respawn="true"/>
+
+	 <include file="$(find openni_launch)/launch/openni.launch">
+	  <arg name="camera" value="bottom_camera"/>
+	  <arg name="device_id" value="#1"/> 
+	  <arg name="depth_camera_info_url" value ="file://$(find help_indicators)/calibration/depth_PS1080_PrimeSense.yaml" />
+	 </include>
+	
+
+         <node name="help_indicators" pkg="help_indicators" type = "help_indicators" respawn = "true" output="screen">
+          <param name="kinect_max_dist" type="double" value="4.75" />
+          <param name="kinect_min_dist" type="double" value="1" />
+          <param name="store_depth" type="bool" value="true" />
+         </node>
+
+
+         <node name="help_transformers" pkg="help_indicators" type="help_transformers" respawn="true" output="screen"/>
+         <node name="controller" pkg="tangy_move" type="controller" respawn="true"/>
+</launch>

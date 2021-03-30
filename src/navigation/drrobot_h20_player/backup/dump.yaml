@@ -1,0 +1,5 @@
+drrobot_player: {RobotCommMethod: Network, RobotID: d, RobotIP: 192.168.0.209, RobotPortNum: 10001,
+  RobotSerialPort: /dev/ttyS10, RobotType: Jaguar, enable_ir: true, enable_sonar: true}
+roslaunch:
+  uris: {host_dri_ros__48060: 'http://dri-ROS:48060/'}
+run_id: 6fdfe1ea-5bb5-11e0-8306-000476cc797c

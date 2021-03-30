@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<objects>
+	<class id="Location">
+		<object id="l0"/>
+		<object id="l1"/>
+		<object id="l2"/>
+		<object id="l3"/>
+	</class>
+	<class id="ChargingStation">
+		<object id="cs1"/>
+	</class>
+	<class id="Robot">
+		<object id="r1"/>
+	</class>
+	<class id="User">
+		<object id="user1"/>
+		<object id="user2"/>
+		<object id="user3"/>
+	</class>
+
+	<class id="TelepresenceSession">
+		<object id="s1"/>
+		<object id="s2"/>
+		<object id="s3"/>
+	</class>
+	<class id="BingoGame">
+		<object id="g1"/>
+		<object id="g2"/>
+	</class>
+
+
+</objects>

@@ -1,0 +1,46 @@
+1) Check if servers have been connected to:
+8) Move back to original position? (Jacob's stuff has it rotate completely to turn around (180 degrees), then move to position, then rotate back to look forward (0 degrees)
+9) After end task we should at least take one more action before finishing
+11) Help is engaging even though it isn't in front of the right person. Must be fixed
+12) Learn to sense
+13) Added triangle detection overlaid on rgb image for help_indicators package
+14) Created a script for installing OPENNI NITE 
+15) Added packages for openni_tracker and skeleton markers
+
+*10) Valediction should not have movement
+*28) Show all positions that need help on gui
+*19) End task learning
+*13) Create appropriate activity states;
+*31) Undo state-action pair
+*32) Create a semi-autonomous system for now
+*33) World_state_ID client is different state at the beginning the world state server. Call service and update world state during intialization from now on 
+*21) Fix bug where I have to manually start help indicators from the topic
+*29) Set robot initial pose when laoding world state
+*7) Backup when doing gestures near the table (i.e. Performing help)
+*30) Cleaned up all unused redundant code in help_indicators (Commented out only for now)
+*16) Make World State Identifier remember last state when continuing game. Publish state immediately 	
+*26) Force start tangy in particular state  or save state of the game to continue after
+*14) Action learner should record when help starts and ends;
+*20) Show images of Bingo Card and Help in world state identifier
+*22) Starting new game should mean new trajecotry created for activity learner. Call service
+*22) detection images now published to help_indicators/detected_triangles
+*23) States-Action pairs are out of order. States are behind by one time step
+*24) Note help phase when recording trajectory
+*29) Have buttons to skip speech
+*25) When card is not being detected in world_state_identifier make the card_state occluded
+*27) Tangy is currently incorrectly saying that there is no assistance required after it has moved to the user
+*21) Turn off gestures to speed up learning
+*22) We need a state where the robot is at the requesters position
+*17) Make red signal when things are in progress
+*12) Start new game with new numbers button
+*3) remove_marker, request_to_show_bingo_card, mark_numbers, congratulations, encourage should all have the robot not move when performing the action and back away to protect the robot from hitting the table
+*9) Robot needs to move his head down when detecting a card
+*10) People need to be able to dump triangles that have been completed
+*11) Ensure when user is being helped the demonstrator must complete help before moving onto next person
+*6) Clear help triangle after completing help
+*5) Publish world_state and action info to the remote computer (GUI) so we know what is going on 
+*2) GUI should not let goals be sent when a goal is active for world_state_identifier or action_executor
+*4) GUI needs to have flipping widget screens
+*6) If robot is already in position don't do anything
+*7) We have a 40cm goal tolerence for navigation
+

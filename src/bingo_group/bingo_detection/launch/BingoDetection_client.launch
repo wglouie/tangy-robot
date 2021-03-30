@@ -1,0 +1,11 @@
+<launch>
+	<node pkg="bingo_detection" type="BingoDetectionClient" 		name="BingoDetectionClient" output="screen">
+		<param name="numberDatabaseFile" type="string" value="$(find bingo_detection)/bingoNumbers.txt" />
+	</node>
+</launch>
+
+
+
+
+
+

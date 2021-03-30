@@ -1,0 +1,10 @@
+# Identifies user using hand detection
+# goal message
+string script_folder			# List of script files to play
+---
+# result message
+int32 success				# Goal completed = 1, Goal failed = 0
+---
+# feedback message
+int32 feedback 
+

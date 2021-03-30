@@ -1,0 +1,11 @@
+Speech:I had a great time playing with everyone today. 
+Text:Thank You!
+
+Speech: I am looking forward to playing again.
+Text:Thank You!
+
+Speech:Have a great day.
+Text:Thank You!
+
+Speech:Goodbye!
+Text:Goodbye!

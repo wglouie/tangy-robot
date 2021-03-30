@@ -1,0 +1,16 @@
+# Request for Execution and Monitoring
+# goal message
+int32 newrequest
+string request
+
+---
+# result message
+int32 statusCode                # the status code of the process 
+                                # (e.g., execution failed, no plan exists, timeout, etc) 
+
+
+---
+# feedback message
+int32 status			# current state
+
+

@@ -1,0 +1,337 @@
+<?xml version="1.0" ?>
+<!--This does not replace URDF, and is not an extension of URDF.
+    This is a format for representing semantic information about the robot structure.
+    A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
+-->
+<robot name="tangymodel_eff">
+    <!--GROUPS: Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
+    <!--LINKS: When a link is specified, the parent joint of that link (if it exists) is automatically included-->
+    <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
+    <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
+    <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
+    <group name="right_arm">
+        <chain base_link="body_link" tip_link="right_hand" />
+    </group>
+    <group name="left_arm">
+        <chain base_link="body_link" tip_link="left_hand" />
+    </group>
+    <group name="both_arms">
+        <group name="right_arm" />
+        <group name="left_arm" />
+    </group>
+    <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
+    <group_state name="home_position_right" group="right_arm">
+        <joint name="lower_to_wrist_right_arm" value="0" />
+        <joint name="right_shoulder_x_revolute" value="0" />
+        <joint name="upper_right_arm_y_revolute_joint" value="0" />
+        <joint name="upper_right_arm_z_revolute_joint" value="0" />
+        <joint name="upper_to_lower_right_joint" value="0" />
+        <joint name="wrist_right_arm_z_revolute_joint" value="0" />
+    </group_state>
+    <group_state name="home_position_left" group="left_arm">
+        <joint name="left_shoulder_x_revolute" value="0" />
+        <joint name="lower_to_wrist_left_arm" value="0" />
+        <joint name="upper_left_arm_y_revolute_joint" value="0" />
+        <joint name="upper_left_arm_z_revolute_joint" value="0" />
+        <joint name="upper_to_lower_left_joint" value="0" />
+        <joint name="wrist_left_arm_z_revolute_joint" value="0" />
+    </group_state>
+    <group_state name="both_arms_home" group="both_arms">
+        <joint name="left_shoulder_x_revolute" value="0" />
+        <joint name="lower_to_wrist_left_arm" value="0" />
+        <joint name="lower_to_wrist_right_arm" value="0" />
+        <joint name="right_shoulder_x_revolute" value="0" />
+        <joint name="upper_left_arm_y_revolute_joint" value="0" />
+        <joint name="upper_left_arm_z_revolute_joint" value="0" />
+        <joint name="upper_right_arm_y_revolute_joint" value="0" />
+        <joint name="upper_right_arm_z_revolute_joint" value="0" />
+        <joint name="upper_to_lower_left_joint" value="0" />
+        <joint name="upper_to_lower_right_joint" value="0" />
+        <joint name="wrist_left_arm_z_revolute_joint" value="0" />
+        <joint name="wrist_right_arm_z_revolute_joint" value="0" />
+    </group_state>
+    <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
+    <virtual_joint name="virtual_joint" type="planar" parent_frame="map" child_link="base_link_robot" />
+    <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
+    <disable_collisions link1="body_link" link2="head_link" reason="Never" />
+    <disable_collisions link1="body_link" link2="kinect2_depth_frame" reason="Never" />
+    <disable_collisions link1="body_link" link2="kinect2_link" reason="Adjacent" />
+    <disable_collisions link1="body_link" link2="kinect2_rgb_optical_frame" reason="Never" />
+    <disable_collisions link1="body_link" link2="kinect_depth_frame" reason="Never" />
+    <disable_collisions link1="body_link" link2="kinect_link" reason="Never" />
+    <disable_collisions link1="body_link" link2="kinect_rgb_optical_frame" reason="Never" />
+    <disable_collisions link1="body_link" link2="left_shoulder_pitch_link" reason="Adjacent" />
+    <disable_collisions link1="body_link" link2="left_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="body_link" link2="neck_link" reason="Adjacent" />
+    <disable_collisions link1="body_link" link2="right_shoulder_pitch_link" reason="Adjacent" />
+    <disable_collisions link1="body_link" link2="right_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="body_link" link2="usb_link" reason="Adjacent" />
+    <disable_collisions link1="head_link" link2="kinect2_depth_frame" reason="Never" />
+    <disable_collisions link1="head_link" link2="kinect2_link" reason="Never" />
+    <disable_collisions link1="head_link" link2="kinect2_rgb_optical_frame" reason="Never" />
+    <disable_collisions link1="head_link" link2="kinect_depth_frame" reason="Never" />
+    <disable_collisions link1="head_link" link2="kinect_link" reason="Never" />
+    <disable_collisions link1="head_link" link2="kinect_rgb_optical_frame" reason="Never" />
+    <disable_collisions link1="head_link" link2="left_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="head_link" link2="left_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="head_link" link2="neck_link" reason="Adjacent" />
+    <disable_collisions link1="head_link" link2="right_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="head_link" link2="right_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="head_link" link2="upper_left_arm" reason="Never" />
+    <disable_collisions link1="head_link" link2="upper_right_arm" reason="Never" />
+    <disable_collisions link1="head_link" link2="usb_link" reason="Never" />
+    <disable_collisions link1="kinect2_depth_frame" link2="kinect2_link" reason="Adjacent" />
+    <disable_collisions link1="kinect2_depth_frame" link2="kinect2_rgb_optical_frame" reason="Adjacent" />
+    <disable_collisions link1="kinect2_depth_frame" link2="kinect_depth_frame" reason="Never" />
+    <disable_collisions link1="kinect2_depth_frame" link2="kinect_link" reason="Never" />
+    <disable_collisions link1="kinect2_depth_frame" link2="kinect_rgb_optical_frame" reason="Never" />
+    <disable_collisions link1="kinect2_depth_frame" link2="left_bottom_fingers" reason="Never" />
+    <disable_collisions link1="kinect2_depth_frame" link2="left_hand" reason="Never" />
+    <disable_collisions link1="kinect2_depth_frame" link2="left_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="kinect2_depth_frame" link2="left_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="kinect2_depth_frame" link2="left_top_fingers" reason="Never" />
+    <disable_collisions link1="kinect2_depth_frame" link2="left_wrist_link" reason="Never" />
+    <disable_collisions link1="kinect2_depth_frame" link2="lower_left_arm" reason="Never" />
+    <disable_collisions link1="kinect2_depth_frame" link2="lower_right_arm" reason="Never" />
+    <disable_collisions link1="kinect2_depth_frame" link2="neck_link" reason="Never" />
+    <disable_collisions link1="kinect2_depth_frame" link2="right_bottom_fingers" reason="Never" />
+    <disable_collisions link1="kinect2_depth_frame" link2="right_hand" reason="Never" />
+    <disable_collisions link1="kinect2_depth_frame" link2="right_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="kinect2_depth_frame" link2="right_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="kinect2_depth_frame" link2="right_top_fingers" reason="Never" />
+    <disable_collisions link1="kinect2_depth_frame" link2="right_wrist_link" reason="Never" />
+    <disable_collisions link1="kinect2_depth_frame" link2="upper_left_arm" reason="Never" />
+    <disable_collisions link1="kinect2_depth_frame" link2="upper_right_arm" reason="Never" />
+    <disable_collisions link1="kinect2_depth_frame" link2="usb_link" reason="Never" />
+    <disable_collisions link1="kinect2_link" link2="kinect2_rgb_optical_frame" reason="Never" />
+    <disable_collisions link1="kinect2_link" link2="kinect_depth_frame" reason="Never" />
+    <disable_collisions link1="kinect2_link" link2="kinect_link" reason="Never" />
+    <disable_collisions link1="kinect2_link" link2="kinect_rgb_optical_frame" reason="Never" />
+    <disable_collisions link1="kinect2_link" link2="left_bottom_fingers" reason="Never" />
+    <disable_collisions link1="kinect2_link" link2="left_hand" reason="Never" />
+    <disable_collisions link1="kinect2_link" link2="left_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="kinect2_link" link2="left_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="kinect2_link" link2="left_top_fingers" reason="Never" />
+    <disable_collisions link1="kinect2_link" link2="left_wrist_link" reason="Never" />
+    <disable_collisions link1="kinect2_link" link2="lower_left_arm" reason="Never" />
+    <disable_collisions link1="kinect2_link" link2="lower_right_arm" reason="Never" />
+    <disable_collisions link1="kinect2_link" link2="neck_link" reason="Never" />
+    <disable_collisions link1="kinect2_link" link2="right_bottom_fingers" reason="Never" />
+    <disable_collisions link1="kinect2_link" link2="right_hand" reason="Never" />
+    <disable_collisions link1="kinect2_link" link2="right_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="kinect2_link" link2="right_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="kinect2_link" link2="right_top_fingers" reason="Never" />
+    <disable_collisions link1="kinect2_link" link2="right_wrist_link" reason="Never" />
+    <disable_collisions link1="kinect2_link" link2="upper_left_arm" reason="Never" />
+    <disable_collisions link1="kinect2_link" link2="upper_right_arm" reason="Never" />
+    <disable_collisions link1="kinect2_link" link2="usb_link" reason="Never" />
+    <disable_collisions link1="kinect2_rgb_optical_frame" link2="kinect_depth_frame" reason="Never" />
+    <disable_collisions link1="kinect2_rgb_optical_frame" link2="kinect_link" reason="Never" />
+    <disable_collisions link1="kinect2_rgb_optical_frame" link2="kinect_rgb_optical_frame" reason="Never" />
+    <disable_collisions link1="kinect2_rgb_optical_frame" link2="left_bottom_fingers" reason="Never" />
+    <disable_collisions link1="kinect2_rgb_optical_frame" link2="left_hand" reason="Never" />
+    <disable_collisions link1="kinect2_rgb_optical_frame" link2="left_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="kinect2_rgb_optical_frame" link2="left_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="kinect2_rgb_optical_frame" link2="left_top_fingers" reason="Never" />
+    <disable_collisions link1="kinect2_rgb_optical_frame" link2="left_wrist_link" reason="Never" />
+    <disable_collisions link1="kinect2_rgb_optical_frame" link2="lower_left_arm" reason="Never" />
+    <disable_collisions link1="kinect2_rgb_optical_frame" link2="lower_right_arm" reason="Never" />
+    <disable_collisions link1="kinect2_rgb_optical_frame" link2="neck_link" reason="Never" />
+    <disable_collisions link1="kinect2_rgb_optical_frame" link2="right_bottom_fingers" reason="Never" />
+    <disable_collisions link1="kinect2_rgb_optical_frame" link2="right_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="kinect2_rgb_optical_frame" link2="right_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="kinect2_rgb_optical_frame" link2="right_top_fingers" reason="Never" />
+    <disable_collisions link1="kinect2_rgb_optical_frame" link2="right_wrist_link" reason="Never" />
+    <disable_collisions link1="kinect2_rgb_optical_frame" link2="upper_left_arm" reason="Never" />
+    <disable_collisions link1="kinect2_rgb_optical_frame" link2="upper_right_arm" reason="Never" />
+    <disable_collisions link1="kinect2_rgb_optical_frame" link2="usb_link" reason="Never" />
+    <disable_collisions link1="kinect_depth_frame" link2="kinect_link" reason="Adjacent" />
+    <disable_collisions link1="kinect_depth_frame" link2="kinect_rgb_optical_frame" reason="Adjacent" />
+    <disable_collisions link1="kinect_depth_frame" link2="left_bottom_fingers" reason="Never" />
+    <disable_collisions link1="kinect_depth_frame" link2="left_hand" reason="Never" />
+    <disable_collisions link1="kinect_depth_frame" link2="left_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="kinect_depth_frame" link2="left_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="kinect_depth_frame" link2="left_top_fingers" reason="Never" />
+    <disable_collisions link1="kinect_depth_frame" link2="left_wrist_link" reason="Never" />
+    <disable_collisions link1="kinect_depth_frame" link2="lower_left_arm" reason="Never" />
+    <disable_collisions link1="kinect_depth_frame" link2="lower_right_arm" reason="Never" />
+    <disable_collisions link1="kinect_depth_frame" link2="neck_link" reason="Never" />
+    <disable_collisions link1="kinect_depth_frame" link2="right_bottom_fingers" reason="Never" />
+    <disable_collisions link1="kinect_depth_frame" link2="right_hand" reason="Never" />
+    <disable_collisions link1="kinect_depth_frame" link2="right_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="kinect_depth_frame" link2="right_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="kinect_depth_frame" link2="right_top_fingers" reason="Never" />
+    <disable_collisions link1="kinect_depth_frame" link2="right_wrist_link" reason="Never" />
+    <disable_collisions link1="kinect_depth_frame" link2="upper_left_arm" reason="Never" />
+    <disable_collisions link1="kinect_depth_frame" link2="upper_right_arm" reason="Never" />
+    <disable_collisions link1="kinect_depth_frame" link2="usb_link" reason="Never" />
+    <disable_collisions link1="kinect_link" link2="kinect_rgb_optical_frame" reason="Never" />
+    <disable_collisions link1="kinect_link" link2="left_bottom_fingers" reason="Never" />
+    <disable_collisions link1="kinect_link" link2="left_hand" reason="Never" />
+    <disable_collisions link1="kinect_link" link2="left_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="kinect_link" link2="left_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="kinect_link" link2="left_top_fingers" reason="Never" />
+    <disable_collisions link1="kinect_link" link2="left_wrist_link" reason="Never" />
+    <disable_collisions link1="kinect_link" link2="lower_left_arm" reason="Never" />
+    <disable_collisions link1="kinect_link" link2="lower_right_arm" reason="Never" />
+    <disable_collisions link1="kinect_link" link2="neck_link" reason="Never" />
+    <disable_collisions link1="kinect_link" link2="right_bottom_fingers" reason="Never" />
+    <disable_collisions link1="kinect_link" link2="right_hand" reason="Never" />
+    <disable_collisions link1="kinect_link" link2="right_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="kinect_link" link2="right_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="kinect_link" link2="right_top_fingers" reason="Never" />
+    <disable_collisions link1="kinect_link" link2="right_wrist_link" reason="Never" />
+    <disable_collisions link1="kinect_link" link2="upper_left_arm" reason="Never" />
+    <disable_collisions link1="kinect_link" link2="upper_right_arm" reason="Never" />
+    <disable_collisions link1="kinect_link" link2="usb_link" reason="Never" />
+    <disable_collisions link1="kinect_rgb_optical_frame" link2="left_bottom_fingers" reason="Never" />
+    <disable_collisions link1="kinect_rgb_optical_frame" link2="left_hand" reason="Never" />
+    <disable_collisions link1="kinect_rgb_optical_frame" link2="left_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="kinect_rgb_optical_frame" link2="left_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="kinect_rgb_optical_frame" link2="left_top_fingers" reason="Never" />
+    <disable_collisions link1="kinect_rgb_optical_frame" link2="left_wrist_link" reason="Never" />
+    <disable_collisions link1="kinect_rgb_optical_frame" link2="lower_left_arm" reason="Never" />
+    <disable_collisions link1="kinect_rgb_optical_frame" link2="lower_right_arm" reason="Never" />
+    <disable_collisions link1="kinect_rgb_optical_frame" link2="neck_link" reason="Never" />
+    <disable_collisions link1="kinect_rgb_optical_frame" link2="right_bottom_fingers" reason="Never" />
+    <disable_collisions link1="kinect_rgb_optical_frame" link2="right_hand" reason="Never" />
+    <disable_collisions link1="kinect_rgb_optical_frame" link2="right_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="kinect_rgb_optical_frame" link2="right_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="kinect_rgb_optical_frame" link2="right_top_fingers" reason="Never" />
+    <disable_collisions link1="kinect_rgb_optical_frame" link2="right_wrist_link" reason="Never" />
+    <disable_collisions link1="kinect_rgb_optical_frame" link2="upper_left_arm" reason="Never" />
+    <disable_collisions link1="kinect_rgb_optical_frame" link2="upper_right_arm" reason="Never" />
+    <disable_collisions link1="kinect_rgb_optical_frame" link2="usb_link" reason="Never" />
+    <disable_collisions link1="left_bottom_fingers" link2="left_hand" reason="Adjacent" />
+    <disable_collisions link1="left_bottom_fingers" link2="left_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="left_bottom_fingers" link2="left_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="left_bottom_fingers" link2="left_top_fingers" reason="Never" />
+    <disable_collisions link1="left_bottom_fingers" link2="left_wrist_link" reason="Never" />
+    <disable_collisions link1="left_bottom_fingers" link2="lower_left_arm" reason="Never" />
+    <disable_collisions link1="left_bottom_fingers" link2="lower_right_arm" reason="Never" />
+    <disable_collisions link1="left_bottom_fingers" link2="right_bottom_fingers" reason="Never" />
+    <disable_collisions link1="left_bottom_fingers" link2="right_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="left_bottom_fingers" link2="right_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="left_bottom_fingers" link2="right_top_fingers" reason="Never" />
+    <disable_collisions link1="left_bottom_fingers" link2="right_wrist_link" reason="Never" />
+    <disable_collisions link1="left_bottom_fingers" link2="upper_left_arm" reason="Never" />
+    <disable_collisions link1="left_bottom_fingers" link2="upper_right_arm" reason="Never" />
+    <disable_collisions link1="left_bottom_fingers" link2="usb_link" reason="Never" />
+    <disable_collisions link1="left_hand" link2="left_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="left_hand" link2="left_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="left_hand" link2="left_top_fingers" reason="Adjacent" />
+    <disable_collisions link1="left_hand" link2="left_wrist_link" reason="Adjacent" />
+    <disable_collisions link1="left_hand" link2="lower_left_arm" reason="Never" />
+    <disable_collisions link1="left_hand" link2="lower_right_arm" reason="Never" />
+    <disable_collisions link1="left_hand" link2="right_bottom_fingers" reason="Never" />
+    <disable_collisions link1="left_hand" link2="right_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="left_hand" link2="right_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="left_hand" link2="right_top_fingers" reason="Never" />
+    <disable_collisions link1="left_hand" link2="upper_left_arm" reason="Never" />
+    <disable_collisions link1="left_hand" link2="upper_right_arm" reason="Never" />
+    <disable_collisions link1="left_hand" link2="usb_link" reason="Never" />
+    <disable_collisions link1="left_shoulder_pitch_link" link2="left_shoulder_roll_link" reason="Adjacent" />
+    <disable_collisions link1="left_shoulder_pitch_link" link2="left_top_fingers" reason="Never" />
+    <disable_collisions link1="left_shoulder_pitch_link" link2="left_wrist_link" reason="Never" />
+    <disable_collisions link1="left_shoulder_pitch_link" link2="lower_left_arm" reason="Never" />
+    <disable_collisions link1="left_shoulder_pitch_link" link2="lower_right_arm" reason="Never" />
+    <disable_collisions link1="left_shoulder_pitch_link" link2="neck_link" reason="Never" />
+    <disable_collisions link1="left_shoulder_pitch_link" link2="right_bottom_fingers" reason="Never" />
+    <disable_collisions link1="left_shoulder_pitch_link" link2="right_hand" reason="Never" />
+    <disable_collisions link1="left_shoulder_pitch_link" link2="right_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="left_shoulder_pitch_link" link2="right_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="left_shoulder_pitch_link" link2="right_top_fingers" reason="Never" />
+    <disable_collisions link1="left_shoulder_pitch_link" link2="right_wrist_link" reason="Never" />
+    <disable_collisions link1="left_shoulder_pitch_link" link2="upper_left_arm" reason="Never" />
+    <disable_collisions link1="left_shoulder_pitch_link" link2="upper_right_arm" reason="Never" />
+    <disable_collisions link1="left_shoulder_pitch_link" link2="usb_link" reason="Never" />
+    <disable_collisions link1="left_shoulder_roll_link" link2="left_top_fingers" reason="Never" />
+    <disable_collisions link1="left_shoulder_roll_link" link2="left_wrist_link" reason="Never" />
+    <disable_collisions link1="left_shoulder_roll_link" link2="lower_left_arm" reason="Never" />
+    <disable_collisions link1="left_shoulder_roll_link" link2="lower_right_arm" reason="Never" />
+    <disable_collisions link1="left_shoulder_roll_link" link2="neck_link" reason="Never" />
+    <disable_collisions link1="left_shoulder_roll_link" link2="right_bottom_fingers" reason="Never" />
+    <disable_collisions link1="left_shoulder_roll_link" link2="right_hand" reason="Never" />
+    <disable_collisions link1="left_shoulder_roll_link" link2="right_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="left_shoulder_roll_link" link2="right_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="left_shoulder_roll_link" link2="right_top_fingers" reason="Never" />
+    <disable_collisions link1="left_shoulder_roll_link" link2="right_wrist_link" reason="Never" />
+    <disable_collisions link1="left_shoulder_roll_link" link2="upper_left_arm" reason="Adjacent" />
+    <disable_collisions link1="left_shoulder_roll_link" link2="upper_right_arm" reason="Never" />
+    <disable_collisions link1="left_shoulder_roll_link" link2="usb_link" reason="Never" />
+    <disable_collisions link1="left_top_fingers" link2="left_wrist_link" reason="Never" />
+    <disable_collisions link1="left_top_fingers" link2="lower_left_arm" reason="Never" />
+    <disable_collisions link1="left_top_fingers" link2="lower_right_arm" reason="Never" />
+    <disable_collisions link1="left_top_fingers" link2="right_bottom_fingers" reason="Never" />
+    <disable_collisions link1="left_top_fingers" link2="right_hand" reason="Never" />
+    <disable_collisions link1="left_top_fingers" link2="right_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="left_top_fingers" link2="right_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="left_top_fingers" link2="right_top_fingers" reason="Never" />
+    <disable_collisions link1="left_top_fingers" link2="right_wrist_link" reason="Never" />
+    <disable_collisions link1="left_top_fingers" link2="upper_left_arm" reason="Never" />
+    <disable_collisions link1="left_top_fingers" link2="upper_right_arm" reason="Never" />
+    <disable_collisions link1="left_wrist_link" link2="lower_left_arm" reason="Adjacent" />
+    <disable_collisions link1="left_wrist_link" link2="lower_right_arm" reason="Never" />
+    <disable_collisions link1="left_wrist_link" link2="right_bottom_fingers" reason="Never" />
+    <disable_collisions link1="left_wrist_link" link2="right_hand" reason="Never" />
+    <disable_collisions link1="left_wrist_link" link2="right_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="left_wrist_link" link2="right_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="left_wrist_link" link2="right_top_fingers" reason="Never" />
+    <disable_collisions link1="left_wrist_link" link2="right_wrist_link" reason="Never" />
+    <disable_collisions link1="left_wrist_link" link2="upper_left_arm" reason="Never" />
+    <disable_collisions link1="left_wrist_link" link2="upper_right_arm" reason="Never" />
+    <disable_collisions link1="left_wrist_link" link2="usb_link" reason="Never" />
+    <disable_collisions link1="lower_left_arm" link2="lower_right_arm" reason="Never" />
+    <disable_collisions link1="lower_left_arm" link2="neck_link" reason="Never" />
+    <disable_collisions link1="lower_left_arm" link2="right_bottom_fingers" reason="Never" />
+    <disable_collisions link1="lower_left_arm" link2="right_hand" reason="Never" />
+    <disable_collisions link1="lower_left_arm" link2="right_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="lower_left_arm" link2="right_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="lower_left_arm" link2="right_top_fingers" reason="Never" />
+    <disable_collisions link1="lower_left_arm" link2="right_wrist_link" reason="Never" />
+    <disable_collisions link1="lower_left_arm" link2="upper_left_arm" reason="Adjacent" />
+    <disable_collisions link1="lower_left_arm" link2="upper_right_arm" reason="Never" />
+    <disable_collisions link1="lower_left_arm" link2="usb_link" reason="Never" />
+    <disable_collisions link1="lower_right_arm" link2="neck_link" reason="Never" />
+    <disable_collisions link1="lower_right_arm" link2="right_bottom_fingers" reason="Never" />
+    <disable_collisions link1="lower_right_arm" link2="right_hand" reason="Never" />
+    <disable_collisions link1="lower_right_arm" link2="right_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="lower_right_arm" link2="right_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="lower_right_arm" link2="right_top_fingers" reason="Never" />
+    <disable_collisions link1="lower_right_arm" link2="right_wrist_link" reason="Adjacent" />
+    <disable_collisions link1="lower_right_arm" link2="upper_left_arm" reason="Never" />
+    <disable_collisions link1="lower_right_arm" link2="upper_right_arm" reason="Adjacent" />
+    <disable_collisions link1="neck_link" link2="right_shoulder_pitch_link" reason="Never" />
+    <disable_collisions link1="neck_link" link2="right_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="neck_link" link2="upper_left_arm" reason="Never" />
+    <disable_collisions link1="neck_link" link2="upper_right_arm" reason="Never" />
+    <disable_collisions link1="neck_link" link2="usb_link" reason="Never" />
+    <disable_collisions link1="right_bottom_fingers" link2="right_hand" reason="Adjacent" />
+    <disable_collisions link1="right_bottom_fingers" link2="right_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="right_bottom_fingers" link2="right_top_fingers" reason="Always" />
+    <disable_collisions link1="right_bottom_fingers" link2="right_wrist_link" reason="Never" />
+    <disable_collisions link1="right_bottom_fingers" link2="upper_left_arm" reason="Never" />
+    <disable_collisions link1="right_bottom_fingers" link2="upper_right_arm" reason="Never" />
+    <disable_collisions link1="right_hand" link2="right_shoulder_roll_link" reason="Never" />
+    <disable_collisions link1="right_hand" link2="right_top_fingers" reason="Adjacent" />
+    <disable_collisions link1="right_hand" link2="right_wrist_link" reason="Adjacent" />
+    <disable_collisions link1="right_hand" link2="upper_left_arm" reason="Never" />
+    <disable_collisions link1="right_hand" link2="upper_right_arm" reason="Never" />
+    <disable_collisions link1="right_shoulder_pitch_link" link2="right_shoulder_roll_link" reason="Adjacent" />
+    <disable_collisions link1="right_shoulder_pitch_link" link2="right_wrist_link" reason="Never" />
+    <disable_collisions link1="right_shoulder_pitch_link" link2="upper_left_arm" reason="Never" />
+    <disable_collisions link1="right_shoulder_pitch_link" link2="upper_right_arm" reason="Never" />
+    <disable_collisions link1="right_shoulder_pitch_link" link2="usb_link" reason="Never" />
+    <disable_collisions link1="right_shoulder_roll_link" link2="right_top_fingers" reason="Never" />
+    <disable_collisions link1="right_shoulder_roll_link" link2="right_wrist_link" reason="Never" />
+    <disable_collisions link1="right_shoulder_roll_link" link2="upper_left_arm" reason="Never" />
+    <disable_collisions link1="right_shoulder_roll_link" link2="upper_right_arm" reason="Adjacent" />
+    <disable_collisions link1="right_shoulder_roll_link" link2="usb_link" reason="Never" />
+    <disable_collisions link1="right_top_fingers" link2="right_wrist_link" reason="Never" />
+    <disable_collisions link1="right_top_fingers" link2="upper_left_arm" reason="Never" />
+    <disable_collisions link1="right_top_fingers" link2="upper_right_arm" reason="Never" />
+    <disable_collisions link1="right_wrist_link" link2="upper_left_arm" reason="Never" />
+    <disable_collisions link1="right_wrist_link" link2="upper_right_arm" reason="Never" />
+    <disable_collisions link1="upper_left_arm" link2="upper_right_arm" reason="Never" />
+    <disable_collisions link1="upper_left_arm" link2="usb_link" reason="Never" />
+</robot>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+   
+    <node pkg="bingo_game" type="face_tracker" name="face_tracker" output="screen" respawn="true"/>
+    <include file="$(find tangerine_2dnav)/launch/my_robot_configuration.launch"/>
+    <include file="$(find face_detection)/launch/FaceDetectionServerAXIS.launch"/>
+
+</launch>

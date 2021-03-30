@@ -1,0 +1,6 @@
+1) roslaunch tangerine_2dnav my_robot_configuration.launch
+2) roslaunch tangerine_2dnav move_base.launch
+3) roslaunch bingo_game BingoGameServer.launch
+4) rosrun help_indicators help_light
+5) rosrun bingo_game bingo_game_client
+6) rviz

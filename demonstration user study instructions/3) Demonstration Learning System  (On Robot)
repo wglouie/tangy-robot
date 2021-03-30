@@ -1,0 +1,16 @@
+On robot run the following:
+
+$ roslaunch action_executor action_executor.launch 
+
+$ roslaunch world_state_identifier world_state_identifier_remote.launch
+
+$ roslaunch skeletontracker_nu openni.launch
+
+$ roslaunch skeletontracker_nu skeletontracker.launch
+
+$ rosrun robot_inverse_kinematics kinect_ik.py
+
+$ rosrun activity_learner random_forest_learner.py
+
+$ rosrun collision_avoider collision_avoider  
+

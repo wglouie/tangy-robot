@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>world_state_identifier</name>
+  <version>0.0.0</version>
+  <description>Get world states</description>
+  <maintainer email="geoffrey.louie@gmail.com">Geoffrey Louie</maintainer>
+  <license>GPLv2</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <depend>roscpp</depend>
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+  <depend>actionlib_msgs</depend>
+  <depend>actionlib</depend>
+  <depend>message_generation</depend>
+  <depend>bingo_detection</depend>
+  <depend>face_detection</depend>
+  <depend>help_indicators</depend>
+  <depend>tf</depend>
+  <depend>geometry_msgs</depend>
+  <depend>demonstration_learning_msgs</depend>
+  <depend>tangy_bringup</depend>
+  <export>
+  </export>
+</package>

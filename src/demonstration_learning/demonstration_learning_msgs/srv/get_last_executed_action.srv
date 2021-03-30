@@ -1,0 +1,5 @@
+#request
+string get_action
+---
+#response 
+string last_action

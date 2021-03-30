@@ -1,0 +1,46 @@
+==== Mapping 
+
+1) in a new terminal run: (the robot must be ON (green lights) and on the origin position)
+$ roslaunch drrobot_h20_player player_and_laser.launch
+
+2) in a new terminal run 
+$ rosbag record -O mylaserdata /scan /tf
+
+Walk with the robot (or teleoprate it) through the enviroment.
+When you're done press Ctrl+c to kill the process. You have to do it on the two opened terminals (the (2nd) first)
+Close all terminals.
+
+
+
+==== Building a Map
+
+1) in a new terminal run:
+$ roscore
+
+2) in a new terminal run:
+$ rosparam set use_sim_time true 
+and then
+$ rosrun gmapping slam_gmapping scan:=scan
+
+3) in a new terminal run:
+$ rosparam set use_sim_time true
+and then 
+$ rosbag play mylaserdata.bag
+wait for it to finish
+$ rosrun map_server map_saver
+
+
+Close all terminals.
+
+
+Cut the resulting files (map.pgm, map.yaml, and mylaserdata.bag) from the /home folder and past in  /home/tangy/tangy-robot/src/navigation/tangerine_2dnav/maps
+
+
+
+
+
+
+
+
+
+

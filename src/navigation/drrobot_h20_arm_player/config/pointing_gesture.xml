@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<pointlist>
+  <point id="test">   <!-- x is to the robot's left; y is to the robot's back; z is upwards-->
+    <x>-0.1</x>
+    <y>-0.2</y>
+    <z>0.83</z>
+  </point>
+</pointlist>

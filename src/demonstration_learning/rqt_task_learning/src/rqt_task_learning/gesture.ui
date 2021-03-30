@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GestureWidget</class>
+ <widget class="QWidget" name="GestureWidget">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1245</width>
+    <height>750</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>640</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Demonstration Learning</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/*
+QPushButton{font-size: 30px;        border: 1px solid #6593cf;
+        border-radius: 2px;
+        padding: 5px 15px 2px 5px;
+        background: qlineargradient(x1 : 0, y1 : 0, x2 : 0, y2 :   1, stop :   0.0 #f5f9ff,
+                stop :   0.5 #c7dfff, stop :   0.55 #afd2ff, stop :   1.0 #c0dbff);
+        color: #006aff;
+        font: bold large &quot;Arial&quot;;
+        height: 30px;}
+QPushButton{border:none;}
+*/
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0,0,0">
+   <item>
+    <layout class="QVBoxLayout" name="Title" stretch="0,0">
+     <item>
+      <widget class="QLabel" name="customize_action_label">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel { font-size: 30pt; 
+					font: bold;
+					text-decoration	: underline;}</string>
+       </property>
+       <property name="text">
+        <string>Customize Action</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item alignment="Qt::AlignVCenter">
+    <widget class="QGroupBox" name="Step1">
+     <property name="styleSheet">
+      <string notr="true">QGroupBox {
+    font-size: 20px;
+    border: 3px solid gray;
+    border-radius: 9px;
+    margin-top: 0.5em;
+	padding-top: 8px;
+	 font: bold;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 9px 0 3px;
+}</string>
+     </property>
+     <property name="title">
+      <string>Step 1: Select an action</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="0">
+      <item>
+       <widget class="QStackedWidget" name="action_selection_stacked_widget">
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="action_selection_page">
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QComboBox" name="actions_combo_box">
+            <property name="styleSheet">
+             <string notr="true">QComboBox{font-size: 16pt; }</string>
+            </property>
+            <property name="editable">
+             <bool>false</bool>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QComboBox::AdjustToContents</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="action_chosen_page">
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item alignment="Qt::AlignHCenter">
+           <widget class="QLabel" name="action_being_changed_label">
+            <property name="styleSheet">
+             <string notr="true">QLabel{font-size: 25px;}</string>
+            </property>
+            <property name="text">
+             <string>Chosen Action</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="Step2_2">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox {
+    font-size: 20px;
+    border: 3px solid gray;
+    border-radius: 9px;
+    margin-top: 0.5em;
+	padding-top: 8px;
+	 font: bold;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 9px 0 3px;
+}</string>
+     </property>
+     <property name="title">
+      <string>Step 2: Select what you would like to change</string>
+     </property>
+     <layout class="QHBoxLayout" name="Step2">
+      <item>
+       <widget class="QStackedWidget" name="cus_state_stacked_widget">
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="cus_state_selection_page">
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <widget class="QPushButton" name="cus_speech_button">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="../../resources/images.qrc">
+                <normaloff>:/images/speech.png</normaloff>:/images/speech.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>400</width>
+                <height>60</height>
+               </size>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="cus_gesture_button">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="../../resources/images.qrc">
+                <normaloff>:/images/gesture.png</normaloff>:/images/gesture.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>350</width>
+                <height>60</height>
+               </size>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="cus_speech_gesture_button">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="../../resources/images.qrc">
+                <normaloff>:/images/speech_gesture.png</normaloff>:/images/speech_gesture.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>500</width>
+                <height>60</height>
+               </size>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="current_cus_state_page">
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item alignment="Qt::AlignHCenter">
+           <widget class="QLabel" name="cus_state_label">
+            <property name="styleSheet">
+             <string notr="true">QLabel{font-size: 25px;}</string>
+            </property>
+            <property name="text">
+             <string>Chosen Customization</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="Step3_2">
+     <property name="styleSheet">
+      <string notr="true">QGroupBox {
+    font-size: 20px;
+    border: 3px solid gray;
+    border-radius: 9px;
+    margin-top: 0.5em;
+	padding-top: 8px;
+	 font: bold;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 9px 0 3px;
+}</string>
+     </property>
+     <property name="title">
+      <string>Step 3: Follow instructions presented here</string>
+     </property>
+     <layout class="QHBoxLayout" name="Step3">
+      <item>
+       <widget class="QStackedWidget" name="info_stacked_widget">
+        <property name="currentIndex">
+         <number>2</number>
+        </property>
+        <widget class="QWidget" name="blank_page"/>
+        <widget class="QWidget" name="gesture_page">
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_17">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <widget class="QTextEdit" name="textEdit">
+                <property name="lineWrapColumnOrWidth">
+                 <number>-4</number>
+                </property>
+                <property name="textInteractionFlags">
+                 <set>Qt::NoTextInteraction</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="button_layout">
+                <item>
+                 <widget class="QPushButton" name="no_button">
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../../resources/images.qrc">
+                    <normaloff>:/images/no.png</normaloff>:/images/no.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>350</width>
+                    <height>60</height>
+                   </size>
+                  </property>
+                  <property name="flat">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="yes_button">
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../../resources/images.qrc">
+                    <normaloff>:/images/yes.png</normaloff>:/images/yes.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>350</width>
+                    <height>60</height>
+                   </size>
+                  </property>
+                  <property name="flat">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="rqt_task_learning::RatioLayoutedFrame" name="gesture_img_frame" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>640</width>
+                <height>480</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>640</width>
+                <height>480</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="speech_page">
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QLabel" name="label">
+            <property name="styleSheet">
+             <string notr="true">QLabel{font-size: 20px;}</string>
+            </property>
+            <property name="text">
+             <string>Add Speech: 
+ (Press Enter to finish)</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="speech_text_box">
+            <property name="styleSheet">
+             <string notr="true">QLineEdit { font-size: 16pt; }</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="done_page">
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QLabel" name="cus_state_label_2">
+            <property name="styleSheet">
+             <string notr="true">QLabel{font-size: 25px;}</string>
+            </property>
+            <property name="text">
+             <string>Customization complete go to step 4</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="kinect_view_page"/>
+        <widget class="QWidget" name="stuffpage">
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <widget class="QLabel" name="number_of_skeletons">
+                <property name="text">
+                 <string>Number of Skeletons</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="skeleton_tracking_status">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="recording_status">
+                <property name="text">
+                 <string>Recording Status</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item alignment="Qt::AlignHCenter">
+               <widget class="QLineEdit" name="recording_status_box">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+         <zorder></zorder>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="Step4">
+     <property name="styleSheet">
+      <string notr="true">QGroupBox {
+    font-size: 20px;
+    border: 3px solid gray;
+    border-radius: 9px;
+    margin-top: 0.5em;
+	padding-top: 8px;
+	 font: bold;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 9px 0 3px;
+}</string>
+     </property>
+     <property name="title">
+      <string>Step 4: Review and save action</string>
+     </property>
+     <layout class="QHBoxLayout" name="Step_4">
+      <item>
+       <widget class="QPushButton" name="redo_button">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../../resources/images.qrc">
+          <normaloff>:/images/redo_customization.png</normaloff>:/images/redo_customization.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>350</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="preview_button">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../../resources/images.qrc">
+          <normaloff>:/images/preview_customization.png</normaloff>:/images/preview_customization.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>350</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="save_button">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../../resources/images.qrc">
+          <normaloff>:/images/save_customization.png</normaloff>:/images/save_customization.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>350</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignRight">
+    <widget class="QPushButton" name="cancel_button">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../../resources/images.qrc">
+       <normaloff>:/images/cancel.png</normaloff>:/images/cancel.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>rqt_task_learning::RatioLayoutedFrame</class>
+   <extends>QWidget</extends>
+   <header location="global">rqt_task_learning/ratio_layouted_frame.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../resources/images.qrc"/>
+ </resources>
+ <connections/>
+</ui>

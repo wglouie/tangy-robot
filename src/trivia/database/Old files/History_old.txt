@@ -1,0 +1,230 @@
+Q:In which year did the "Suez Crisis" take place?
+A1:1954
+A2:1955
+A3:1956
+CA:A3
+H:Dwight Eisenhower was re-elected for a second term in this year.
+ 
+Q:Which 1950s icon starred in the film "Rebel Without A Cause"?
+A1:Elvis Presley
+A2:James Dean
+A3:Marlon Brando
+CA:A2
+H:This icon also starred in the film East of Eden.
+ 
+Q:The River Yalu was significant during the Korean War; it marked the border between which two countries?
+A1:North Korea and Japan
+A2:North Korea and Manchuria
+A3:North Korea and South Korea
+CA:A2
+H:This was the most northerly point reached by UN forces.
+
+Q:Which city hosted the 1956 Olympic Games?
+A1:Helsinki
+A2:London
+A3:Melbourne
+CA:A3
+H:This city has been named the most livable city to live for five years in a row in the past decade.
+ 
+Q:In 1959, Fidel Castro was sworn in as leader of which country?
+A1:Cuba
+A2:Guatemala
+A3:Nicaragua
+CA:A1
+H:This country is famous for its cigars.
+ 
+Q:Which of Queen Elizabeth II's children was born in the 1950s?
+A1:Princess Anne
+A2:Prince Charles
+A3:Prince Edward
+CA:A1
+H:This royal became the first senior member of the royal family to have a criminal record.
+ 
+Q:What was Sputnik 1?
+A1:The first man-made space satellite
+A2:The first personal computer
+A3:The first shopping mall in Moscow
+CA:A1
+H:It was launched in 1957.
+
+Q:Which religious leader was assassinated on the 4th of April 1968?
+A1:Jesse Jackson
+A2:Martin Luther King
+A3:Mother Theresa
+CA:A2
+H:He was shot by James Earl Ray.
+ 
+Q:In which century did Leonardo da Vinci produce the Mona Lisa?
+A1:15th century
+A2:16th century
+A3:18th century
+CA:A2
+H:Leonardo da Vinci passed away in May of 1519.
+ 
+Q:When did Canada gain independence from Britain?
+A1:1776
+A2:1867
+A3:1812
+CA:A2
+H:Canada was first formed as a federal dominion of four provinces.
+ 
+Q:When did Marilyn Monroe's final film "The Misfits" get released?
+A1:1952
+A2:1955
+A3:1961
+CA:A3
+H:This movie was released posthumously for the other starring actor, Clark Gable.
+ 
+Q:Which famous Polish trade union was founded in the 1980s?
+A1:Solidarity
+A2:Solidity
+A3:Union of Polish Dockworkers
+CA:A1
+H:A strike at a shipyard inspired the formation of this trade union.
+ 
+Q:In which South American country did the Incas establish their capital?
+A1:Peru
+A2:Colombia
+A3:Ecuador
+CA:A1
+H:The Inca capital was established at Cuzco in the 12th century
+ 
+Q:What nationality was the philosopher and mathematician, Pythagoras?
+A1:Greek
+A2:Persian
+A3:Roman
+CA:A1
+H:He was famous for his mathematical theorem, the Pythagorean theorem.
+ 
+Q:Which 51-mile waterway opened to traffic in August 1914?
+A1:Manchester Ship Canal
+A2:Panama Canal
+A3:St Lawrence Seaway
+CA:A2
+H:France began the project, but the United States took over the work in 1904.
+
+Q:What was the name of the Viet Cong offensive launched in January 1968?
+A1:The Tat Offensive
+A2:The Tet Offensive
+A3:The Tot Offensive
+CA:A2
+H:The Tet Festival is a Vietnamese celebration of the lunar new year
+
+Q:What was the real first name of the 1960s astronaut "Buzz" Aldrin?
+A1:Edgar
+A2:Edward
+A3:Edwin
+CA:A3
+H:The astronomer for whom the Hubble telescope is named also shares this name.
+ 
+Q:Which famous figure was assassinated on the 22nd of November 1963?
+A1:Che Guevara
+A2:John F Kennedy
+A3:Martin Luther King
+CA:A2
+H:He was shot by Lee Harvey Oswald.
+ 
+Q:Which pop group recorded the album "Rubber Soul" in 1965?
+A1:The Beachboys
+A2:The Beatles
+A3:The Rolling Stones
+CA:A2
+H:This pop group also recorded the album Revolver, which was released in August 1966.
+ 
+Q:Which art movement was Andy Warhol famous for during the 1960s?
+A1:Abstract Movement
+A2:Cubism
+A3:Pop Art
+CA:A3
+H:This art style frequently uses images of iconic American objects.
+ 
+Q:Which national British TV channel first appeared in the 1960s?
+A1:BBC1
+A2:BBC2
+A3:Channel 4
+CA:A2
+H:This channel developed a reputation for screening highly praised drama series.
+ 
+Q:How was Northern Rhodesia re-named upon independence in 1964?
+A1:Lesotho
+A2:Malawi
+A3:Zambia
+CA:A3
+H:This country now neigbors the Democratic Republic of the Congo.
+ 
+Q:Which 1960s James Bond film's title song was famously recorded by Nancy Sinatra?
+A1:Dr No
+A2:From Russia With Love
+A3:You Only Live Twice
+CA:A3
+H:In the film of the same name, James Bond visits a remote Japanese island.
+
+Q:Who succeeded Harold Wilson as British Prime Minister in 1976?
+A1:Edward Heath
+A2:James Callaghan
+A3:Margaret Thatcher
+CA:A2
+H:This politician served as the leader of the Labour Party from 1976 to 1980.
+ 
+Q:How many gold medals did swimmer Mark Spitz win at the 1972 Olympic Games?
+A1:5
+A2:6
+A3:7
+CA:A3
+H:His record has only been surpassed by Michael Phelps, who won 8 gold medals in 2008.
+ 
+Q:In which year was the Islamic Republic of Iran created?
+A1:1975
+A2:1977
+A3:1979
+CA:A3
+H:This year also marked the beginning of the Iran hostage crisis.
+
+Q:Which American film depicted a swimmer's worst nightmare when released in 1975?
+A1:Jaws
+A2:Moby Dick
+A3:Anaconda
+CA:A1
+H:The film is responsible for perpetuating the negative stereotypes surrounding the famous animal.
+ 
+Q:Louise Brown made medical history in 1978. Louise was the first what?
+A1:Mother of sextuplets
+A2:Heart transplant patient
+A3:Test-tube baby
+CA:A3
+H:Louise Brown currently lives in England with her husband and her two sons.
+ 
+Q:Which American city housed the Watergate complex which was broken into in 1972?
+A1:Washington
+A2:Los Angeles
+A3:New York
+CA:A1
+H:Watergate housed the Democratic National Committee Headquarters.
+
+Q:When did the dismantling of the Berlin Wall commence?
+A1:January 1987
+A2:October 1988
+A3:November 1989
+CA:A3
+H:On November 9, 2009, Berlin celebrated the 20th Anniversary of the Fall of the Berlin Wall with a "Festival of Freedom".
+ 
+Q:Which pop singer issued the 1986 album "True Blue"?
+A1:Madonna
+A2:Janet Jackson
+A3:Kylie Minogue
+CA:A1
+H:She is recognized as the best-selling female recording artist of all time.
+ 
+Q:What product was re-named the "Rubik's Cube" in 1980?
+A1:Enigma Cube
+A2:IQ Cube
+A3:Magic Cube
+CA:A3
+H:The product was invented in 1974 by Erno Rubik, who gave it its original name.
+
+Q:Which Indian leader died on the 31st of October 1984?
+A1:Indira Ghandi
+A2:Mahatma Ghandi
+A3:Rajiv Ghandi
+CA:A1
+H:The assassination was carried out by this leader's own bodyguards.

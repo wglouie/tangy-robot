@@ -1,0 +1,10 @@
+#Goal -> Execute action with the follow name
+string action_name
+bool run_gestures
+bool run_speech
+---
+#Results
+int8 done           # Action Does not Exist = -1, Success = 1
+---
+#Feedback -> String of where the process is currently
+string info

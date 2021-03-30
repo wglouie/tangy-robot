@@ -1,0 +1,13 @@
+Encouragement:Ooh, that's not it. Good try!
+
+Encouragement:I'm sorry, that's not the right answer. Maybe next time!
+
+Encouragement:Sorry about that, that's incorrect. Great try though!
+
+Praise:Amazing! That's correct!
+
+Praise:That's the right answer! You must have played this before!
+
+Praise:That was right! You're great at this game.
+
+Praise:I can't believe you got that! Great job!

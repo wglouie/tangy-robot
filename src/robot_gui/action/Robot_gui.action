@@ -1,0 +1,13 @@
+#Goal - manipulate the robot gui
+string activity #Show default tab = "default_tab", Show robot status tab = "robot_status", Show telepresence tab = "telepresence", Show bingo tab = "bingo", Show log tab = "log_tab"
+int32  code 	# -1: don't show or speak anything, 0:show text in the gui, 1:speak some text, 2:speak and show a text, 3:call a number
+string speech 	# sets the text to be reproduced
+string text 	# sets the text to be displayed at the gui
+int32 subtab   # sets a subtab for multi-tab activities
+---
+#Action result
+int32 end # 0: finished default, 1: telepresence session finished, 2: Telepresence session rejected, 3: Bingo action exucted
+int32 statusCode # 0: failed, 1: succeeded
+---
+#Action feedback
+int32 feedback # 0: Waiting interaction, 1: Waiting for user on Telepresence, 2: Telepresence Session on, 3: Executing bingo activity

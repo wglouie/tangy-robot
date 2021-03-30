@@ -1,0 +1,7 @@
+#request
+float64[4] left_arm_angles
+float64[4] right_arm_angles
+---
+#response 
+float64[4] optimized_left_arm_angles
+float64[4] optimized_right_arm_angles

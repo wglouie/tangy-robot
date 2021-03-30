@@ -1,0 +1,12 @@
+#Goal -> Identification goal: Set as true for desired states
+bool person_identification
+bool robot_state
+bool assistance_request
+bool user_activity_state
+
+---
+#Results
+demonstration_learning_msgs/world_state updated_world_state
+---
+#Feedback -> String of where the process is currently
+demonstration_learning_msgs/world_state current_world_state

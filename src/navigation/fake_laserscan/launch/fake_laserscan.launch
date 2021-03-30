@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+
+<launch>
+
+<arg name="camera" default="bottom_camera" />
+<arg name="segment_service" default="segment_plane" />
+
+<!--node pkg="tf" type="static_transform_publisher" name="fake_laserscan" args="0 0 0 0 0 1.57079632679 /skeleton/openni_link /link 100" /-->
+
+<!--
+<node pkg="tf" type="static_transform_publisher" name="fake_laserscan" args="0 0 0 0 0 1.57079632679 skeleton/openni_depth_frame link 100" />
+
+<node pkg="tf" type="static_transform_publisher" name="link_to_kinect" args="0 0 0 1.57079632679 0 0 link bottom_camera_link 100" />
+-->
+
+<node pkg="tf" type="static_transform_publisher" name="fake_laserscan" args="0 0 0 0 0 1.57079632679 kinect_depth_frame bottom_camera_link 100" />
+
+
+
+<!--<node pkg="tf" type="static_transform_publisher" name="fake_laserscan" args="0 0 0 0 0 1.57079632679 /skeleton/openni_depth_frame /link 100" />
+
+<node pkg="tf" type="static_transform_publisher" name="link_to_kinect" args="0 0 0 1.57079632679 0 0 /link /bottom_camera_link 100" />-->
+
+
+<!-- openni launch  OLD KINECT (TOP) 
+<include file="$(find openni2_launch)/launch/openni2.launch">
+  <arg name="device_id" default="#1" />
+  <arg name="camera" default="$(arg camera)" />
+  <arg name="respawn" default="true" />
+  <arg name="depth_registration" default="true" />
+</include>-->
+
+<!-- openni launch BOTH KINECTS (TOP + LOWER) -->
+	<!-- serial number -->	
+
+	<!--<arg name="camera1_id" default="1208060067" />-->
+	<!--<arg name="camera1_id" default="1302200040" />-->
+
+
+	<!-- Default parameters -->
+
+	<!--<arg name="camera1_name" default="top_camera" />-->
+	<!--<arg name="camera1_name" default="bottom_camera" />-->
+
+
+	<!-- USE ROS OPENNI LAUNCHER -->
+	<!--Kinect 1 (top) -->
+	<!--<include file="$(find openni2_launch)/launch/openni2.launch">
+		<arg name="device_id" value="$(arg camera1_id)" />
+		<arg name="camera" value="$(arg camera1_name)" />
+		<arg name="depth_registration" value="true" />
+	</include>-->
+
+	<!--Kinect 2 (lower) -->
+	<!--<include file="$(find openni2_launch)/launch/openni2.launch">
+		<arg name="device_id" value="$(arg camera1_id)" />
+		<arg name="camera" value="$(arg camera1_name)" />
+		<arg name="depth_registration" value="true" />
+	</include>-->
+
+<!--<include file="$(find openni2_launch)/launch/openni2.launch">-->
+		<!--<arg name="device_id" value="" />-->
+		<!--<arg name="camera" value="kinect1" />
+		<arg name="depth_registration" value="true" />
+	</include>-->
+
+<!-- fakelaser_manager -->	
+<arg name="manager_id" value="laserscan_nodelet_manager"/>
+<node pkg="nodelet" type="nodelet" name="$(arg manager_id)" output="screen" args="manager">
+  <param name="num_worker_threads" value="10"/> <!-- Hydro -->
+</node>
+
+<!--arg name="manager_id" value="$(arg camera)_nodelet_manager" unless="$(arg separate_manager)"/-->
+
+<!-- process pointclouds -->
+<node pkg="nodelet" type="nodelet" name="cloud_preprocess" args="load fake_laserscan/CloudPreprocess $(arg manager_id)">
+  <param name="max_rate" value="5"/> <!--"3"/-->
+  <remap from="cloud_in" to="$(arg camera)/depth_registered/points"/>
+  <remap from="cloud_out" to="cloud_throttled"/>
+
+  <!-- Hydro start -->
+  <!--
+  <param name="max_update_rate" value="3"/>
+  <param name="tf_to_frame_id" value="/base_link"/>
+
+  <param name="voxel_filter_enabled" value="true"/>
+  <param name="voxel_filter_size" value="0.01"/>
+
+  <param name="sor_filter_enabled" value="false"/>
+  <param name="mean_k" value="30"/>
+  <param name="std_dev_mult" value="0.5"/>
+  -->
+  <!-- Hydro end -->
+</node>
+<node pkg="nodelet" type="nodelet" name="pcl_manager" args="manager" output="screen" />
+
+  <!-- Run a passthrough filter to clean NaNs -->
+  <node pkg="nodelet" type="nodelet" name="passthrough" args="load pcl/PassThrough pcl_manager" output="screen">
+    <remap from="~input" to="cloud_throttled"/>
+    <remap from="~output" to="kinect_filtered"/>
+    <rosparam>
+      input_frame: "base_link_robot"
+     
+      filter_field_name: "z"
+      filter_limit_min: -0.50
+      filter_limit_max: 0.10
+      filter_limit_negative: True
+    </rosparam>
+    
+  </node>
+
+<!-- Run a VoxelGrid filter to clean NaNs and downsample the data >
+  <node pkg="nodelet" type="nodelet" name="voxel_grid" args="load pcl/VoxelGrid pcl_manager" output="screen">
+    <remap from="~input" to="kinect_floorfilter"/>
+    <remap from="~output" to="kinect_filtered"/>
+    <rosparam>
+      input_frame: "base_link_robot"
+      filter_field_name: "z"
+      filter_limit_min: 0.01
+      filter_limit_max: 1.5
+      filter_limit_negative: False
+      leaf_size: 0.05
+    </rosparam>
+  </node-->
+
+<!-- fake laser scan -->
+<node pkg="nodelet" type="nodelet" name="cloud_to_scan" args="load fake_laserscan/CloudToScan $(arg manager_id)">
+  <!--param name="output_frame_id" value="/bottom_camera_rgb_optical_frame"/-->
+<!--param name="output_frame_id" value="/skeleton/openni_depth_frame"/-->
+<remap from="cloud" to="kinect_filtered"/>  
+<!--remap from="cloud" to="cloud_throttled"/-->
+
+  <!-- Hydro start -->
+  <param name="min_height" value="0.1"/>
+  <param name="max_height" value="1.5"/>
+  <param name="angle_min" value="-1.5"/>
+  <param name="angle_max" value="1.5"/>
+  <param name="angle_increment" value="0.01"/>
+  <param name="scan_time" value="0.033"/>
+  <param name="range_min" value="0.45"/>
+  <param name="range_max" value="5.0"/>
+  <!-- Hydro end -->
+
+</node>
+
+</launch>

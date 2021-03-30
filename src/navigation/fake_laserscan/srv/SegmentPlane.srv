@@ -1,0 +1,3 @@
+string camera_topic
+---
+float32[4] params

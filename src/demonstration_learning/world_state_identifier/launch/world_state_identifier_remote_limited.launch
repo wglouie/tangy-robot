@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+    <param name="nav_goal_tolerence" type="double" value="0.4" />
+    <param name="server_wait_time" type="string" value="1" />
+    <param name="saved_world_state_file" type="string" value="$(find world_state_identifier)/saved_state/file.save" />
+    <node pkg="world_state_identifier" type="world_state_identifier_server" name="world_state_identifier_server" output="screen" respawn="true"/>
+    <include file="$(find bingo_detection)/launch/BingoDetection_server.launch"/>
+
+</launch>

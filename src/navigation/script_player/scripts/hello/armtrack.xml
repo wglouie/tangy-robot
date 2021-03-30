@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSetRecord>
+  <DataTableRecord>
+    <FileName>one_hand_wave.xml</FileName>
+    <StartTime>0</StartTime>
+    <EndTime>PT6S</EndTime>
+    <Tag>0</Tag>
+    <ColorIndex>0</ColorIndex>
+  </DataTableRecord>
+</DataSetRecord>

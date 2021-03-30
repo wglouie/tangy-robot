@@ -1,0 +1,7 @@
+#request
+string get_action_list
+---
+#response 
+string[] action_list
+string[] gui_text_list
+

@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<launch>
+
+	<!-- Map server -->
+	<node name="map_server"
+				pkg="map_server"
+				type="map_server"
+				args="$(find tangerine_2dnav)/maps/map.yaml"
+				respawn="true">
+		<param name="frame_id" value="/map" />
+	</node>
+
+	<!-- AMCL -->
+	<include file="$(find tangerine_2dnav)/launch/amcl_diff.launch" />
+<!--
+	 <node pkg="tf" type="static_transform_publisher" name="move_base_launch" args="0 0 0 0 0 0 map odom 100" respawn="true"/> 
+
+	 <node pkg="tf" type="static_transform_publisher" name="move_base_launch1" args="0 0 0 0 0 0 odom base_link 100" respawn="true"/> 
+-->
+	<!-- Clear Scan -->
+	<node pkg="tangerine_2dnav" type="clear_scan" name="clear_scan" output="screen" respawn="true"/>
+
+	<!--- Run move base-->
+	<node pkg="move_base" type="move_base" name="move_base" output="screen" respawn="true" >
+		<!-- If using namespaces (for multiple robots)
+			<remap from="/scan" to="scan"/>
+			<remap from="map" to="/map"/>
+		-->
+
+		<!-- If local planner not set defaults to nav_fn -->
+		<!--
+			<param name="base_local_planner" value="eband_local_planner/EBandPlannerROS"/>
+			<param name="base_global_planner" value="carrot_planner/CarrotPlanner"/>
+		-->
+
+		<!-- <param name="planner_frequency" value = "5.0"/> -->
+
+		<rosparam file="$(find tangerine_2dnav)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+		<rosparam file="$(find tangerine_2dnav)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+		<rosparam file="$(find tangerine_2dnav)/config/local_costmap_params.yaml" command="load" />
+		<rosparam file="$(find tangerine_2dnav)/config/global_costmap_params.yaml" command="load" />
+		<rosparam file="$(find tangerine_2dnav)/config/base_local_planner_params.yaml" command="load" />
+	      	
+		<!-- Add Layers -->
+ 		<rosparam file="$(find tangerine_2dnav)/config/layers.yaml" command="load" ns="global_costmap" />
+ 		<rosparam file="$(find tangerine_2dnav)/config/layers.yaml" command="load" ns="local_costmap" />
+ 		<rosparam file="$(find tangerine_2dnav)/config/global_costmap_layers.yaml" command="load" ns="global_costmap" />
+ 		<rosparam file="$(find tangerine_2dnav)/config/local_costmap_layers.yaml" command="load" ns="local_costmap" />
+              
+    <!-- No Layers
+	 		<rosparam file="$(find tangerine_2dnav)/config/no_layers.yaml" command="load" ns="global_costmap" />
+	 		<rosparam file="$(find tangerine_2dnav)/config/no_layers.yaml" command="load" ns="local_costmap" />
+     -->
+	</node>
+
+	<!--- Run Tangerine Model -->
+	<include file="$(find tangerine_2dnav)/launch/tangerine_model.launch" />
+
+  	<!-- Sensor Information - Hokuyo node -->
+  	<node name="hokuyo" pkg="hokuyo_node" type="hokuyo_node" respawn="true">
+		<param name="frame_id" type="str" value="base_laser"/>
+		<!--<param name="frame_id" type="str" value="/base_laser"/>  -->
+    		<!-- Starts up faster, but timestamps will be inaccurate. -->
+    		<param name="calibrate_time" type="bool" value="false"/>
+    		<!-- Set the port to connect to here -->
+    		<param name="port" type="string" value="/dev/ttyACM0"/>
+    		<param name="intensity" type="bool" value="false"/>
+    		<param name="hokuyoLaserModel04LX" type="bool" value="true" />
+		<!--param name="max_range" type="double" value="0.5" /-->
+    		<!--param name="min_ang" type="double" value="-2.08621" />
+    		<param name="max_ang" type="double" value="2.09234" /-->
+    		<param name="min_ang" type="double" value="-1.57" />
+    		<param name="max_ang" type="double" value="1.57" />
+	</node>
+
+	<!-- transform between kinect_2_depth_frame and bottom_camera_link-->
+<!--
+	<node pkg="tf" type="static_transform_publisher" name="BingoGameServer" args="0 0 0 0 0 1.57079632679 kinect2_depth_frame bottom_camera_link 100" respawn="true"/>
+
+	<rosparam file="$(find tangy_description)/controllers/eff_controllers.yaml" command="load"/>
+
+	<include file="$(find openni2_launch)/launch/openni2.launch">
+		<arg name="camera" value="kinect"/>
+		<arg name="device_id" value="#1"/>
+		<arg name="depth_registration" value="false" />
+		<arg name="rgb_frame_id"   value="kinect_optical_frame" />
+		<arg name="depth_frame_id" value="kinect_depth_frame" />
+	</include>
+
+	<include file="$(find openni2_launch)/launch/openni2.launch">
+		<arg name="camera" value="bottom_camera"/>
+		<arg name="device_id" value="#2"/>
+	</include>
+-->
+	<!-- Sensor Information - Fake Laser node  from Xtion/Kinect
+	<include file="$(find fake_laserscan)/launch/fake_laserscan.launch"/>-->
+
+	<!-- Sensor Information - Infrared Range Sensor node
+	<node name="ir_reading" pkg="ir_reading" type="ir_reading" respawn="false"/> -->
+
+	<!-- Sensor Information - Sonar Sensor node
+	<node name="sonar_reading" pkg="sonar_reading" type="sonar_reading" respawn="false"/>  -->
+
+    <node name="navigation_server" pkg="tangy_move" type="navigationServer" output="screen"/>
+
+</launch>

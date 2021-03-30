@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<globals>
+	<global id="global">
+		<!-- distance between locations -->
+		<attribute name="distance" type="int" value="20" pddl="true">
+			<parameter type="Location" value="l0"/>
+			<parameter type="Location" value="l1"/>
+		</attribute>
+		<attribute name="distance" type="int" value="20" pddl="true">
+			<parameter type="Location" value="l1"/>
+			<parameter type="Location" value="l0"/>
+		</attribute>
+		<attribute name="distance" type="int" value="20" pddl="true">
+			<parameter type="Location" value="l1"/>
+			<parameter type="Location" value="l2"/>
+		</attribute>
+		<attribute name="distance" type="int" value="20" pddl="true">
+			<parameter type="Location" value="l2"/>
+			<parameter type="Location" value="l1"/>
+		</attribute>
+		<attribute name="distance" type="int" value="20" pddl="true">
+			<parameter type="Location" value="l2"/>
+			<parameter type="Location" value="l3"/>
+		</attribute>
+		<attribute name="distance" type="int" value="20" pddl="true">
+			<parameter type="Location" value="l3"/>
+			<parameter type="Location" value="l2"/>
+		</attribute>
+
+		<!-- distance between locations and charging stations -->
+		<attribute name="distancetostation" type="int" value="0" pddl="true">
+			<parameter type="Location" value="l0"/>
+			<parameter type="ChargingStation" value="cs1"/>
+		</attribute>
+		<attribute name="distancetostation" type="int" value="20" pddl="true">
+			<parameter type="Location" value="l1"/>
+			<parameter type="ChargingStation" value="cs1"/>
+		</attribute>
+		<attribute name="distancetostation" type="int" value="40" pddl="true">
+			<parameter type="Location" value="l2"/>
+			<parameter type="ChargingStation" value="cs1"/>
+		</attribute>
+		<attribute name="distancetostation" type="int" value="60" pddl="true">
+			<parameter type="Location" value="l3"/>
+			<parameter type="ChargingStation" value="cs1"/>
+		</attribute>
+
+	</global>
+
+</globals>

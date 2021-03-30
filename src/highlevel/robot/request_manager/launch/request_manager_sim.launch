@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- Simulation of Manager-->
+	<node pkg="request_manager" name="request_manager" type="request_manager_server_sim" output="screen"/>
+	<param name="path" value="$(find request_manager)" />
+
+</launch>
+

@@ -1,0 +1,31 @@
+controller_list:
+  - name: fake_right_arm_controller
+    joints:
+      - right_shoulder_x_revolute
+      - upper_right_arm_y_revolute_joint
+      - upper_right_arm_z_revolute_joint
+      - upper_to_lower_right_joint
+      - wrist_right_arm_z_revolute_joint
+      - lower_to_wrist_right_arm
+  - name: fake_left_arm_controller
+    joints:
+      - left_shoulder_x_revolute
+      - upper_left_arm_y_revolute_joint
+      - upper_left_arm_z_revolute_joint
+      - upper_to_lower_left_joint
+      - wrist_left_arm_z_revolute_joint
+      - lower_to_wrist_left_arm
+  - name: fake_both_arms_controller
+    joints:
+      - left_shoulder_x_revolute
+      - upper_left_arm_y_revolute_joint
+      - upper_left_arm_z_revolute_joint
+      - upper_to_lower_left_joint
+      - wrist_left_arm_z_revolute_joint
+      - lower_to_wrist_left_arm
+      - right_shoulder_x_revolute
+      - upper_right_arm_y_revolute_joint
+      - upper_right_arm_z_revolute_joint
+      - upper_to_lower_right_joint
+      - wrist_right_arm_z_revolute_joint
+      - lower_to_wrist_right_arm
